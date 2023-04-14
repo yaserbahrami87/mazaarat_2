@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'nianAmir';
+    src: url("../fonts/W_ferdosi.ttf");
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url("../fonts/BYekan.ttf");
+}
+
+*
+{
+    font-family: 'nianAmir';
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+body
+{
+    background-color: #000000;
+}
+
+#main_home{
+    background-color: #000000;
+    height: 100vh;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#main_home img
+{
+    opacity: 0.8;
+}
+
+#main_home a,#signup a
+{
+    font-size: 1.3em;
+    color: #8e9092;
+    transition: 0.5s;
+}
+
+#main_home a:hover,#signup a:hover
+{
+    color: #2e3192;
+}
+
+#main_home >.row >div:first-child a::before
+{
+    content: url("../images/after.png");
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+
+#main_home  >.row > div:last-child a::after
+{
+    content: url("../images/after.png");
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+
+
+#signup{
+    background-color: #000000;
+    height: 100vh;
+    background-image: url("../images/background2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#signup >div:last-child a:hover
+{
+    margin-right: 25px;
+}
+
+#signup  li.nav-item
+{
+    position: relative;
+}
+
+#signup li.nav-item::before
+{
+    content: url("../images/after.png");
+
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    transition: 1s;
+    display: none;
+}
+
+#signup li.nav-item:hover::before
+{
+    display: block;
+}
+
+#signup  label
+{
+    color: #ffffff;
+}
+
+footer
+{
+    border-top:3px solid #2e3192;
+    font-family: 'yekan';
+    font-size: 14px;
+}
+
+footer *
+{
+    font-family: 'yekan';
+}
+
+
+footer b{
+    color: #2e3192;
+    font-size: 1.1em;
+    line-height: 2;
+
+}
+
+footer a,footer p
+{
+    font-size: 1em;
+    color: #b9b9b9;
+    line-height: 1.7;
+}
+
+footer a:hover
+{
+    color: #2e3192;
+}
+
+footer ul
+{
+    list-style: none;
+    list-style-position: inside;
+}
+
+
+footer > div.row > div
+{
+    border-left:3px solid #2e3192;
+    height: 150px;
+}
+
+footer > div.row > div:last-child
+{
+    border: none;
+}
+
+footer >div.row >div:hover
+{
+    background-color: #2b2c2d;
+}
+
+
+#collapseGallery span:first-child a
+{
+    font-size: 1.1em;
+    font-weight: 200;
+}
+
+#collapseGallery span a
+{
+    background-color: #555555;
+    padding: 0px 10px;
+    border-radius: 10px;
+
+}
+
+#collapseGallery span a:hover
+{
+    background-color: #2e3192;
+    color: #ffffff;
+}
+
+.btn-primary
+{
+    background-color: #2e3192;
+    border-color: #2e3192;
+    color: #ffffff !important;
+}
+
+#main_gallery a
+{
+    font-family: 'yekan';
+}
+
+#main_gallery #navbarVerticalContent
+{
+    border-bottom:3px solid #2e3192;
+}
+
+#main_gallery #navbarVerticalContent li
+{
+    min-width: 130px;
+}
+
+#main_gallery #navbarVerticalContent li:hover
+{
+
+}
+
+
+#main_gallery #gallery img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+#main_gallery #gallery img:hover
+{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
