@@ -86,7 +86,7 @@
         <div class="col-md-4 text-left mx-auto">
             <ul class=" nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" >ثبت نام</a>
+                    <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >ثبت نام</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">ارسال عکس</a>
@@ -154,5 +154,38 @@
 
 <script src="/js/jquery.slim.min.js" ></script>
 <script src="/js/bootstrap.bundle.min.js" ></script>
+<script>
+$('#collapseGallery').on('show.bs.collapse', function ()
+    {
+        $('#collapseExample').collapse('hide');
+        $('#collapseLogin').collapse('hide');
+        $('#collapseSignup').collapse('hide');
+    }
+)
+
+$('#link_signup').on('show.bs.collapse', function ()
+    {
+        $('#collapseGallery').collapse('hide');
+    }
+)
+
+$('#collapseLogin').on('show.bs.collapse', function ()
+{
+    $('#collapseSignup').collapse('hide');
+});
+
+$('#collapseSignup').on('show.bs.collapse', function ()
+{
+    $('#collapseLogin').collapse('hide');
+});
+
+
+$('#collapseExample').on('show.bs.collapse', function ()
+    {
+        $('#collapseGallery').collapse('hide');
+        $('#link_signup').collapse('hide');
+    }
+)
+</script>
 </body>
 </html>
