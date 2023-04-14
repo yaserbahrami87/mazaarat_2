@@ -5,12 +5,15 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <title></title>
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link href="/css/bootstrap-rtl.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
-    <title></title>
+   <link href="/lightbox-gallery-blurred/jquery.lightbox.css" rel="stylesheet" />
+
 </head>
 <body>
 <main class="container-fluid" id="main_gallery" dir="rtl">
@@ -53,75 +56,75 @@
     </nav>
 
     <div class="container">
-        <div class="row align-items-center mt-3 mb-3" id="gallery">
+        <div class="row align-items-center mt-3 mb-3 gallery" id="gallery">
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/2.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/1.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/2.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/1.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/2.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/1.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/2.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/1.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/2.jpg" rel="rel1"  >
                     <img src="/images/gallery/2.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/1.jpg" rel="rel1"  >
                     <img src="/images/gallery/2.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/2.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />
                 </a>
 
             </div>
             <div class="col-6 col-md-3 mb-4 box_image">
-                <a href="">
+                <a href="/images/gallery/1.jpg">
                     <img src="/images/gallery/2.jpg" class="img-fluid"  />
                 </a>
 
@@ -168,5 +171,13 @@
 
 <script src="/js/jquery.slim.min.js" ></script>
 <script src="/js/bootstrap.bundle.min.js" ></script>
+<script src="/js/jquery-3.6.4.min.js"></script>
+<script src="/lightbox-gallery-blurred/jquery.lightbox.js"></script>
+<script>
+    $(function() {
+        $('.gallery a').lightbox();
+    });
+</script>
+
 </body>
 </html>
