@@ -30,8 +30,8 @@
 
 
             <div class="collapse float-left" id="collapseExample" >
-                <a class="btn btn-primary d-block mb-1" data-toggle="collapse" href="#collapseLogin" role="button" aria-expanded="false" aria-controls="collapseLogin">ورود</a>
-                <a class="btn btn-primary " data-toggle="collapse" href="#collapseSignup" role="button" aria-expanded="false" aria-controls="collapseSignup"      >ثبت نام</a>
+                <a class="btn btn-primary d-block mb-1 btn-sm" data-toggle="collapse" href="#collapseLogin" role="button" aria-expanded="false" aria-controls="collapseLogin">ورود</a>
+                <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#collapseSignup" role="button" aria-expanded="false" aria-controls="collapseSignup"      >ثبت نام</a>
             </div>
 
             <form class="collapse" id="collapseLogin">
@@ -180,12 +180,20 @@ $('#collapseSignup').on('show.bs.collapse', function ()
 });
 
 
+$('#collapseExample').on('hide.bs.collapse', function ()
+{
+    $('#collapseLogin').collapse('hide');
+    $('#collapseSignup').collapse('hide');
+});
+
 $('#collapseExample').on('show.bs.collapse', function ()
     {
         $('#collapseGallery').collapse('hide');
         $('#link_signup').collapse('hide');
     }
-)
+);
+
+
 </script>
 </body>
 </html>

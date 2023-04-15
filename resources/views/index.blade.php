@@ -12,7 +12,7 @@
 <body>
 <main class="container-fluid" id="main_home" dir="rtl">
     <div class="row align-items-center h-100">
-        <div class="col-md-4 text-right mx-auto d-none d-md-block d-lg-block d-xl-block">
+        <div class="col-md-4 text-right ml-auto d-none d-md-block d-lg-block d-xl-block">
             <div class="row" dir="ltr">
                 <div class="col-8  border-left  border-bottom p-5"></div>
             </div>
@@ -21,10 +21,12 @@
                 <div class="col-8   p-5"></div>
             </div>
         </div>
-        <div class="col-md-4 text-center mx-auto">
+        <div class="col-md-4 col-lg-3 col-xl-3 text-center">
+            <!--
             <img src="/images/logo_green.png" class="img-fluid" />
+            -->
         </div>
-        <div class="col-md-4 text-left mx-auto">
+        <div class="col-md-4 text-left mr-auto">
             <div class="row" dir="ltr">
                 <div class="col-8   p-5"></div>
             </div>
