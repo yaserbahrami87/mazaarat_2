@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'yekan';
-    src: url("../fonts/BYekan.ttf");
+    src: url("../fonts/W_yekan.ttf");
 }
 
 *
@@ -77,9 +77,9 @@ body
     background-position: center;
 }
 
-#signup >div:last-child a:hover
+#signup >div:first-child a:hover
 {
-    margin-right: 25px;
+    margin-left: 25px;
 }
 
 #signup  li.nav-item
@@ -96,7 +96,7 @@ body
     height: 25px;
     position: absolute;
     top: 10px;
-    right: -30px;
+    left: -20px;
     transition: 1s;
     display: none;
 }
@@ -125,7 +125,7 @@ footer *
 
 
 footer b{
-    color: #2e3192;
+    color: #ffffff;
     font-size: 1.1em;
     line-height: 2;
 
@@ -133,7 +133,7 @@ footer b{
 
 footer a,footer p
 {
-    font-size: 1em;
+    font-size: 1.10em;
     color: #b9b9b9;
     line-height: 1.7;
 }
@@ -164,6 +164,33 @@ footer > div.row > div:last-child
 footer >div.row >div:hover
 {
     background-color: #2b2c2d;
+}
+
+footer .social
+{
+    background-image: url("../images/social.png");
+    width: 35px;
+    height: 35px;
+}
+
+footer #facebook_footer
+{
+    background-position: 35px -1px;
+}
+
+footer #telegram_footer
+{
+    background-position: 73px -1px;
+}
+
+footer #insta_footer
+{
+    background-position: 110px -1px;
+}
+
+footer #whatsapp_footer
+{
+    background-position: 147px -1px;
 }
 
 

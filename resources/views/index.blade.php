@@ -14,7 +14,7 @@
     <div class="row align-items-center h-100">
         <div class="col-md-4 text-right ml-auto d-none d-md-block d-lg-block d-xl-block">
             <div class="row" dir="ltr">
-                <div class="col-8  border-left  border-bottom p-5"></div>
+                <div class="col-7  border-left  border-bottom p-5"></div>
             </div>
             <a href="/farsi/home">نخستین جشنواره بین المللی عکس مزارات</a>
             <div class="row" dir="ltr">
