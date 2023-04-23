@@ -11,7 +11,7 @@
 </head>
 <body>
 <main class="container-fluid" id="main_home" dir="rtl">
-    <div class="row align-items-center h-100">
+    <div class="row align-items-center h-100 d-flex">
         <div class="col-md-4 text-right ml-auto d-none d-md-block d-lg-block d-xl-block">
             <div class="row" dir="ltr">
                 <div class="col-7  border-left  border-bottom p-5"></div>

@@ -23,6 +23,21 @@ Route::get('/farsi/gallery',function()
     return view('farsi.gallery');
 });
 
+Route::get('/farsi/news',function()
+{
+    return view('farsi.news');
+});
+
+Route::get('/farsi/pillars_category',function()
+{
+    return view('farsi.pillars_category');
+});
+
+
+Route::get('/farsi/pillars',function()
+{
+    return view('farsi.pillars_single');
+});
 
 Route::get('/', function () {
     return view('index');

@@ -28,13 +28,13 @@
                     <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >گالری</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">اخبار</a>
+                    <a class="nav-link" data-toggle="collapse" href="#collapseNews" role="button" aria-expanded="true" aria-controls="collapseNews">اخبار</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">فراخوان</a>
+                    <a class="nav-link" data-toggle="collapse" href="#collapseCall" role="button" aria-expanded="true" aria-controls="collapseCall">فراخوان</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ارکان جشنواره</a>
+                    <a class="nav-link" data-toggle="collapse" href="#collapsePillars" role="button" aria-expanded="true" aria-controls="collapsePillars">ارکان جشنواره</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">آرشیو</a>
@@ -51,7 +51,7 @@
         </div>
 
         <div class=" col-md-4 text-left mx-auto"  >
-            <div class="collapse text-right" id="collapseGallery">
+            <div class="collapse text-left" id="collapseGallery">
                 <span class="d-block mb-3">
                     <a href="/farsi/gallery"  class="d-inlineblock">
                         عکس های نخستین جشنواره
@@ -66,8 +66,8 @@
             </div>
 
 
-            <div class="collapse float-left" id="collapseExample" >
-                <a class="btn btn-primary d-block mb-1 btn-sm rounded-circle" data-toggle="collapse" href="#collapseLogin" role="button" aria-expanded="false" aria-controls="collapseLogin">ورود اعضا</a>
+            <div class="collapse float-right mb-3" id="collapseExample" >
+                <a class="btn btn-primary d-block mb-1 btn-sm" data-toggle="collapse" href="#collapseLogin" role="button" aria-expanded="false" aria-controls="collapseLogin">ورود اعضا</a>
                 <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#collapseSignup" role="button" aria-expanded="false" aria-controls="collapseSignup"      >ثبت نام</a>
             </div>
 
@@ -85,13 +85,13 @@
                     </div>
                     <input type="password" class="form-control" name="pass" />
                 </div>
-                <input class="btn btn-success" type="submit" value="ورود" />
+                <input class="btn btn-primary" type="submit" value="ورود" />
             </form>
 
             <form class="collapse" id="collapseSignup">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" >نام</span>
+                        <span class="input-group-text bg-primary" >نام</span>
                     </div>
                     <input type="text" class="form-control" name="fname" />
                 </div>
@@ -113,87 +113,54 @@
                     </div>
                     <input type="password" class="form-control" name="pass" />
                 </div>
-                <input class="btn btn-success" type="submit" value="ثبت نام" />
+                <input class="btn btn-primary" type="submit" value="ثبت نام" />
             </form>
+
+            <div class="collapse text-left" id="collapseNews">
+                <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <span class="d-block mb-3">
+                    <a href="/farsi/gallery"  class="d-inline-block text-center">
+                        راه یافتگان نخستین جشنواره
+                    </a>
+                </span>
+                <span class="d-block mb-3">
+                    <a href="" class="d-inline-block  text-center">
+                        اختتامیه نخستین جشنواره
+                    </a >
+                </span>
+                <span class="d-block">
+                    <a href="" class="d-inline-block  text-center">
+                        برگزیدگان نخستین جشنواره
+                    </a >
+                </span>
+            </div>
+
+            <div class="collapse text-left" id="collapseCall">
+                <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <span class="d-block mb-3">
+                    <a href="/farsi/call"  class="d-inline-block text-center">
+                        نمایش متن فراخوان
+                    </a>
+                </span>
+            </div>
+
+            <div class="collapse text-left" id="collapsePillars">
+                <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <span class="d-block mb-3">
+                    <a href="/farsi/gallery"  class="d-inline-block text-center">
+                         نخستین دوره جشنواره
+                    </a>
+                </span>
+                <span class="d-block mb-3">
+                    <a href="" class="d-inline-block  text-center">
+                        دوره دومین جشنواره
+                    </a >
+                </span>
+            </div>
 
         </div>
 
     </div>
 
 </main>
-<footer class="container" dir="rtl">
-    <div class="row pt-4">
-
-        <div class="col-md-4">
-            <b class="d-block">ارتباط با ما</b>
-            <p class="m-0 text-justify">مشـهـد. خیـابـان کـوهـسنـگی.کوهسنـگی 11. عـدالـت 18. پـلاک 9.1
-                مـوسســــه آفــرینـش‌هــــای هـنـــــری آستـــــان قــــدس رضــــــوی</p>
-            <a href="tel:05132001146" class="mr-3">051-32001146</a>
-            <span class="text-light">.</span>
-            <a href="tel:05132001146" class="ml-3">051-3225058</a>
-            <a href="mailto:tarh.bamame@aqrazavi.org" class="d-block">tarh.bamame@aqrazavi.org</a>
-        </div>
-        <div class="col-md-2 align-items-center text-justify">
-            <b>&nbsp;</b>
-            <p>تمام حقــوق این وبـگاه متعلق به آستان قدس رضوی است</p>
-        </div>
-        <div class="col-md-3 align-content-center text-center">
-
-            <a href="" class="d-inline-block social mr-3" id="facebook_footer"></a>
-            <a href="" class="d-inline-block social mr-3" id="telegram_footer"></a>
-            <a href="" class="d-inline-block social mr-3" id="insta_footer"></a>
-            <a href="" class="d-inline-block social mr-3" id="whatsapp_footer"></a>
-        </div>
-        <div class="col-md-3">
-            <img src="/images/logo_maktab.png" width="120px" class="mr-2" />
-            <img src="/images/logo_aq.png" width="120px" />
-        </div>
-
-    </div>
-</footer>
-
-<script src="/js/jquery.slim.min.js" ></script>
-<script src="/js/bootstrap.bundle.min.js" ></script>
-<script>
-$('#collapseGallery').on('show.bs.collapse', function ()
-    {
-        $('#collapseExample').collapse('hide');
-        $('#collapseLogin').collapse('hide');
-        $('#collapseSignup').collapse('hide');
-    }
-)
-
-$('#link_signup').on('show.bs.collapse', function ()
-    {
-        $('#collapseGallery').collapse('hide');
-    }
-)
-
-$('#collapseLogin').on('show.bs.collapse', function ()
-{
-    $('#collapseSignup').collapse('hide');
-});
-
-$('#collapseSignup').on('show.bs.collapse', function ()
-{
-    $('#collapseLogin').collapse('hide');
-});
-
-
-$('#collapseExample').on('hide.bs.collapse', function ()
-{
-    $('#collapseLogin').collapse('hide');
-    $('#collapseSignup').collapse('hide');
-});
-
-$('#collapseExample').on('show.bs.collapse', function ()
-    {
-        $('#collapseGallery').collapse('hide');
-        $('#link_signup').collapse('hide');
-    }
-);
-
-
-</script>
-</body>
-</html>
+@include('farsi.master.footer')
