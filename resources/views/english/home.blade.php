@@ -14,6 +14,11 @@
 <main class="container-fluid" id="main_signup" dir="rtl">
     <div class="row align-items-center signup_en" id="signup">
         <div class="col-12 col-md-4 text-left mx-auto"  >
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger">{{$error}}</div>
+                @endforeach
+            @endif
             <div class="collapse text-right" id="collapseGallery">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
@@ -35,7 +40,8 @@
                 <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#collapseSignup" role="button" aria-expanded="false" aria-controls="collapseSignup"      >Register</a>
             </div>
 
-            <form class="collapse" id="collapseLogin">
+            <form class="collapse" id="collapseLogin" method="POST" action="{{ route('login') }}">
+                {{csrf_field()}}
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" name="email" />
                     <div class="input-group-prepend">
@@ -43,7 +49,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" name="pass" />
+                    <input type="password" class="form-control" name="password" />
                     <div class="input-group-prepend">
                         <span class="input-group-text" >Password</span>
                     </div>
@@ -51,7 +57,8 @@
                 <input class="btn btn-primary" type="submit" value="Login" />
             </form>
 
-            <form class="collapse" id="collapseSignup">
+            <form class="collapse" id="collapseSignup" method="POST" action="{{ route('register') }}">
+                {{csrf_field()}}
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" name="fname" />
                     <div class="input-group-prepend">
@@ -71,9 +78,15 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" name="pass" />
+                    <input type="password" class="form-control" name="password" />
                     <div class="input-group-prepend">
                         <span class="input-group-text" >Password</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" name="password_confirmation" />
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >Confirm Password</span>
                     </div>
                 </div>
                 <input class="btn btn-primary" type="submit" value="ثبت نام" />
@@ -137,11 +150,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/">Home</a>
                         </li>
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home"  >{{Auth::user()->fname}}</a>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >Register / Login</a>
+                            </li>
+                        @endauth
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >Register / Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Upload photo</a>
+                            <a class="nav-link" href="/english/upload">Upload photo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >Gallery</a>

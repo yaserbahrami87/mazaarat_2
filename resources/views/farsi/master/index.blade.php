@@ -28,11 +28,30 @@
                     <li class="nav-item">
                         <a class="nav-link text-light" href="/">خانه</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link text-light" href="#">ثبت نام / عضویت <span class="sr-only">(current)</span></a>
-                    </li>
+                    @guest
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="/farsi/login">ثبت نام / عضویت <span class="sr-only">(current)</span></a>
+                        </li>
+                    @else
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                {{Auth::user()->fname}}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('خروج') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endif
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">ارسال عکس</a>
+                        <a class="nav-link text-light" href="/farsi/upload">ارسال عکس</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">گالری</a>

@@ -39,6 +39,38 @@ Route::get('/farsi/pillars',function()
     return view('farsi.pillars_single');
 });
 
+Route::get('/farsi/upload',function()
+{
+    if(Auth::check())
+    {
+        return redirect('/');
+    }
+    else
+    {
+        return redirect('/farsi/login');
+    }
+
+});
+
+Route::get('/farsi/login',function()
+{
+    return view('farsi.auth.login');
+});
+
+Route::get('/farsi/register',function()
+{
+    return view('farsi.auth.register');
+});
+
+Route::get('/farsi/password/reset',function()
+{
+    return view('farsi.auth.passwords.reset');
+});
+
+
+
+
+
 Route::get('/', function () {
     return view('index');
 });
@@ -74,4 +106,35 @@ Route::get('/english/pillars',function()
 {
     return view('english.pillars_single');
 });
+
+Route::get('/english/upload',function()
+{
+    if(Auth::check())
+    {
+        return redirect('/');
+    }
+    else
+    {
+        return redirect('/english/login');
+    }
+
+});
+
+
+Route::get('/english/login',function()
+{
+    return view('english.auth.login');
+});
+
+Route::get('/english/register',function()
+{
+    return view('english.auth.register');
+});
+
+Route::get('/english/password/reset',function()
+{
+    return view('english.auth.passwords.reset');
+});
+
+
 

@@ -23,11 +23,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/">خانه</a>
                         </li>
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home"  >{{Auth::user()->fname}}</a>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >ثبت نام / عضویت</a>
+                            </li>
+                        @endguest
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >ثبت نام / عضویت</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">ارسال عکس</a>
+                            <a class="nav-link" href="/farsi/upload">ارسال عکس</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >گالری</a>
@@ -58,6 +64,11 @@
         </div>
 
         <div class="col-12 col-md-4 text-left mx-auto"  >
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger">{{$error}}</div>
+                @endforeach
+            @endif
             <div class="collapse text-left mb-3" id="collapseGallery">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
@@ -79,8 +90,8 @@
                 <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#collapseSignup" role="button" aria-expanded="false" aria-controls="collapseSignup"      >ثبت نام</a>
             </div>
 
-            <form class="collapse" id="collapseLogin">
-
+            <form class="collapse" id="collapseLogin" method="POST" action="{{ route('login') }}">
+                {{csrf_field()}}
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" >ایمیل</span>
@@ -91,12 +102,13 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" >رمز عبور</span>
                     </div>
-                    <input type="password" class="form-control" name="pass" />
+                    <input type="password" class="form-control" name="password" />
                 </div>
                 <input class="btn btn-primary" type="submit" value="ورود" />
             </form>
 
-            <form class="collapse" id="collapseSignup">
+            <form class="collapse" id="collapseSignup" method="POST" action="{{ route('register') }}">
+                {{csrf_field()}}
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text bg-primary" >نام</span>
@@ -119,15 +131,22 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" >رمز عبور</span>
                     </div>
-                    <input type="password" class="form-control" name="pass" />
+                    <input type="password" class="form-control" name="password" />
                 </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >تکرار رمز عبور</span>
+                    </div>
+                    <input type="password" class="form-control" name="password_confirmation" />
+                </div>
+
                 <input class="btn btn-primary" type="submit" value="ثبت نام" />
             </form>
 
             <div class="collapse text-left" id="collapseNews">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
-                    <a href="/farsi/gallery"  class="d-inline-block text-center">
+                    <a href="/farsi/news"  class="d-inline-block text-center">
                         راه یافتگان نخستین جشنواره
                     </a>
                 </span>

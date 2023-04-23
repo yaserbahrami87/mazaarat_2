@@ -28,11 +28,30 @@
                     <li class="nav-item">
                         <a class="nav-link text-light" href="/">Home</a>
                     </li>
+                    @guest
                     <li class="nav-item active">
                         <a class="nav-link text-light" href="#">Register / Login <span class="sr-only">(current)</span></a>
                     </li>
+                    @else
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                {{Auth::user()->fname}}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Exit') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endif
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Upload photo</a>
+                        <a class="nav-link text-light" href="/english/upload">Upload photo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">Gallery</a>
