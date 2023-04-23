@@ -13,7 +13,7 @@
 <body>
 <main class="container-fluid" id="main_signup" dir="rtl">
     <div class="row align-items-center signup_en" id="signup">
-        <div class=" col-md-4 text-left mx-auto"  >
+        <div class="col-12 col-md-4 text-left mx-auto"  >
             <div class="collapse text-right" id="collapseGallery">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
@@ -123,41 +123,48 @@
 
         </div>
 
-        <div class="col-md-4 text-center mx-auto">
+        <div class="col-12 col-md-4 text-center mx-auto">
 
         </div>
 
-        <div class="col-md-4 text-left mx-auto pr-0">
-            <ul class=" nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >Register / Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Upload photo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseNews" role="button" aria-expanded="true" aria-controls="collapseNews">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseCall" role="button" aria-expanded="true" aria-controls="collapseCall">Open Calls</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapsePillars" role="button" aria-expanded="true" aria-controls="collapsePillars">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Archive</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact us</a>
-                </li>
+        <div class="col-12 col-md-4 text-left mx-auto pr-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-0 mb-3">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class=" nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >Register / Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Upload photo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapseNews" role="button" aria-expanded="true" aria-controls="collapseNews">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapseCall" role="button" aria-expanded="true" aria-controls="collapseCall">Open Calls</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapsePillars" role="button" aria-expanded="true" aria-controls="collapsePillars">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Archive</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
 
-            </ul>
+                    </ul>
+                </div>
+            </nav>
         </div>
 
 

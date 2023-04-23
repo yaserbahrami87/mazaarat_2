@@ -378,8 +378,19 @@ footer #whatsapp_footer
 
 @media only screen and (max-width:768px)
 {
+    #main_home
+    {
+        background-size:230px ;
+        min-height: 70vh;
+    }
+
+    #main_home > div > div
+    {
+        text-align: center!important;
+    }
+
     #signup{
-        background-size: 150px;
+        background-size: 230px;
         min-height: 70vh;
     }
 
@@ -402,6 +413,19 @@ footer #whatsapp_footer
     }
 
     .signup_fa #navbarSupportedContent .nav-item a
+    {
+        color: #ffffff;
+    }
+
+    .signup_en #navbarSupportedContent .nav-item
+    {
+        background-color: #8e9092;
+        border-radius:30px ;
+        margin-bottom: 2px;
+
+    }
+
+    .signup_en #navbarSupportedContent .nav-item a
     {
         color: #ffffff;
     }

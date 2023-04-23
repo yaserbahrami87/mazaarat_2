@@ -12,22 +12,22 @@
 <body>
 <main class="container-fluid" id="main_home" dir="rtl">
     <div class="row align-items-center h-100 d-flex">
-        <div class="col-md-4 text-right ml-auto d-none d-md-block d-lg-block d-xl-block">
+        <div class="col-12 col-md-4 text-right ml-auto ">
             <div class="row" dir="ltr">
                 <div class="col-7  border-left  border-bottom p-5"></div>
             </div>
             <a href="/farsi/home">نخستین جشنواره بین المللی عکس مزارات</a>
-            <div class="row" dir="ltr">
-                <div class="col-8   p-5"></div>
+            <div class="row d-none d-md-block d-lg-block d-xl-block" dir="ltr">
+                <div class="col-8  p-5 "></div>
             </div>
         </div>
-        <div class="col-md-4 col-lg-3 col-xl-3 text-center">
+        <div class="col-12 col-md-4 col-lg-3 col-xl-3 text-center">
             <!--
             <img src="/images/logo_green.png" class="img-fluid" />
             -->
         </div>
-        <div class="col-md-4 text-left mr-auto">
-            <div class="row" dir="ltr">
+        <div class="col-12 col-md-4 text-left mr-auto">
+            <div class="row d-none d-md-block d-lg-block d-xl-block" dir="ltr">
                 <div class="col-8   p-5"></div>
             </div>
             <a href="/english/home">Mazaarat International Photo Festival 2021</a>
