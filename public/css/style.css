@@ -71,7 +71,7 @@ body
 
 #signup{
     background-color: #000000;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("../images/background2.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -119,7 +119,7 @@ body
     height: 25px;
     position: absolute;
     top: 10px;
-    left: -20px;
+    left: -40px;
     transition: 1s;
     display: none;
 }
@@ -374,6 +374,38 @@ footer #whatsapp_footer
     {
         height: 150px;
     }
+}
+
+@media only screen and (max-width:768px)
+{
+    #signup{
+        background-size: 150px;
+        min-height: 70vh;
+    }
+
+    #signup > div:first-child
+    {
+        text-align: center !important;
+    }
+
+    .signup_fa li.nav-item::before
+    {
+        right: 20px;
+    }
+
+    .signup_fa #navbarSupportedContent .nav-item
+    {
+        background-color: #8e9092;
+        border-radius:30px ;
+        margin-bottom: 2px;
+
+    }
+
+    .signup_fa #navbarSupportedContent .nav-item a
+    {
+        color: #ffffff;
+    }
+
 }
 
 #news img

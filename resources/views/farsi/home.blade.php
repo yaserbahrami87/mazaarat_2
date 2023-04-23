@@ -13,45 +13,52 @@
 <body>
 <main class="container-fluid" id="main_signup" dir="rtl">
     <div class="row align-items-center signup_fa" id="signup">
-        <div class="col-md-4 text-right mx-auto pr-0">
-            <ul class=" nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">خانه</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >ثبت نام / عضویت</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ارسال عکس</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >گالری</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseNews" role="button" aria-expanded="true" aria-controls="collapseNews">اخبار</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapseCall" role="button" aria-expanded="true" aria-controls="collapseCall">فراخوان</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#collapsePillars" role="button" aria-expanded="true" aria-controls="collapsePillars">ارکان جشنواره</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">آرشیو</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">تماس با ما</a>
-                </li>
+        <div class="col-12 col-md-4 text-right mx-auto pr-0" dir="ltr">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-0 mb-3">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">خانه</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >ثبت نام / عضویت</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ارسال عکس</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >گالری</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapseNews" role="button" aria-expanded="true" aria-controls="collapseNews">اخبار</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapseCall" role="button" aria-expanded="true" aria-controls="collapseCall">فراخوان</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#collapsePillars" role="button" aria-expanded="true" aria-controls="collapsePillars">ارکان جشنواره</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">آرشیو</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">تماس با ما</a>
+                        </li>
 
-            </ul>
+                    </ul>
+                </div>
+            </nav>
         </div>
 
-        <div class="col-md-4 text-center mx-auto">
+        <div class="col-12 col-md-4 text-center mx-auto">
 
         </div>
 
-        <div class=" col-md-4 text-left mx-auto"  >
-            <div class="collapse text-left" id="collapseGallery">
+        <div class="col-12 col-md-4 text-left mx-auto"  >
+            <div class="collapse text-left mb-3" id="collapseGallery">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
                     <a href="/farsi/gallery"  class="d-inline-block text-center">
