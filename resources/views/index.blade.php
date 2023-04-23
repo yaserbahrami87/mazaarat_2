@@ -30,7 +30,7 @@
             <div class="row" dir="ltr">
                 <div class="col-8   p-5"></div>
             </div>
-            <a href="">Mazaarat International Photo Festival 2021</a>
+            <a href="/english/home">Mazaarat International Photo Festival 2021</a>
             <div class="row" dir="rtl">
                 <div class="col-8  border-right  border-top p-5"></div>
             </div>

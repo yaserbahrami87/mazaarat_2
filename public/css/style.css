@@ -77,20 +77,43 @@ body
     background-position: center;
 }
 
-#signup >div:first-child a:hover
+.signup_fa >div:first-child a:hover
 {
     margin-left: 25px;
 }
+
+.signup_en > div:last-child a:hover
+{
+    margin-right: 25px;
+}
+
 
 #signup  li.nav-item
 {
     position: relative;
 }
 
-#signup li.nav-item::before
+.signup_en li.nav-item::after
 {
     content: url("../images/after.png");
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    transition: 1s;
+    display: none;
+}
 
+.signup_en li.nav-item:hover::after
+{
+    display: block;
+}
+
+.signup_fa li.nav-item::before
+{
+    content: url("../images/after.png");
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -101,10 +124,12 @@ body
     display: none;
 }
 
-#signup li.nav-item:hover::before
+.signup_fa li.nav-item:hover::before
 {
     display: block;
 }
+
+
 
 #signup  label
 {
@@ -221,9 +246,9 @@ footer #whatsapp_footer
     font-weight: 200;
 }
 
-#collapseNews span a
+#collapseNews span a ,#collapseGallery span a,#collapseCall span a,#collapsePillars span a
 {
-    width: 230px;
+    width: 235px;
 }
 
 #collapseGallery span a,#collapseNews span a,#collapseCall span a,#collapsePillars span a
@@ -272,6 +297,32 @@ footer #whatsapp_footer
 }
 
 #main_gallery #navbarVerticalContent li:hover
+{
+
+}
+
+
+
+#main_gallery #navbarVerticalContent_en
+{
+    border-bottom:2px solid #2e3192;
+    padding-bottom: 10px;
+}
+
+#main_gallery #navbarVerticalContent_en li
+{
+    min-width: 130px;
+    text-align: center;
+    border-right: 1px solid #2e3192;
+}
+
+#main_gallery #navbarVerticalContent_en li:last-child
+{
+
+    border-right: none;
+}
+
+#main_gallery #navbarVerticalContent_en li:hover
 {
 
 }

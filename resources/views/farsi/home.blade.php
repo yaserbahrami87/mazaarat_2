@@ -12,11 +12,11 @@
 </head>
 <body>
 <main class="container-fluid" id="main_signup" dir="rtl">
-    <div class="row align-items-center" id="signup">
+    <div class="row align-items-center signup_fa" id="signup">
         <div class="col-md-4 text-right mx-auto pr-0">
             <ul class=" nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">خانه</a>
+                    <a class="nav-link" href="/">خانه</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="link_signup" >ثبت نام / عضویت</a>
@@ -52,13 +52,14 @@
 
         <div class=" col-md-4 text-left mx-auto"  >
             <div class="collapse text-left" id="collapseGallery">
+                <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
-                    <a href="/farsi/gallery"  class="d-inlineblock">
+                    <a href="/farsi/gallery"  class="d-inline-block text-center">
                         عکس های نخستین جشنواره
                     </a>
                 </span>
                 <span class="d-block">
-                    <a href="" class="d-inlineblock">
+                    <a href="" class="d-inline-block text-center">
                         تـصــویــر جشـــنــواره
                     </a >
                 </span>

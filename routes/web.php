@@ -46,3 +46,32 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/english/home',function()
+{
+    return view('english.home');
+});
+
+Route::get('/english/gallery',function()
+{
+    return view('english.gallery');
+});
+
+Route::get('/english/news',function()
+{
+    return view('english.news');
+});
+
+
+Route::get('/english/pillars_category',function()
+{
+    return view('english.pillars_category');
+});
+
+
+Route::get('/english/pillars',function()
+{
+    return view('english.pillars_single');
+});
+
