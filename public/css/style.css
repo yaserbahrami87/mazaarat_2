@@ -10,7 +10,7 @@
 
 *
 {
-    font-family: 'nianAmir';
+    font-family: 'yekan';
 }
 
 a{
@@ -379,8 +379,30 @@ footer #whatsapp_footer
 }
 
 
-#pillars .name_refree
+#pillars .name_referee
+{
+    background-color: #a7a9ac;
+    width: 60%;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+    right: 80px;
+    top: -15px;
+    z-index: 2;
+}
+
+#pillars .position_referee
 {
     background-color: #2e3192;
-    width: 50%;
+    width: 60%;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+    right: 110px;
+    top: -45px;
+}
+
+#pillars .info_referee *
+{
+    margin: 0px;
 }

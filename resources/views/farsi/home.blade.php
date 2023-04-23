@@ -147,7 +147,7 @@
             <div class="collapse text-left" id="collapsePillars">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
-                    <a href="/farsi/gallery"  class="d-inline-block text-center">
+                    <a href="/farsi/pillars"  class="d-inline-block text-center">
                          نخستین دوره جشنواره
                     </a>
                 </span>
