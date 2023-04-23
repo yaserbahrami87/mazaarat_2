@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid mb-5" id="pillars">
         <div class="row">
-            <div class="col-2 mx-auto rounded-circle mb-5" id="pillars_title" >
+            <div class="col-8 col-md-2 mx-auto rounded-circle mb-5" id="pillars_title" >
                 <img src="/images/first-festival.png" class="img-fluid" />
             </div>
 
