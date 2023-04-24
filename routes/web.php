@@ -125,6 +125,11 @@ Route::get('/english/upload',function()
 
 });
 
+Route::get('/english/call',function()
+{
+    return view('english.call');
+});
+
 
 Route::get('/english/login',function()
 {

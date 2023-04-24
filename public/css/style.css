@@ -296,6 +296,16 @@ footer #whatsapp_footer
     font-size: 0.95rem;
 }
 
+#main_gallery #navbarVerticalContent_en li a
+{
+    font-size: 0.85rem !important;
+}
+
+#main_gallery #navbarVerticalContent_en li
+{
+    min-width: 110px !important;
+}
+
 #main_gallery #navbarVerticalContent li:last-child
 {
 
