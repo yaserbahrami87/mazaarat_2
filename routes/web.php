@@ -39,6 +39,11 @@ Route::get('/farsi/pillars',function()
     return view('farsi.pillars_single');
 });
 
+Route::get('/farsi/call',function()
+{
+    return view('farsi.call');
+});
+
 Route::get('/farsi/upload',function()
 {
     if(Auth::check())

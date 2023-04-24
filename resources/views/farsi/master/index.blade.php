@@ -73,10 +73,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="#">تماس با ما</a>
                             </li>
-
-
                         </ul>
-
                     </div>
                 </nav>
 
