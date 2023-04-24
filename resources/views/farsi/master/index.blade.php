@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
 
-                <nav class="navbar navbar-expand-lg navbar-light bg-transparent mb-5">
+                <nav class="col-12 navbar navbar-expand-lg navbar-light bg-transparent mb-5">
                     <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarVerticalContent" aria-controls="navbarVerticalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -55,17 +55,43 @@
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="/farsi/upload">ارسال عکس</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">گالری</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    گالری
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/farsi/gallery">عکس های نخستین جشنواره</a>
+                                    <a class="dropdown-item" href="#">تصویر جشنواره</a>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">اخبار</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    اخبار
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">راه یافتگان نخستین جشنواره</a>
+                                    <a class="dropdown-item" href="#">اختتامیه نخستین جشنواره</a>
+                                    <a class="dropdown-item" href="#">برگزیدگان نخستین جشنواره</a>
+
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">فراخوان</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    فراخوان
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/farsi/call">نمایش متن فراخوان</a>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">ارکان جشنواره</a>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    ارکان جشنواره
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">نخستین دوره جشنواره</a>
+                                    <a class="dropdown-item" href="/farsi/pillars">دومین دوره جشنواره</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="#">آرشیو</a>

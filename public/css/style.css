@@ -420,7 +420,7 @@ footer #whatsapp_footer
         right: 20px;
     }
 
-    .signup_fa #navbarSupportedContent .nav-item
+    .signup_fa #navbarSupportedContent .nav-item,#navbarVerticalContent .nav-item
     {
         background-color: #8e9092;
         border-radius:30px ;
