@@ -1,4 +1,7 @@
 <footer class="container" dir="rtl">
+    <div class="col-12 text-center">
+        <img src="/images/footer.png" width="60px" class="position-relative" id="bolt-footer"/>
+    </div>
     <div class="row pt-4">
 
         <div class="col-md-4">
@@ -15,7 +18,6 @@
             <p>تمام حقــوق این وبـگاه متعلق به آستان قدس رضوی است</p>
         </div>
         <div class="col-md-3 align-items-center text-center">
-
             <a href="https://www.facebook.com/mazaar.photo/" target="_blank" class="d-inline-block social mr-3" id="facebook_footer"></a>
             <a href="https://t.me/Mazaarat_2023" target="_blank" class="d-inline-block social mr-3" id="telegram_footer"></a>
             <a href="" class="d-inline-block social mr-3" id="insta_footer"></a>

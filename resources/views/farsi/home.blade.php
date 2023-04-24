@@ -71,13 +71,15 @@
             @endif
             <div class="collapse text-left mb-3" id="collapseGallery">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <!--
                 <span class="d-block mb-3">
                     <a href="/farsi/gallery"  class="d-inline-block text-center">
                         عکس های نخستین جشنواره
                     </a>
                 </span>
+                -->
                 <span class="d-block">
-                    <a href="" class="d-inline-block text-center">
+                    <a href="/farsi/gallery" class="d-inline-block text-center">
                         تـصــویــر جشـــنــواره
                     </a >
                 </span>
@@ -145,6 +147,7 @@
 
             <div class="collapse text-left" id="collapseNews">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <!--
                 <span class="d-block mb-3">
                     <a href="/farsi/news"  class="d-inline-block text-center">
                         راه یافتگان نخستین جشنواره
@@ -160,6 +163,7 @@
                         برگزیدگان نخستین جشنواره
                     </a >
                 </span>
+                -->
             </div>
 
             <div class="collapse text-left" id="collapseCall">
@@ -173,11 +177,13 @@
 
             <div class="collapse text-left" id="collapsePillars">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <!--
                 <span class="d-block mb-3">
                     <a href=""  class="d-inline-block text-center">
                          نخستین دوره جشنواره
                     </a>
                 </span>
+                -->
                 <span class="d-block mb-3">
                     <a href="/farsi/pillars" class="d-inline-block  text-center">
                          دومین دوره جشنواره

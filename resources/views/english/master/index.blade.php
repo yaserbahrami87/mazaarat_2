@@ -59,7 +59,9 @@
                                 Gallery
                             </a>
                             <div class="dropdown-menu">
+                                <!--
                                 <a class="dropdown-item" href="/english/gallery">First edition gallery</a>
+                                -->
                                 <a class="dropdown-item" href="#">Image Festival</a>
                             </div>
                         </li>
@@ -67,11 +69,13 @@
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                 News
                             </a>
+                            <!--
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="/english/news">First edition finalists</a>
                                 <a class="dropdown-item" href="#">Closing of the first edition</a>
                                 <a class="dropdown-item" href="#">First edition winners</a>
                             </div>
+                            -->
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -86,7 +90,9 @@
                                 Team
                             </a>
                             <div class="dropdown-menu">
+                                <!--
                                 <a class="dropdown-item" href="">First edition</a>
+                                -->
                                 <a class="dropdown-item" href="/english/pillars">Festival 2nd edition</a>
                             </div>
                         </li>

@@ -156,6 +156,12 @@ footer
     font-size: 14px;
 }
 
+footer #bolt-footer
+{
+    top: -22px;
+}
+
+
 footer *
 {
     font-family: 'yekan';
@@ -212,11 +218,12 @@ footer .social
     background-image: url("../images/social.png");
     width: 35px;
     height: 35px;
+    transition: 1s;
 }
 
 footer .social:hover
 {
-
+    background-image: url("../images/social-hover.png");
 }
 
 
@@ -291,6 +298,21 @@ footer #whatsapp_footer
     border-left: 1px solid #2e3192;
 }
 
+
+#main_gallery #navbarVerticalContent li:hover:after
+{
+    /*content: url("../images/after.png");*/
+    position: absolute;
+    top: 43px;
+}
+
+#main_gallery #navbarVerticalContent li.dropdown:hover:after
+{
+    top: 37px !important;
+
+}
+
+
 #main_gallery #navbarVerticalContent li a
 {
     font-size: 0.95rem;
@@ -344,10 +366,17 @@ footer #whatsapp_footer
 }
 
 
-#main_gallery #gallery img
+#main_gallery #gallery a
 {
+    display: inline-block;
     width: 200px;
     height: 200px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+#main_gallery #gallery img
+{
     border-radius: 25px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -515,6 +544,19 @@ footer #whatsapp_footer
     z-index: 2;
 }
 
+#pillars .name_referee_en
+{
+    background-color: #a7a9ac;
+    width: 60%;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+    right: -80px;
+    top: -15px;
+    z-index: 2;
+}
+
+
 #pillars .position_referee
 {
     background-color: #2e3192;
@@ -526,12 +568,28 @@ footer #whatsapp_footer
     top: -45px;
 }
 
+#pillars .position_referee_en
+{
+    background-color: #2e3192;
+    width: 60%;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+    right: -110px;
+    top: -45px;
+}
+
 #pillars .info_referee *
 {
     margin: 0px;
 }
 
 #call_fa
+{
+    background-color: #8f9092;
+}
+
+.bg_silver
 {
     background-color: #8f9092;
 }

@@ -21,11 +21,13 @@
             @endif
             <div class="collapse text-right" id="collapseGallery">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <!--
                 <span class="d-block mb-3">
                     <a href="/english/gallery"  class="d-inline-block text-center">
                         First edition gallery
                     </a>
                 </span>
+                -->
                 <span class="d-block">
                     <a href="" class="d-inline-block text-center">
                         Image Festival
@@ -94,6 +96,7 @@
 
             <div class="collapse text-right" id="collapseNews">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <!--
                 <span class="d-block mb-3">
                     <a href="/english/news"  class="d-inline-block text-center">
                         First edition finalists
@@ -109,6 +112,7 @@
                         First edition winners
                     </a >
                 </span>
+                -->
             </div>
 
             <div class="collapse text-right" id="collapseCall">
@@ -122,11 +126,13 @@
 
             <div class="collapse text-right" id="collapsePillars">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <!--
                 <span class="d-block mb-3">
                     <a href=""  class="d-inline-block text-center">
                          First edition
                     </a>
                 </span>
+                -->
                 <span class="d-block mb-3">
                     <a href="/english/pillars" class="d-inline-block  text-center">
                         Festival 2nd edition

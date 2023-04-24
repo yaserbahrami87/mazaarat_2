@@ -60,8 +60,10 @@
                                     گالری
                                 </a>
                                 <div class="dropdown-menu">
+                                    <!--
                                     <a class="dropdown-item" href="/farsi/gallery">عکس های نخستین جشنواره</a>
-                                    <a class="dropdown-item" href="#">تصویر جشنواره</a>
+                                    -->
+                                    <a class="dropdown-item" href="/farsi/gallery">تصویر جشنواره</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -69,9 +71,11 @@
                                     اخبار
                                 </a>
                                 <div class="dropdown-menu">
+                                    <!--
                                     <a class="dropdown-item" href="/farsi/news">راه یافتگان نخستین جشنواره</a>
                                     <a class="dropdown-item" href="#">اختتامیه نخستین جشنواره</a>
                                     <a class="dropdown-item" href="#">برگزیدگان نخستین جشنواره</a>
+                                    -->
 
                                 </div>
                             </li>
@@ -89,7 +93,9 @@
                                     ارکان جشنواره
                                 </a>
                                 <div class="dropdown-menu">
+                                    <!--
                                     <a class="dropdown-item" href="#">نخستین دوره جشنواره</a>
+                                    -->
                                     <a class="dropdown-item" href="/farsi/pillars">دومین دوره جشنواره</a>
                                 </div>
                             </li>
