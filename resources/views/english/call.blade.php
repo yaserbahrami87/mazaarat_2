@@ -3,8 +3,8 @@
 @section('content')
     <div class="container mb-5" dir="ltr">
         <div class="col-12 text-light text-justify rounded-lg p-3 " id="call_fa">
-            <h3 class="font-weight-bold text-center">فراخوان جشنواره بین‌المللی عکس مزارات</h3>
-            <h3 class="font-weight-bold text-center border-bottom">1402</h3>
+            <h3 class="font-weight-bold text-center">Mazaarat Inermational Photo Festival Open Call</h3>
+            <h3 class="font-weight-bold text-center border-bottom">2023</h3>
             <p>Visiting the sacred burial grounds of the pillars of society, great members of community and society's prominent religious figures, alongside paying homage and honoring their memory to receive spiritual blessing has always had a significant place in all religious cultures across the world, and in Islam specifically. It is indeed a presence which provides the basis for connecting to God's all-embracing mercy, as well as purifying one's soul and psyche. </p>
             <p>As of now, the most magnificent architectural works of the Islamic world are those that belong to the mausoleas and burials of Islam's eminent religious figures, a fact which in turn, manifests the chief notion of making pilgrimage to such locations. </p>
             <p>Given the crucial role the Islamic figures' mausoleas play in expanding the intercultural connections and carrying out the cultural development of the Islamic world, saving the spiritual heritage and Islamic holy pilgrimage sites, Astan Guds Razavi's Art Institution of Afarineshha has decided to hold the second Mazaarat International Photo Festival. </p>
@@ -81,12 +81,6 @@
             <p>3rd prize-winner is awarded the Festival statuette in addition to an appreciation letter + 750€</p>
             <p class="font-weight-bold">Festival Director's Special Prize</p>
             <p>Selected by the director of the festival, one contestant will win the Festival statuette in addition to an appreciation letter + 1000€</p>
-
-
-
-
-
-
         </div>
     </div>
 @endsection
