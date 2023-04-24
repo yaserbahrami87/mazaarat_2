@@ -80,6 +80,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('ثبت نام') }}
                                 </button>
+                                <a class="btn btn-link" href="/farsi/login">
+                                    {{ __('ورود') }}
+                                </a>
                             </div>
                         </div>
                     </form>

@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <nav class="col-12 navbar navbar-expand-lg navbar-light bg-transparent mb-5" dir="ltr">
-                <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarVerticalContent" aria-controls="navbarVerticalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarVerticalContent_en" aria-controls="navbarVerticalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarVerticalContent_en">

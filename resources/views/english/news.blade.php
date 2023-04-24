@@ -1,4 +1,4 @@
-@extends('farsi.master.index')
+@extends('english.master.index')
 @section('headerScript')
     <link href="/slick/slick.css" rel="stylesheet" />
     <link href="/slick/slick-theme.css" rel="stylesheet" />
@@ -13,7 +13,7 @@
             <div class="card border-0 bg-transparent p-3 text-light">
                 <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
                 <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره</a>
+                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره1</a>
 
                     <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
 
@@ -22,7 +22,7 @@
             <div class="card border-0 bg-transparent p-3 text-light">
                 <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
                 <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره</a>
+                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره2</a>
 
                     <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
 
@@ -31,7 +31,7 @@
             <div class="card border-0 bg-transparent p-3 text-light">
                 <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
                 <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره</a>
+                    <a href="#" class="btn w-100 mb-3 text-light">3راه یافتگان نخستین جشنواره</a>
 
                     <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
 
@@ -86,7 +86,6 @@
             infinite: true,
             slidesToShow: 5,
             slidesToScroll: 5,
-            rtl:true,
             speed:1000,
             autoplay:true,
             arrows:true,

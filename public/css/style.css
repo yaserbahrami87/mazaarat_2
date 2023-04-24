@@ -420,7 +420,7 @@ footer #whatsapp_footer
         right: 20px;
     }
 
-    .signup_fa #navbarSupportedContent .nav-item,#navbarVerticalContent .nav-item
+    .signup_fa #navbarSupportedContent .nav-item,#navbarVerticalContent .nav-item,#navbarVerticalContent_en .nav-item
     {
         background-color: #8e9092;
         border-radius:30px ;
@@ -488,7 +488,7 @@ footer #whatsapp_footer
 
 #news .slick-prev
 {
-    transform: rotate(180deg);
+    /*transform: rotate(180deg);*/
     background: url("../images/arrows-next.png");
     background-size: 100%;
     background-repeat: no-repeat;

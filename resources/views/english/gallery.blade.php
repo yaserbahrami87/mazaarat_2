@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row align-items-center mt-3 mb-3 gallery" id="gallery">
+        <div class="row align-items-center mt-3 mb-3 gallery" id="gallery" >
             <div class="col-6 col-md-3 mb-4 box_image">
                 <a href="/images/gallery/2.jpg" rel="rel1"  >
                     <img src="/images/gallery/1.jpg" class="img-fluid"  />

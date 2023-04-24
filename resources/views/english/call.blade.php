@@ -1,4 +1,4 @@
-@extends('farsi.master.index')
+@extends('english.master.index')
 
 @section('content')
     <div class="container mb-5" dir="ltr">
