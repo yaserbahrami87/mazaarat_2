@@ -123,12 +123,12 @@
             <div class="collapse text-right" id="collapsePillars">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
-                    <a href="/english/pillars"  class="d-inline-block text-center">
+                    <a href=""  class="d-inline-block text-center">
                          First edition
                     </a>
                 </span>
                 <span class="d-block mb-3">
-                    <a href="" class="d-inline-block  text-center">
+                    <a href="/english/pillars" class="d-inline-block  text-center">
                         Festival 2nd edition
                     </a >
                 </span>

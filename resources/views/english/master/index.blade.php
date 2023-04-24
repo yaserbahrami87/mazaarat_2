@@ -54,18 +54,43 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="/english/upload">Upload photo</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Gallery</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Gallery
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/english/gallery">First edition gallery</a>
+                                <a class="dropdown-item" href="#">Image Festival</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">News</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                News
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/english/news">First edition finalists</a>
+                                <a class="dropdown-item" href="#">Closing of the first edition</a>
+                                <a class="dropdown-item" href="#">First edition winners</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Open Calls</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Open Calls
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/english/call">Exhibit</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Team</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Team
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="">First edition</a>
+                                <a class="dropdown-item" href="/english/pillars">Festival 2nd edition</a>
+                            </div>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#">Archive</a>
                         </li>

@@ -69,7 +69,7 @@
                                     اخبار
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">راه یافتگان نخستین جشنواره</a>
+                                    <a class="dropdown-item" href="/farsi/news">راه یافتگان نخستین جشنواره</a>
                                     <a class="dropdown-item" href="#">اختتامیه نخستین جشنواره</a>
                                     <a class="dropdown-item" href="#">برگزیدگان نخستین جشنواره</a>
 
