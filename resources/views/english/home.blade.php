@@ -29,7 +29,7 @@
                 </span>
                 -->
                 <span class="d-block">
-                    <a href="" class="d-inline-block text-center">
+                    <a href="/english/gallery" class="d-inline-block text-center">
                         Image Festival
                     </a>
                 </span>
