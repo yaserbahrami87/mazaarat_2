@@ -206,16 +206,17 @@ footer > div.row > div:last-child
     border: none;
 }
 
-footer >div.row >div:hover
-{
-    background-color: #2b2c2d;
-}
 
 footer .social
 {
     background-image: url("../images/social.png");
     width: 35px;
     height: 35px;
+}
+
+footer .social:hover
+{
+
 }
 
 
@@ -285,9 +286,14 @@ footer #whatsapp_footer
 
 #main_gallery #navbarVerticalContent li
 {
-    min-width: 115px;
+    min-width: 110px;
     text-align: center;
     border-left: 1px solid #2e3192;
+}
+
+#main_gallery #navbarVerticalContent li a
+{
+    font-size: 0.95rem;
 }
 
 #main_gallery #navbarVerticalContent li:last-child

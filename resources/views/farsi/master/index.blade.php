@@ -20,7 +20,7 @@
 <main class="container-fluid" id="main_gallery" dir="rtl">
     <div class="container">
         <div class="row">
-            <div class="col-12 mx-auto text-center">
+
                 <nav class="navbar navbar-expand-lg navbar-light bg-transparent mb-5">
                     <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarVerticalContent" aria-controls="navbarVerticalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -79,7 +79,7 @@
 
                     </div>
                 </nav>
-            </div>
+
         </div>
     </div>
 
