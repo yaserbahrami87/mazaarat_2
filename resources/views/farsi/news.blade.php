@@ -1,7 +1,7 @@
 @extends('farsi.master.index')
 @section('headerScript')
-    <link href="/slick/slick.scss" rel="stylesheet" />
-    <link href="/slick/slick-theme.scss" rel="stylesheet" />
+    <link href="/slick/slick.css" rel="stylesheet" />
+    <link href="/slick/slick-theme.css" rel="stylesheet" />
 @endsection
 @section('content')
     <div class="col-12 text-center mb-3">
