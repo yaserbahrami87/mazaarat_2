@@ -52,18 +52,21 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3 position-relative p-3 text-justify">
-                    <img src="/images/mahdi-moghimnejad-small.jpg" class="img-fluid"/>
-                    <p class="name_referee_en position-relative">Mehdi Moghimnejad</p>
+                    <img src="/images/reha-bilir.jpg" class="img-fluid"/>
+                    <p class="name_referee_en position-relative"> Reha BİLİR </p>
                     <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
-                    <div class="info_referee position-relative text-light text-justify" dir="ltr">
-                        <p>Born 1976, Babol, Iran</p>
-                        <p class="m-0">Lives and works in Tehran, Iran</p>
-                        <p class="m-0">BA of Visual Communication (1999), MA of Photography (2001) and PhD of Art Studies (2010), Tehran University of Art (TUA) </p>
-                        <p class="m-0">Visual Arts Faculty member as Assistant Professor since 2010, Tehran University of Art (TUA) </p>
-                        <p class="m-0">Held 4 solo and more than 50 group photography and conceptual art exhibition in and out of Iran since 1996</p>
-                        <p class="m-0">Author and translator of 7 books and more than 100 article about poem, art and photography since 2002</p>
-                        <p class="m-0">Held more than 60 workshops, artist talks, lectures and discussion panels since 2003</p>
-                        <p class="m-0">Member of Policymaking and Judgment Committee in more than 50 National and International festivals about photography, painting and contemporary art since 2004</p>
+                    <div class="info_referee position-relative text-light" dir="ltr">
+                        <p>Born in Beysehir / Turkey</p>
+                        <p class="m-0">Reha Bilir graduated from istanbul University's Faculty of Pharmacy and although he is known to be a photographer by profession, he actually works as a free pharmacist.</p>
+                        <p class="m-0"> He participated in various national and international competitions as a photographer. He received two of Turkey’s most prestigious photography awards, namely the Şinasi Barutcu Cup in 2008 and the Sami Güner Cup in 2009. Various works of Reha Bilir, which reflect his journey through photography in his own style, have been included in many exhibitions in different countries. Having many of his photography albums exhibited in famous international photography museums, Reha Bilir has also exhibited his photographs and slide shows in various cities in our country.</p>
+                        <p class="m-0"> Not only does Reha Bilir engage in taking photographs but he has also shared his photographs with enthusiasts of photography in different cities in order to act as a guide for those who have just taken up photography, and also who have participated in interviews on the philosophy of photography. His interviews have been published in national and international photography magazines.</p>
+                        <p class="m-0">In a publication made by Pamukbank entitled “Photography in Turkey”, he was referred to as being among the first Turkish Photographers who made changes on photographs in computer environment by virtue of his exhibition “Digital Snapshots”.</p>
+                        <p class="m-0">He has been jury member in more then 90 international photo contests and more then 300 national contests including FIAP World Cup in 2012.</p>
+                        <p class="m-0">He is the founder of Sille Sanat Sarayı photography organization and president of International Art Photography Association (UFSD)</p>
+                        <p class="m-0"> He is the honorary fellowship of clubs and federations in more then 20 countries.</p>
+                        <p class="m-0">  He was the DB member of GPU in 2012 – 2016.  </p>
+                        <p class="m-0"> He is the director of FIAP Exhibition Center in Sille - Konya / Turkey.</p>
+
                     </div>
                 </div>
                 <div class="col-12 col-md-3 position-relative p-3 text-justify">
@@ -85,24 +88,6 @@
                 </div>
 
                 <div class="col-12 col-md-3 position-relative p-3 text-justify">
-                    <img src="/images/reha-bilir.jpg" class="img-fluid"/>
-                    <p class="name_referee_en position-relative"> Reha BİLİR </p>
-                    <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
-                    <div class="info_referee position-relative text-light" dir="ltr">
-                        <p>Born in Beysehir / Turkey</p>
-                        <p class="m-0">Reha Bilir graduated from istanbul University's Faculty of Pharmacy and although he is known to be a photographer by profession, he actually works as a free pharmacist.</p>
-                        <p class="m-0"> He participated in various national and international competitions as a photographer. He received two of Turkey’s most prestigious photography awards, namely the Şinasi Barutcu Cup in 2008 and the Sami Güner Cup in 2009. Various works of Reha Bilir, which reflect his journey through photography in his own style, have been included in many exhibitions in different countries. Having many of his photography albums exhibited in famous international photography museums, Reha Bilir has also exhibited his photographs and slide shows in various cities in our country.</p>
-                        <p class="m-0"> Not only does Reha Bilir engage in taking photographs but he has also shared his photographs with enthusiasts of photography in different cities in order to act as a guide for those who have just taken up photography, and also who have participated in interviews on the philosophy of photography. His interviews have been published in national and international photography magazines.</p>
-                        <p class="m-0">In a publication made by Pamukbank entitled “Photography in Turkey”, he was referred to as being among the first Turkish Photographers who made changes on photographs in computer environment by virtue of his exhibition “Digital Snapshots”.</p>
-                        <p class="m-0">He has been jury member in more then 90 international photo contests and more then 300 national contests including FIAP World Cup in 2012.</p>
-                        <p class="m-0">He is the founder of Sille Sanat Sarayı photography organization and president of International Art Photography Association (UFSD)</p>
-                        <p class="m-0"> He is the honorary fellowship of clubs and federations in more then 20 countries.</p>
-                        <p class="m-0">  He was the DB member of GPU in 2012 – 2016.  </p>
-                        <p class="m-0"> He is the director of FIAP Exhibition Center in Sille - Konya / Turkey.</p>
-
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
                     <img src="/images/abbas-mirhashemi.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Seyed Abbas Mirhashemi</p>
                     <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
@@ -120,6 +105,25 @@
                         <p class="m-0">Art Advisor of Tehran Visual Arts Center and Museum of Contemporary Arts.</p>
                     </div>
                 </div>
+                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                    <img src="/images/mahdi-moghimnejad-small.jpg" class="img-fluid"/>
+                    <p class="name_referee_en position-relative">Mehdi Moghimnejad</p>
+                    <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
+                    <div class="info_referee position-relative text-light text-justify" dir="ltr">
+                        <p>Born 1976, Babol, Iran</p>
+                        <p class="m-0">Lives and works in Tehran, Iran</p>
+                        <p class="m-0">BA of Visual Communication (1999), MA of Photography (2001) and PhD of Art Studies (2010), Tehran University of Art (TUA) </p>
+                        <p class="m-0">Visual Arts Faculty member as Assistant Professor since 2010, Tehran University of Art (TUA) </p>
+                        <p class="m-0">Held 4 solo and more than 50 group photography and conceptual art exhibition in and out of Iran since 1996</p>
+                        <p class="m-0">Author and translator of 7 books and more than 100 article about poem, art and photography since 2002</p>
+                        <p class="m-0">Held more than 60 workshops, artist talks, lectures and discussion panels since 2003</p>
+                        <p class="m-0">Member of Policymaking and Judgment Committee in more than 50 National and International festivals about photography, painting and contemporary art since 2004</p>
+                    </div>
+                </div>
+
+
+
+
                 <div class="col-12 col-md-3 position-relative p-3 text-justify">
                     <img src="/images/ebrahim-bahrami.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Ebrahim Bahrami </p>
