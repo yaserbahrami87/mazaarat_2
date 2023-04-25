@@ -1,11 +1,15 @@
 @font-face {
     font-family: 'nianAmir';
-    src: url("../fonts/W_ferdosi.ttf");
+    /*src: url("../fonts/W_ferdosi.ttf");*/
+    src: url("../fonts/AnjomanMaxFN-Regular.ttf");
 }
 
 @font-face {
     font-family: 'yekan';
-    src: url("../fonts/W_yekan.ttf");
+    /*src: url("../fonts/W_yekan.ttf");*/
+    src: url("../fonts/AnjomanMaxFN-Regular.ttf"),
+         url("../fonts/AnjomanMaxFN-Regular.woff"),
+         url("../fonts/AnjomanMaxFN-Regular.woff2");
 }
 
 *
@@ -207,17 +211,17 @@ footer > div.row > div:nth-child(3)
     justify-content: space-between;
 }
 
-footer > div.row > div:last-child
+footer > div.row > div:first-child
 {
-    border: none;
+    border-right:2px solid #2e3192;
 }
 
 
 footer .social
 {
     background-image: url("../images/social.png");
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     transition: 1s;
 }
 
@@ -229,22 +233,22 @@ footer .social:hover
 
 footer #facebook_footer
 {
-    background-position: 35px -1px;
+    background-position: 29px 0px;
 }
 
 footer #telegram_footer
 {
-    background-position: 73px -1px;
+    background-position: 59px 0px;
 }
 
 footer #insta_footer
 {
-    background-position: 110px -1px;
+    background-position: 89px 0px;
 }
 
 footer #whatsapp_footer
 {
-    background-position: 147px -1px;
+    background-position: 118px 0px;
 }
 
 
@@ -315,12 +319,12 @@ footer #whatsapp_footer
 
 #main_gallery #navbarVerticalContent li a
 {
-    font-size: 0.95rem;
+    font-size: 0.84rem;
 }
 
 #main_gallery #navbarVerticalContent_en li a
 {
-    font-size: 0.85rem !important;
+    font-size: 0.80rem !important;
 }
 
 #main_gallery #navbarVerticalContent_en li
