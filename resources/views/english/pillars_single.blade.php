@@ -9,7 +9,7 @@
         </div>
         <div class="container">
             <div class="row" dir="ltr" >
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/hakimi.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Amir mahdi Hakimi</p>
                     <p class="position_referee_en position-relative pt-3">دبیر جشنواره</p>
@@ -28,7 +28,7 @@
                         <p class="m-0">Attendance to the Alter Do Chao International Film Festival in Brazil.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/ebrahimi.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Amin Ebrahimi</p>
                     <p class="position_referee_en position-relative pt-3">دبیر اجرایی جشنواره</p>
@@ -51,7 +51,7 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/reha-bilir.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative"> Reha BİLİR </p>
                     <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
@@ -69,7 +69,7 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/mohammad-sattari.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Mohammad Sattari</p>
                     <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/abbas-mirhashemi.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Seyed Abbas Mirhashemi</p>
                     <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
@@ -105,7 +105,7 @@
                         <p class="m-0">Art Advisor of Tehran Visual Arts Center and Museum of Contemporary Arts.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/mahdi-moghimnejad-small.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Mehdi Moghimnejad</p>
                     <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
@@ -124,7 +124,7 @@
 
 
 
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/ebrahim-bahrami.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Ebrahim Bahrami </p>
                     <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
