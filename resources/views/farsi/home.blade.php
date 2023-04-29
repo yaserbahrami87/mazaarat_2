@@ -93,56 +93,64 @@
             </div>
 
             <form class="collapse" id="collapseLogin" method="POST" action="{{ route('login') }}">
-                {{csrf_field()}}
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >ایمیل</span>
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        {{csrf_field()}}
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >ایمیل</span>
+                            </div>
+                            <input type="text" class="form-control" name="email" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >رمز عبور</span>
+                            </div>
+                            <input type="password" class="form-control" name="password" />
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="ورود" />
                     </div>
-                    <input type="text" class="form-control" name="email" />
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >رمز عبور</span>
-                    </div>
-                    <input type="password" class="form-control" name="password" />
-                </div>
-                <input class="btn btn-primary" type="submit" value="ورود" />
             </form>
 
             <form class="collapse" id="collapseSignup" method="POST" action="{{ route('register') }}">
-                {{csrf_field()}}
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text bg-primary" >نام</span>
-                    </div>
-                    <input type="text" class="form-control" name="fname" />
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >نام خانوادگی</span>
-                    </div>
-                    <input type="text" class="form-control" name="lname" />
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >ایمیل</span>
-                    </div>
-                    <input type="text" class="form-control" name="email" />
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >رمز عبور</span>
-                    </div>
-                    <input type="password" class="form-control" name="password" />
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >تکرار رمز عبور</span>
-                    </div>
-                    <input type="password" class="form-control" name="password_confirmation" />
-                </div>
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        {{csrf_field()}}
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-primary" >نام</span>
+                            </div>
+                            <input type="text" class="form-control" name="fname" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >نام خانوادگی</span>
+                            </div>
+                            <input type="text" class="form-control" name="lname" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >ایمیل</span>
+                            </div>
+                            <input type="text" class="form-control" name="email" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >رمز عبور</span>
+                            </div>
+                            <input type="password" class="form-control" name="password" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >تکرار رمز عبور</span>
+                            </div>
+                            <input type="password" class="form-control" name="password_confirmation" />
+                        </div>
 
-                <input class="btn btn-primary" type="submit" value="ثبت نام" />
+                        <input class="btn btn-primary" type="submit" value="ثبت نام" />
+                    </div>
+                </div>
             </form>
 
             <div class="collapse text-left" id="collapseNews">

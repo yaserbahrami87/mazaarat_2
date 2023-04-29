@@ -32,7 +32,7 @@
                             </li>
                             @guest
                                 <li class="nav-item active">
-                                    <a class="nav-link text-light" href="/farsi/login">ثبت نام / عضویت <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link text-light" href="/farsi/login">عضویت <span class="sr-only">(current)</span></a>
                                 </li>
                             @else
                                 <li class="nav-item dropdown">

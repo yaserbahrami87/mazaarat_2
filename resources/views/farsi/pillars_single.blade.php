@@ -5,11 +5,10 @@
             <div class="col-8 col-md-2 mx-auto rounded-circle mb-5" id="pillars_title" >
                 <img src="/images/first-festival.png" class="img-fluid" />
             </div>
-
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-3 position-relative p-3">
+                <div class="col-12 col-md-6 position-relative p-3">
                     <img src="/images/hakimi.jpg" class="img-fluid"/>
                     <p class="name_referee position-relative">امیر مهدی حکیمی</p>
                     <p class="position_referee position-relative pt-3">دبیر جشنواره</p>
@@ -20,7 +19,7 @@
                         <p class="m-0">برگزیده نخستین سوگواره عکس لحظه های عاشورایی، برگزیده جشنواره ملی عکس آیات، برگزیده دومین جشنواره ملی عکس مشهد، رتبه دوم بخش عکس جشنواره ملی هنر آسمانی، برگزیده و کسب رتبه برتر نخستین جشنواره ملی عکس منابع طبیعی ایران، دریافت لوح تقدیر بهترین نویسندگی گفتار متن از سیزدهمین جشنواره بین المللی فیلم مستند ایران سینما حقیقت، حضور در جشنواره بین المللی فیلم Alter Do Chao در برزیل</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6  position-relative p-3 text-justify">
                     <img src="/images/ebrahimi.jpg" class="img-fluid"/>
                     <p class="name_referee position-relative">امین ابراهیمی</p>
                     <p class="position_referee position-relative pt-3">دبیر اجرایی جشنواره</p>
@@ -44,7 +43,7 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/reha-bilir.jpg" class="img-fluid"/>
                     <p class="name_referee position-relative">رها بیلر</p>
                     <p class="position_referee position-relative pt-3">داور جشنواره</p>
@@ -56,7 +55,7 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/mohammad-sattari.jpg" class="img-fluid"/>
                     <p class="name_referee position-relative">محمد ستاری</p>
                     <p class="position_referee position-relative pt-3">داور جشنواره</p>
@@ -73,7 +72,7 @@
                         <p class="m-0">نویسندهُ مقاله در کتاب (لنز بومی) از انتشارات دانشگاه‌های زوریخ و وین، 2018</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 position-relative p-3 text-justify">
+                <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/abbas-mirhashemi.jpg" class="img-fluid"/>
                     <p class="name_referee position-relative">سید عباس میرهاشمی</p>
                     <p class="position_referee position-relative pt-3">داور جشنواره</p>
@@ -92,7 +91,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-3 position-relative p-3">
+                <div class="col-12 col-md-6 position-relative p-3">
                     <img src="/images/mahdi-moghimnejad-small.jpg" class="img-fluid"/>
                     <p class="name_referee position-relative">مهدی مقیم نژاد</p>
                     <p class="position_referee position-relative pt-3">داور جشنواره</p>

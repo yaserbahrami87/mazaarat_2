@@ -73,6 +73,13 @@ body
 }
 
 
+#signup input[type='text'],#signup input[type='password']
+{
+    background-color: #8e9092;
+    border-color: #8e9092;
+    color: #FFFFFF;
+}
+
 #signup{
     background-color: #000000;
     min-height: 100vh;
@@ -477,6 +484,15 @@ footer #whatsapp_footer
     .signup_en #navbarSupportedContent .nav-item a
     {
         color: #ffffff;
+    }
+
+}
+
+@media only screen and (min-width: 2000px)
+{
+    #main_home,#signup
+    {
+         background-size: 800px;
     }
 
 }

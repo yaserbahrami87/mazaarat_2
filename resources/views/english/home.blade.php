@@ -44,55 +44,64 @@
             </div>
 
             <form class="collapse" id="collapseLogin" method="POST" action="{{ route('login') }}">
-                {{csrf_field()}}
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="email" />
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >Email</span>
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        {{csrf_field()}}
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="email" />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >Email</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" name="password" />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >Password</span>
+                            </div>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Login" />
                     </div>
                 </div>
-                <div class="input-group mb-3">
-                    <input type="password" class="form-control" name="password" />
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >Password</span>
-                    </div>
-                </div>
-                <input class="btn btn-primary" type="submit" value="Login" />
+
             </form>
 
             <form class="collapse" id="collapseSignup" method="POST" action="{{ route('register') }}">
-                {{csrf_field()}}
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="fname" />
-                    <div class="input-group-prepend">
-                        <span class="input-group-text bg-primary" >Fname</span>
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        {{csrf_field()}}
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="fname" />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-primary" >Fname</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="lname" />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >Lname</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="email" />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >Email</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" name="password" />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >Password</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" name="password_confirmation" />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >Confirm Password</span>
+                            </div>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Register" />
                     </div>
                 </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="lname" />
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >Lname</span>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="email" />
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >Email</span>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="password" class="form-control" name="password" />
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >Password</span>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="password" class="form-control" name="password_confirmation" />
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >Confirm Password</span>
-                    </div>
-                </div>
-                <input class="btn btn-primary" type="submit" value="ثبت نام" />
             </form>
 
             <div class="collapse text-right" id="collapseNews">

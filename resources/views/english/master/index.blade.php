@@ -31,7 +31,7 @@
                         </li>
                         @guest
                         <li class="nav-item active">
-                            <a class="nav-link text-light" href="#">Register / Login <span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-light" href="#">Register <span class="sr-only">(current)</span></a>
                         </li>
                         @else
                             <li class="nav-item dropdown">
