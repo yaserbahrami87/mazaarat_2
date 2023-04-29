@@ -3,7 +3,7 @@
     <div class="container-fluid mb-5" id="pillars">
         <div class="row">
             <div class="col-8 col-md-2 mx-auto rounded-circle mb-5" id="pillars_title" >
-                <img src="/images/first-festival.png" class="img-fluid" />
+                <!-- <img src="/images/first-festival.png" class="img-fluid" /> -->
             </div>
 
         </div>
@@ -12,7 +12,7 @@
                 <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/hakimi.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Amir mahdi Hakimi</p>
-                    <p class="position_referee_en position-relative pt-3">دبیر جشنواره</p>
+                    <p class="position_referee_en position-relative pt-3">Festival Secretary</p>
                     <div class="info_referee position-relative text-light text-justify" >
                         <p>Born in 1975</p>
                         <p class="m-0">Writer, photographer, documentary filmmaker</p>
@@ -31,7 +31,7 @@
                 <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/ebrahimi.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Amin Ebrahimi</p>
-                    <p class="position_referee_en position-relative pt-3">دبیر اجرایی جشنواره</p>
+                    <p class="position_referee_en position-relative pt-3">Executive Secretary</p>
                     <div class="info_referee position-relative text-light" dir="ltr">
                         <p>Born in 1982/ Mashhad </p>
                         <p class="m-0">Member of the Policy Council of the Photo Center of the Iranian Youth Cinema Society, 2005_2012 </p>
@@ -54,7 +54,7 @@
                 <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/reha-bilir.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative"> Reha BİLİR </p>
-                    <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
+                    <p class="position_referee_en position-relative pt-3">Jury Member</p>
                     <div class="info_referee position-relative text-light" dir="ltr">
                         <p>Born in Beysehir / Turkey</p>
                         <p class="m-0">Reha Bilir graduated from istanbul University's Faculty of Pharmacy and although he is known to be a photographer by profession, he actually works as a free pharmacist.</p>
@@ -72,7 +72,7 @@
                 <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/mohammad-sattari.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Mohammad Sattari</p>
-                    <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
+                    <p class="position_referee_en position-relative pt-3">Jury Member</p>
                     <div class="info_referee position-relative text-light" dir="ltr">
                         <p>Born in 1960/ Mashhad/ Iran</p>
                         <p> Photography PhD</p>
@@ -90,7 +90,7 @@
                 <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/abbas-mirhashemi.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Seyed Abbas Mirhashemi</p>
-                    <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
+                    <p class="position_referee_en position-relative pt-3">Jury Member</p>
                     <div class="info_referee position-relative text-light" dir="ltr">
                         <p>Born in 1961/ Saveh/ Iran </p>
                         <p class="m-0">Bachelor of Photography from Tehran University of Arts</p>
@@ -108,7 +108,7 @@
                 <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/mahdi-moghimnejad-small.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Mehdi Moghimnejad</p>
-                    <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
+                    <p class="position_referee_en position-relative pt-3">Jury Member</p>
                     <div class="info_referee position-relative text-light text-justify" dir="ltr">
                         <p>Born 1976, Babol, Iran</p>
                         <p class="m-0">Lives and works in Tehran, Iran</p>
@@ -127,7 +127,7 @@
                 <div class="col-12 col-md-6 position-relative p-3 text-justify">
                     <img src="/images/ebrahim-bahrami.jpg" class="img-fluid"/>
                     <p class="name_referee_en position-relative">Ebrahim Bahrami </p>
-                    <p class="position_referee_en position-relative pt-3">داور جشنواره</p>
+                    <p class="position_referee_en position-relative pt-3">Jury Member</p>
                     <div class="info_referee position-relative text-light bg-silver" dir="ltr">
                         <p class="m-0">Researcher and lecturer of photography</p>
                         <p class="m-0">Secretary, Artistic Director and Member of the Jury of Domestic and International Photography Exhibitions and Competitions , "EFIAP" Honored Artist of the Fédération Internationale de l'Art Photographique (FIAP),  reciever of United Nations Medal of Human Rights for the Photo Collection "the Elderly" and the United Nations Cultural organization Award (UNESCO), selected as the Honorary Ambassador of Iran Photography in 2017, and have been awarded numerous awards from national and international photography exhibitions.</p>

@@ -79,10 +79,10 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                Open Calls
+                                Call for Entries
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="/english/call">Exhibit</a>
+                                <a class="dropdown-item" href="/english/call">Open Calls</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">

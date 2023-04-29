@@ -72,13 +72,13 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="fname" />
                             <div class="input-group-prepend">
-                                <span class="input-group-text bg-primary" >Fname</span>
+                                <span class="input-group-text bg-primary" >Name</span>
                             </div>
                         </div>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="lname" />
                             <div class="input-group-prepend">
-                                <span class="input-group-text" >Lname</span>
+                                <span class="input-group-text" >Surname</span>
                             </div>
                         </div>
                         <div class="input-group mb-3">
