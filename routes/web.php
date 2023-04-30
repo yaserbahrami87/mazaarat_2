@@ -147,6 +147,7 @@ Route::get('/english/password/reset',function()
 });
 
 
+
 Route::get('/test',function(){
     return view('test');
 });
