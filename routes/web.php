@@ -153,3 +153,10 @@ Route::get('/test',function(){
 });
 
 Route::post('/test','HomeController@test');
+
+
+Route::get('/migrate',function()
+{
+   Artisan::call('migrate');
+   return "Migration";
+});
