@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\festival;
+use Hekmatinasser\Verta\Verta;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $dateJalali=Verta::now()->formatDate();
+        View::share('dateJalali',$dateJalali);
+        $festivals=festival::get();
+        View::share('festivals',$festivals);
     }
 }

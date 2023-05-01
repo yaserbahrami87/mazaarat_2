@@ -8,73 +8,16 @@
         <img src="/images/news.png" class="img-fluid " />
     </div>
     <div class="col-12  mb-5" id="news" >
-
         <div class="news_item"  dir="ltr">
-            <div class="card border-0 bg-transparent p-3 text-light">
-                <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
-                <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره1</a>
-
-                    <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
-
+            @foreach($festival->news as $news)
+                <div class="card border-0 bg-transparent p-3 text-light">
+                    <img src="/images/news/{{$news->image}}" class="card-img-top mb-3" alt="...">
+                    <div class="card-body p-0">
+                        <a href="#" class="btn w-100 mb-3 text-light">{{$news->title_en}}</a>
+                        <p class="card-text text-justify">{{$news->description_en}} </p>
+                    </div>
                 </div>
-            </div>
-            <div class="card border-0 bg-transparent p-3 text-light">
-                <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
-                <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره2</a>
-
-                    <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
-
-                </div>
-            </div>
-            <div class="card border-0 bg-transparent p-3 text-light">
-                <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
-                <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">3راه یافتگان نخستین جشنواره</a>
-
-                    <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
-
-                </div>
-            </div>
-            <div class="card border-0 bg-transparent p-3 text-light">
-                <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
-                <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره</a>
-
-                    <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
-
-                </div>
-            </div>
-            <div class="card border-0 bg-transparent p-3 text-light">
-                <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
-                <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره</a>
-
-                    <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
-
-                </div>
-            </div>
-            <div class="card border-0 bg-transparent p-3 text-light">
-                <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
-                <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره</a>
-
-                    <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
-
-                </div>
-            </div>
-            <div class="card border-0 bg-transparent p-3 text-light">
-                <img src="/images/gallery/2.jpg" class="card-img-top mb-3" alt="...">
-                <div class="card-body p-0">
-                    <a href="#" class="btn w-100 mb-3 text-light">راه یافتگان نخستین جشنواره</a>
-
-                    <p class="card-text text-justify">تست متن خبر تست متن خبر تست متن خبر تست متن خبر تست متن خبر </p>
-
-                </div>
-            </div>
-            <div>your content</div>
-            <div>your content</div>
+            @endforeach
         </div>
     </div>
 @endsection

@@ -21,18 +21,13 @@
             @endif
             <div class="collapse text-right" id="collapseGallery">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
-                <!--
-                <span class="d-block mb-3">
-                    <a href="/english/gallery"  class="d-inline-block text-center">
-                        First edition gallery
-                    </a>
-                </span>
-                -->
-                <span class="d-block">
-                    <a href="/english/gallery" class="d-inline-block text-center">
-                        Image Festival
-                    </a>
-                </span>
+                @foreach($festivals as $festival)
+                    <span class="d-block">
+                        <a href="/english/gallery/{{$festival->festival_en}}" class="d-inline-block text-center mb-2">
+                            {{$festival->festival_en}}
+                        </a>
+                    </span>
+                @endforeach
 
 
             </div>
@@ -106,23 +101,14 @@
 
             <div class="collapse text-right" id="collapseNews">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
-                <!--
-                <span class="d-block mb-3">
-                    <a href="/english/news"  class="d-inline-block text-center">
-                        First edition finalists
-                    </a>
-                </span>
-                <span class="d-block mb-3">
-                    <a href="" class="d-inline-block  text-center">
-                        Closing of the first edition
-                    </a >
-                </span>
-                <span class="d-block">
-                    <a href="" class="d-inline-block  text-center">
-                        First edition winners
-                    </a >
-                </span>
-                -->
+                @foreach($festivals as $festival)
+                    <span class="d-block mb-3">
+                        <a href="/english/news/{{$festival->festival_en}}"  class="d-inline-block text-center">
+                            {{$festival->festival_en}}
+                        </a>
+                    </span>
+                @endforeach
+
             </div>
 
             <div class="collapse text-right" id="collapseCall">
@@ -136,18 +122,13 @@
 
             <div class="collapse text-right" id="collapsePillars">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
-                <!--
-                <span class="d-block mb-3">
-                    <a href=""  class="d-inline-block text-center">
-                         First edition
-                    </a>
-                </span>
-                -->
-                <span class="d-block mb-3">
-                    <a href="/english/pillars" class="d-inline-block  text-center">
-                        Festival 2nd edition
-                    </a >
-                </span>
+                @foreach($festivals as $festival)
+                    <span class="d-block mb-3">
+                        <a href="/english/pillars/{{$festival->festival_en}}" class="d-inline-block  text-center">
+                            {{$festival->festival_en}}
+                        </a >
+                    </span>
+                @endforeach
             </div>
 
         </div>

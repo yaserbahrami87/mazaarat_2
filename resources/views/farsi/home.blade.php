@@ -71,18 +71,13 @@
             @endif
             <div class="collapse text-left mb-3" id="collapseGallery">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
-                <!--
-                <span class="d-block mb-3">
-                    <a href="/farsi/gallery"  class="d-inline-block text-center">
-                        عکس های نخستین جشنواره
-                    </a>
-                </span>
-                -->
-                <span class="d-block">
-                    <a href="/farsi/gallery" class="d-inline-block text-center">
-                        تـصــویــر جشـــنــواره
-                    </a >
-                </span>
+                @foreach($festivals as $festival)
+                    <span class="d-block">
+                        <a href="/farsi/gallery/{{$festival->festival_fa}}" class="d-inline-block text-center mb-2">
+                            {{$festival->festival_fa}}
+                        </a>
+                    </span>
+                @endforeach
 
             </div>
 
@@ -155,23 +150,13 @@
 
             <div class="collapse text-left" id="collapseNews">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
-                <!--
-                <span class="d-block mb-3">
-                    <a href="/farsi/news"  class="d-inline-block text-center">
-                        راه یافتگان نخستین جشنواره
-                    </a>
-                </span>
-                <span class="d-block mb-3">
-                    <a href="" class="d-inline-block  text-center">
-                        اختتامیه نخستین جشنواره
-                    </a >
-                </span>
-                <span class="d-block">
-                    <a href="" class="d-inline-block  text-center">
-                        برگزیدگان نخستین جشنواره
-                    </a >
-                </span>
-                -->
+                @foreach($festivals as $festival)
+                    <span class="d-block mb-2">
+                        <a href="/farsi/news/{{$festival->festival_fa}}"  class="d-inline-block text-center mb-2">
+                            {{$festival->festival_fa}}
+                        </a>
+                    </span>
+                @endforeach
             </div>
 
             <div class="collapse text-left" id="collapseCall">
@@ -185,18 +170,13 @@
 
             <div class="collapse text-left" id="collapsePillars">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
-                <!--
-                <span class="d-block mb-3">
-                    <a href=""  class="d-inline-block text-center">
-                         نخستین دوره جشنواره
-                    </a>
+                @foreach($festivals as $festival)
+                    <span class="d-block mb-3">
+                        <a href="/farsi/pillars/{{$festival->festival_en}}" class="d-inline-block  text-center">
+                             {{$festival->festival_fa}}
+                        </a >
                 </span>
-                -->
-                <span class="d-block mb-3">
-                    <a href="/farsi/pillars" class="d-inline-block  text-center">
-                         دومین دوره جشنواره
-                    </a >
-                </span>
+                @endforeach
             </div>
 
         </div>

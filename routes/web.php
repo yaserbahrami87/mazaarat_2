@@ -23,26 +23,20 @@ Route::get('/farsi/gallery',function()
     return view('farsi.gallery');
 });
 
-Route::get('/farsi/news',function()
-{
-    return view('farsi.news');
-});
+//News
+Route::get('/farsi/news/{festival}','NewsController@show');
 
 Route::get('/farsi/pillars_category',function()
 {
     return view('farsi.pillars_category');
 });
 
+//pillars
+Route::get('/farsi/pillars/{festival}','PillarController@show');
 
-Route::get('/farsi/pillars',function()
-{
-    return view('farsi.pillars_single');
-});
+//Call
+Route::get('/farsi/call','CallController@show');
 
-Route::get('/farsi/call',function()
-{
-    return view('farsi.call');
-});
 
 Route::get('/farsi/upload',function()
 {
@@ -95,10 +89,7 @@ Route::get('/english/gallery',function()
     return view('english.gallery');
 });
 
-Route::get('/english/news',function()
-{
-    return view('english.news');
-});
+Route::get('/english/news/{festival}','NewsController@show_en');
 
 
 Route::get('/english/pillars_category',function()
@@ -107,10 +98,7 @@ Route::get('/english/pillars_category',function()
 });
 
 
-Route::get('/english/pillars',function()
-{
-    return view('english.pillars_single');
-});
+Route::get('/english/pillars/{festival}','PillarController@show_en');
 
 Route::get('/english/upload',function()
 {
@@ -125,10 +113,7 @@ Route::get('/english/upload',function()
 
 });
 
-Route::get('/english/call',function()
-{
-    return view('english.call');
-});
+Route::get('/english/call','CallController@show_en');
 
 
 Route::get('/english/login',function()

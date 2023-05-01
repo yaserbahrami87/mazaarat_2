@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'bc0dcde1f3f24c969a3cebd6fdcfdf2d9bb8f1f7',
+        'reference' => '2dbfc397837659b1dd9b3fb673ea0105c7c768fe',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -184,6 +184,24 @@
             'reference' => '8c3d0a3f6af734494ad8f6fbbee0ba92422859f3',
             'dev_requirement' => true,
         ),
+        'hekmatinasser/notowo' => array(
+            'pretty_version' => 'v1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../hekmatinasser/notowo',
+            'aliases' => array(),
+            'reference' => 'c51ad5dcedac966dd93ce558ac7e6a84e0020d6d',
+            'dev_requirement' => false,
+        ),
+        'hekmatinasser/verta' => array(
+            'pretty_version' => 'v2.1.1',
+            'version' => '2.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../hekmatinasser/verta',
+            'aliases' => array(),
+            'reference' => '8659810fce313f49fd4f665ca9fb05a371aa6da7',
+            'dev_requirement' => false,
+        ),
         'illuminate/auth' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -358,6 +376,15 @@
                 0 => 'v7.30.6',
             ),
         ),
+        'intervention/image' => array(
+            'pretty_version' => '2.7.2',
+            'version' => '2.7.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../intervention/image',
+            'aliases' => array(),
+            'reference' => '04be355f8d6734c826045d02a1079ad658322dad',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -379,7 +406,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'bc0dcde1f3f24c969a3cebd6fdcfdf2d9bb8f1f7',
+            'reference' => '2dbfc397837659b1dd9b3fb673ea0105c7c768fe',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -721,6 +748,15 @@
             'replaced' => array(
                 0 => '4.2.3',
             ),
+        ),
+        'sadegh19b/laravel-persian-validation' => array(
+            'pretty_version' => '1.2.3',
+            'version' => '1.2.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sadegh19b/laravel-persian-validation',
+            'aliases' => array(),
+            'reference' => '293b0ca4cec8ee6be1d97e1b5e9a7b72fa1ac305',
+            'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '1.0.1',

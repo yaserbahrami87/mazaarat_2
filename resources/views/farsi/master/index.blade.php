@@ -36,10 +36,14 @@
                                 </li>
                             @else
                                 <li class="nav-item dropdown">
+
                                     <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                         {{Auth::user()->fname}}
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        @if(Auth::user()->is_admin==1)
+                                            <a class="dropdown-item" href="/admin/panel">داشبورد</a>
+                                        @endif
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
@@ -47,7 +51,7 @@
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
+                                            {{csrf_field()}}
                                         </form>
                                     </div>
                                 </li>
@@ -60,10 +64,9 @@
                                     گالری
                                 </a>
                                 <div class="dropdown-menu">
-                                    <!--
-                                    <a class="dropdown-item" href="/farsi/gallery">عکس های نخستین جشنواره</a>
-                                    -->
-                                    <a class="dropdown-item" href="/farsi/gallery">تصویر جشنواره</a>
+                                    @foreach($festivals as $festival)
+                                        <a class="dropdown-item" href="/farsi/gallery/{{$festival->festival_en}}">{{$festival->festival_fa}}</a>
+                                    @endforeach
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -71,11 +74,9 @@
                                     اخبار
                                 </a>
                                 <div class="dropdown-menu">
-                                    <!--
-                                    <a class="dropdown-item" href="/farsi/news">راه یافتگان نخستین جشنواره</a>
-                                    <a class="dropdown-item" href="#">اختتامیه نخستین جشنواره</a>
-                                    <a class="dropdown-item" href="#">برگزیدگان نخستین جشنواره</a>
-                                    -->
+                                    @foreach($festivals as $festival)
+                                        <a class="dropdown-item" href="/farsi/news/{{$festival->festival_en}}">{{$festival->festival_fa}}</a>
+                                    @endforeach
 
                                 </div>
                             </li>
@@ -93,10 +94,10 @@
                                     ارکان جشنواره
                                 </a>
                                 <div class="dropdown-menu">
-                                    <!--
-                                    <a class="dropdown-item" href="#">نخستین دوره جشنواره</a>
-                                    -->
-                                    <a class="dropdown-item" href="/farsi/pillars">دومین دوره جشنواره</a>
+                                    @foreach($festivals as $festival)
+                                        <a class="dropdown-item" href="/farsi/pillars/{{$festival->festival_en}}">{{$festival->festival_fa}}</a>
+                                    @endforeach
+
                                 </div>
                             </li>
                             <li class="nav-item">
