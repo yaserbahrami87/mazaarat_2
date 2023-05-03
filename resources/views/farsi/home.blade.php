@@ -152,7 +152,7 @@
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 @foreach($festivals as $festival)
                     <span class="d-block mb-2">
-                        <a href="/farsi/news/{{$festival->festival_fa}}"  class="d-inline-block text-center mb-2">
+                        <a href="/farsi/news/{{$festival->festival_en}}"  class="d-inline-block text-center mb-2">
                             {{$festival->festival_fa}}
                         </a>
                     </span>
