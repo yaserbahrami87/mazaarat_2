@@ -48,8 +48,8 @@ class GalleryController extends Controller
         $gallery=gallery::latest()->first();
 
         $this->validate($request,[
-            'fname_fa'              =>'required|persian_alpha|max:100',
-            'lname_fa'              =>'required|persian_alpha|max:100',
+            'fname_fa'              =>'required|string|max:100',
+            'lname_fa'              =>'required|string|max:100',
             'description_fa'        =>'nullable|string|max:200',
             'fname_en'              =>'required|string|max:100',
             'lname_en'              =>'required|string|max:100',
@@ -126,8 +126,8 @@ class GalleryController extends Controller
     public function update(Request $request, gallery $gallery)
     {
         $this->validate($request,[
-            'fname_fa'              =>'required|persian_alpha|max:100',
-            'lname_fa'              =>'required|persian_alpha|max:100',
+            'fname_fa'              =>'required|string|max:100',
+            'lname_fa'              =>'required|string|max:100',
             'description_fa'        =>'nullable|string|max:200',
             'fname_en'              =>'required|string|max:100',
             'lname_en'              =>'required|string|max:100',
