@@ -67,7 +67,7 @@
                                     <a href="/panel/competiton/{{$competiton->id}}/edit" class="btn btn-warning">
                                         <i class="bi bi-pencil-fill"></i>
                                     </a>
-                                    <form class="form-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
+                                    <form class="d-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
                                         {{csrf_field()}}
                                         {{method_field('DELETE')}}
                                         <input type="hidden" value="{{$competiton->id}}" name="competition_id" />
@@ -144,7 +144,7 @@
                                 <a href="/panel/competiton/{{$competiton->id}}/edit" class="btn btn-warning">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
-                                <form class="form-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
+                                <form class="d-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
                                     {{csrf_field()}}
                                     {{method_field('DELETE')}}
                                     <input type="hidden" value="{{$competiton->id}}" name="competition_id" />
