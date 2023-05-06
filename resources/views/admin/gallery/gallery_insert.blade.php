@@ -37,7 +37,7 @@
 
                                 </div>
                                 <div class="input-group mb-3">
-                                    <label for="description_fa">توضیحات عکس:<span class="text-danger">*</span></label>
+                                    <label for="description_fa">توضیحات عکس:</label>
                                     <textarea id="description_fa" name="description_fa">{{old('description_fa')}}</textarea>
                                 </div>
 
@@ -84,7 +84,7 @@
                                         <input type="text" class="form-control"   id="lname_en" name="lname_en" value="{{old('lname_en')}}" />
                                     </div>
                                     <div class="input-group mb-3">
-                                        <label for="description_en">توضیحات عکس به انگلیسی:<span class="text-danger">*</span></label>
+                                        <label for="description_en">توضیحات عکس به انگلیسی:</label>
                                         <textarea id="description_en" name="description_en">{{old('description_en')}}</textarea>
                                     </div>
 

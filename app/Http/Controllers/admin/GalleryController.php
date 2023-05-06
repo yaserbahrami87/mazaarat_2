@@ -50,10 +50,10 @@ class GalleryController extends Controller
         $this->validate($request,[
             'fname_fa'              =>'required|persian_alpha|max:100',
             'lname_fa'              =>'required|persian_alpha|max:100',
-            'description_fa'        =>'required|string|max:200',
+            'description_fa'        =>'nullable|string|max:200',
             'fname_en'              =>'required|string|max:100',
             'lname_en'              =>'required|string|max:100',
-            'description_en'        =>'required|string|max:200',
+            'description_en'        =>'nullable|string|max:200',
             'gallery_category_id'   =>'required|numeric',
             'festival_id'           =>'required|numeric',
             'image'                 =>'required|mimes:jpeg,jpg|max:2048',
@@ -128,10 +128,10 @@ class GalleryController extends Controller
         $this->validate($request,[
             'fname_fa'              =>'required|persian_alpha|max:100',
             'lname_fa'              =>'required|persian_alpha|max:100',
-            'description_fa'        =>'required|string|max:200',
+            'description_fa'        =>'nullable|string|max:200',
             'fname_en'              =>'required|string|max:100',
             'lname_en'              =>'required|string|max:100',
-            'description_en'        =>'required|string|max:200',
+            'description_en'        =>'nullable|string|max:200',
             'gallery_category_id'   =>'required|numeric',
             'festival_id'           =>'required|numeric',
         ]);
