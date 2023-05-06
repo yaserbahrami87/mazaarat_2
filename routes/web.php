@@ -22,15 +22,18 @@ Route::prefix('farsi')->group(function ()
 {
     Route::get('/gallery/{festival}','GalleryController@show');
 
+
+    //News
+    Route::get('/news/{festival}','NewsController@show');
+    Route::get('/news/{news}/show','NewsController@news_single');
+
+
 });
 
 Route::get('/farsi/gallery',function()
 {
     return view('farsi.gallery');
 });
-
-//News
-Route::get('/farsi/news/{festival}','NewsController@show');
 
 Route::get('/farsi/pillars_category',function()
 {

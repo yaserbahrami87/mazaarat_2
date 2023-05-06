@@ -90,4 +90,10 @@ class NewsController extends Controller
     {
         //
     }
+
+    public function news_single(news $news)
+    {
+        return view('farsi.news_single')
+                        ->with('news',$news);
+    }
 }

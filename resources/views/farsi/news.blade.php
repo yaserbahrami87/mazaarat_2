@@ -14,8 +14,7 @@
                 <div class="card border-0 bg-transparent p-3 text-light">
                     <img src="/images/news/{{$news->image}}" class="card-img-top mb-3" alt="...">
                     <div class="card-body p-0">
-                        <a href="#" class="btn w-100 mb-3 text-light">{{$news->title_fa}}</a>
-                        <p class="card-text text-justify">{{$news->description_fa}} </p>
+                        <a href="/farsi/news/{{$news->title_en}}/show" class="btn w-100 mb-3 text-light">{{$news->title_fa}}</a>
                     </div>
                 </div>
             @endforeach
