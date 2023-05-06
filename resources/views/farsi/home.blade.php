@@ -88,9 +88,10 @@
             </div>
 
             <form class="collapse" id="collapseLogin" method="POST" action="{{ route('login') }}">
+                {{csrf_field()}}
                 <div class="row">
                     <div class="col-10 mx-auto">
-                        {{csrf_field()}}
+
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" >ایمیل</span>
@@ -109,9 +110,10 @@
             </form>
 
             <form class="collapse" id="collapseSignup" method="POST" action="{{ route('register') }}">
+                {{csrf_field()}}
                 <div class="row">
                     <div class="col-10 mx-auto">
-                        {{csrf_field()}}
+
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-primary" >نام</span>

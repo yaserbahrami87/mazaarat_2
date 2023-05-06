@@ -145,3 +145,12 @@ Route::get('/migrate',function()
    Artisan::call('migrate');
    return "Migration";
 });
+
+
+
+Route::get('/clear_cache',function()
+{
+    Artisan::call('cache:clear');
+    return "Clear cache";
+});
+
