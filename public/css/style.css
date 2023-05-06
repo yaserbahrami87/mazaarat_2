@@ -549,6 +549,12 @@ footer #whatsapp_footer
     background-repeat: no-repeat;
 }
 
+#news_single a
+{
+    text-decoration: underline;
+    background-color: transparent;
+}
+
 #pillars_category
 {
     background-image: url("../images/mazaarat_bg.png");
