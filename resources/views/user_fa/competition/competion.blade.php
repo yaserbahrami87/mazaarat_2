@@ -55,7 +55,6 @@
         <div class="card">
             <h5 class="card-header">بخش مزارات</h5>
             <div class="card-body">
-
                     <form class="form" method="post" action="/panel/competition" enctype="multipart/form-data">
                         <div class="row">
                             @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id))<7)
@@ -67,15 +66,21 @@
                                     </div>
                                     <input type="hidden" name="competiton_category_id" value="1" />
                                     <div class="form-group">
-                                        <label >توضیحات:</label>
+                                        <label >توضیحات:
+                                            <span class="alert text-danger m-0 p-0">*</span>
+                                        </label>
                                         <textarea class="form-control" name="description" rows="3"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label>نام مکان:</label>
+                                        <label>نام مکان:
+                                            <span class="alert text-danger m-0 p-0">*</span>
+                                        </label>
                                         <input type="text" class="form-control"  name="name_place">
                                     </div>
                                     <div class="form-group">
-                                        <label>آدرس مکان:</label>
+                                        <label>آدرس مکان:
+                                            <span class="alert text-danger m-0 p-0">*</span>
+                                        </label>
                                         <input type="text" class="form-control"  name="location">
                                     </div>
                                 </div>
@@ -92,6 +97,53 @@
 
                         </div>
                     </form>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header">بخش نیایش</h5>
+            <div class="card-body">
+                <form class="form" method="post" action="/panel/competition" enctype="multipart/form-data">
+                    <div class="row">
+                        @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id))<7)
+                            {{csrf_field()}}
+                            <div class="col-12 col-md-3 mb-3">
+                                <div class="form-group files">
+                                    <label>Upload Your File </label>
+                                    <input type="file" class="form-control" name="image">
+                                </div>
+                                <input type="hidden" name="competiton_category_id" value="2" />
+                                <div class="form-group">
+                                    <label >توضیحات:
+                                        <span class="alert text-danger m-0 p-0">*</span>
+                                    </label>
+                                    <textarea class="form-control" name="description" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>نام مکان:
+                                        <span class="alert text-danger m-0 p-0">*</span>
+                                    </label>
+                                    <input type="text" class="form-control"  name="name_place">
+                                </div>
+                                <div class="form-group">
+                                    <label>آدرس مکان:
+                                        <span class="alert text-danger m-0 p-0">*</span>
+                                    </label>
+                                    <input type="text" class="form-control"  name="location">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success">
+                                    ثبت
+                                </button>
+                            </div>
+                        @else
+                            <div class="col-12 alert alert-warning">
+                                حداکثر تعداد عکس های مورد نظر جشنواره ارسال شده است
+                            </div>
+                        @endif
+
+                    </div>
+                </form>
             </div>
         </div>
     </div>
