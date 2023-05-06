@@ -619,3 +619,33 @@ footer #whatsapp_footer
 {
     background-color: #8f9092;
 }
+
+.upload_pictures  .card-title
+{
+    background-color: #2e3192;
+    border-radius: 30px;
+}
+
+.upload_pictures .form-group
+{
+    text-align: center;
+    background-color: #8e9092;
+    border-radius: 30px;
+    color: #FFFFFF;
+}
+
+.upload_pictures .form-group textarea
+{
+    border-radius:0px 0px 30px 30px;
+}
+
+
+.upload_pictures .form-group input
+{
+    border-radius:0px 0px 30px 30px;
+}
+
+.upload_pictures .form-group input:first-child
+{
+    border-radius: 0px;
+}

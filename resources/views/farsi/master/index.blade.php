@@ -59,7 +59,7 @@
                                 </li>
                             @endif
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="/panel/competition/create">ارسال عکس</a>
+                                <a class="nav-link text-light" href="/panel/competiton/create">ارسال عکس</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -114,7 +114,17 @@
 
         </div>
     </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @if($errors->any())
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-danger">{{$error}}</div>
+                    @endforeach
+                @endif
+            </div>
+        </div>
+    </div>
     @yield('content')
 </main>
 @include('farsi.master.footer')

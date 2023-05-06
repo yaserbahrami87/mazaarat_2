@@ -174,7 +174,7 @@ class CompetitonController extends BaseController
             alert()->error('خطا در بروزرسانی')->persistent('بستن');
         }
 
-        return redirect('/panel/competiton');
+        return redirect('/panel/competiton/create');
     }
 
     /**

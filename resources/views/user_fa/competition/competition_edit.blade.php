@@ -1,4 +1,4 @@
-@extends('user_fa.master.index')
+@extends('farsi.master.index')
 
 @section('headerScript')
     <style>
@@ -51,41 +51,45 @@
 @endsection
 
 @section('content')
-    <div class="col-12 col-md-3">
-        <div class="card col-12" >
-            <form class="form" method="post" action="/panel/competiton/{{$competiton->id}}" enctype="multipart/form-data">
-                {{csrf_field()}}
-                {{method_field('PATCH')}}
-                <div class="row">
-                    <div class="card col-12  mb-3">
+    <div class="container">
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <div class="card col-12 mb-3 upload_pictures bg-transparent" >
+                <form class="form" method="post" action="/panel/competiton/{{$competiton->id}}" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                    {{method_field('PATCH')}}
+                    <div class="row text-center">
+                        <div class="card col-12  mb-3 bg-transparent">
 
-                        <img src="/images/competition/{{$competiton->image}}" class="img-fluid" />
-                        <input type="hidden" name="competiton_category_id" value="1" />
-                        <div class="form-group">
-                            <label >توضیحات:
-                            </label>
-                            <textarea class="form-control" name="description" rows="3">{{$competiton->description}}</textarea>
+                            <img src="/images/competition/{{$competiton->image}}" class="img-fluid mb-3" />
+                            <input type="hidden" name="competiton_category_id" value="1" />
+                            <div class="form-group">
+                                <label >توضیحات:
+                                </label>
+                                <textarea class="form-control" name="description" rows="3">{{$competiton->description}}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>نام مکان:
+                                    <span class="alert text-danger m-0 p-0">*</span>
+                                </label>
+                                <input type="text" class="form-control"  name="name_place" value="{{$competiton->name_place}}">
+                            </div>
+                            <div class="form-group">
+                                <label>آدرس مکان:
+                                </label>
+                                <input type="text" class="form-control"  name="location" value="{{$competiton->location}}">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>نام مکان:
-                                <span class="alert text-danger m-0 p-0">*</span>
-                            </label>
-                            <input type="text" class="form-control"  name="name_place" value="{{$competiton->name_place}}">
-                        </div>
-                        <div class="form-group">
-                            <label>آدرس مکان:
-                            </label>
-                            <input type="text" class="form-control"  name="location" value="{{$competiton->location}}">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-success">
+                                بروزرسانی
+                            </button>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-success">
-                            بروزرسانی
-                        </button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+
         </div>
-
+    </div>
     </div>
 @endsection
