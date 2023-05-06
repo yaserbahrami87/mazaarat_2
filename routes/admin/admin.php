@@ -19,8 +19,5 @@ Route::resource('gallery','GalleryController');
 //Category Gallery
 Route::resource('gallery_category','GalleryCategoryController');
 
-Route::get('/panel',function()
-{
-    return view('admin.index');
-});
+Route::get('/panel','AdminController@index');
 

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\competiton;
+use App\festival;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -14,7 +18,13 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $users=User::get();
+        $festival=festival::latest()->first();
+        $competition=competiton::where('festival_id','=',$festival->id)
+                            ->get();
+        return view('admin.index')
+                        ->with('competition',$competition)
+                        ->with('users',$users);
     }
 
     /**

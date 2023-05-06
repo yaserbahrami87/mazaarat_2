@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link href="/css/bootstrap-rtl.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
     <title></title>
 </head>
 <body>
