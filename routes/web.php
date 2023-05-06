@@ -18,6 +18,12 @@ Route::get('/farsi/home',function()
     return view('farsi.home');
 });
 
+Route::prefix('farsi')->group(function ()
+{
+    Route::get('/gallery/{festival}','GalleryController@show');
+
+});
+
 Route::get('/farsi/gallery',function()
 {
     return view('farsi.gallery');

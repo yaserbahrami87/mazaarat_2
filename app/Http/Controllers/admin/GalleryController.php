@@ -19,7 +19,7 @@ class GalleryController extends Controller
     public function index()
     {
         $galleries=gallery::orderby('id','desc')
-                    ->get();
+                    ->paginate(10);
         return view('admin.gallery.gallery_all')
                             ->with('galleries',$galleries);
     }
@@ -56,6 +56,7 @@ class GalleryController extends Controller
             'description_en'        =>'required|string|max:200',
             'gallery_category_id'   =>'required|numeric',
             'festival_id'           =>'required|numeric',
+            'image'                 =>'required|mimes:jpeg,jpg|max:2048',
         ]);
         $gallery=gallery::create($request->all()+[
                 'insert_user_id'    =>Auth::user()->id,
@@ -108,7 +109,11 @@ class GalleryController extends Controller
      */
     public function edit(gallery $gallery)
     {
-        //
+        $gallery_categories=gallery_category::where('status','=','1')
+                                ->get();
+        return view('admin.gallery.gallery_edit')
+                            ->with('gallery_categories',$gallery_categories)
+                            ->with('gallery',$gallery);
     }
 
     /**
@@ -120,7 +125,27 @@ class GalleryController extends Controller
      */
     public function update(Request $request, gallery $gallery)
     {
-        //
+        $this->validate($request,[
+            'fname_fa'              =>'required|persian_alpha|max:100',
+            'lname_fa'              =>'required|persian_alpha|max:100',
+            'description_fa'        =>'required|string|max:200',
+            'fname_en'              =>'required|string|max:100',
+            'lname_en'              =>'required|string|max:100',
+            'description_en'        =>'required|string|max:200',
+            'gallery_category_id'   =>'required|numeric',
+            'festival_id'           =>'required|numeric',
+        ]);
+        $status=$gallery->update($request->all());
+        if($status)
+        {
+            alert()->success('بروزرسانی با موفقیت انجام شد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در بروزرسانی');
+        }
+
+        return redirect('/admin/gallery/');
     }
 
     /**
@@ -131,6 +156,16 @@ class GalleryController extends Controller
      */
     public function destroy(gallery $gallery)
     {
-        //
+        $status=$gallery->delete();
+        if($status)
+        {
+            alert()->success('عکس از گالری حذف شد')->persistent();
+        }
+        else
+        {
+            alert()->error('خطا در حذف عکس');
+        }
+
+        return back();
     }
 }

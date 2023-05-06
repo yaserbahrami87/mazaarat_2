@@ -25,5 +25,10 @@ class festival extends Model
         return $this->hasMany('App\news');
     }
 
+    public function gallery()
+    {
+        return $this->hasMany('App\gallery');
+    }
+
 
 }

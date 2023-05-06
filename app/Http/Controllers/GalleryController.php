@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\festival;
 use App\gallery;
 use Illuminate\Http\Request;
 
@@ -44,9 +45,15 @@ class GalleryController extends Controller
      * @param  \App\gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function show(gallery $gallery)
+    public function show(festival $festival)
     {
-        //
+
+        $galleries=gallery::where('festival_id','=',$festival->id)
+                            ->paginate(12);
+
+        return view('farsi.gallery')
+                        ->with('galleries',$galleries)
+                        ->with('festival',$festival);
     }
 
     /**
