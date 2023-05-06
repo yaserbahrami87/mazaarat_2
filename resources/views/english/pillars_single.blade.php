@@ -8,7 +8,7 @@
 
         </div>
         <div class="container">
-            <div class="row" dir="ltr en" >
+            <div class="row  en" dir="ltr" >
                 @foreach($festival->pillars as $pillar)
                     <div class="col-12 col-md-6 position-relative p-3 text-justify">
                         <img src="/images/pillars/{{'thumbnail_'.$pillar->image}}" width="150px" height="150px"/>

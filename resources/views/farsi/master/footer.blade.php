@@ -49,6 +49,7 @@
             $('#collapseNews').collapse('hide');
             $('#collapseCall').collapse('hide');
             $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
         }
     )
 
@@ -58,6 +59,7 @@
             $('#collapseNews').collapse('hide');
             $('#collapseCall').collapse('hide');
             $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
         }
     )
 
@@ -67,6 +69,7 @@
         $('#collapseNews').collapse('hide');
         $('#collapseCall').collapse('hide');
         $('#collapsePillars').collapse('hide');
+        $('#collapseAuth').collapse('hide');
     });
 
     $('#collapseSignup').on('show.bs.collapse', function ()
@@ -75,6 +78,7 @@
         $('#collapseNews').collapse('hide');
         $('#collapseCall').collapse('hide');
         $('#collapsePillars').collapse('hide');
+        $('#collapseAuth').collapse('hide');
     });
 
 
@@ -85,6 +89,7 @@
         $('#collapseNews').collapse('hide');
         $('#collapseCall').collapse('hide');
         $('#collapsePillars').collapse('hide');
+        $('#collapseAuth').collapse('hide');
     });
 
     $('#collapseExample').on('show.bs.collapse', function ()
@@ -94,6 +99,7 @@
             $('#collapseNews').collapse('hide');
             $('#collapseCall').collapse('hide');
             $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
         }
     );
 
@@ -103,6 +109,7 @@
             $('#collapseExample').collapse('hide');
             $('#collapseCall').collapse('hide');
             $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
 
         }
     );
@@ -113,6 +120,7 @@
             $('#collapseExample').collapse('hide');
             $('#collapseNews').collapse('hide');
             $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
 
         }
     );
@@ -123,6 +131,18 @@
             $('#collapseExample').collapse('hide');
             $('#collapseNews').collapse('hide');
             $('#collapseCall').collapse('hide');
+            $('#collapseAuth').collapse('hide');
+
+        }
+    );
+
+    $('#collapseAuth').on('show.bs.collapse', function ()
+        {
+            $('#collapseGallery').collapse('hide');
+            $('#collapseExample').collapse('hide');
+            $('#collapseNews').collapse('hide');
+            $('#collapseCall').collapse('hide');
+            $('#collapsePillars').collapse('hide');
 
         }
     );

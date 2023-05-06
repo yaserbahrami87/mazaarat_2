@@ -25,7 +25,7 @@
                         </li>
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="/home"  >{{Auth::user()->fname}}</a>
+                                <a class="nav-link"  data-toggle="collapse" href="#collapseAuth" role="button" aria-expanded="false" aria-controls="collapseAuth" id="link_auth"  >{{Auth::user()->fname}}</a>
                             </li>
                         @else
                             <li class="nav-item">
@@ -160,6 +160,26 @@
                     </span>
                 @endforeach
             </div>
+
+            <div class="collapse text-left" id="collapseAuth">
+                <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <span class="d-block mb-2">
+                        <a href="/home"  class="d-inline-block text-center mb-2">
+                            داشبورد
+                        </a>
+                </span>
+                <span class="d-block mb-2">
+
+                        <form  action="{{ route('logout') }}" method="POST" >
+                            {{csrf_field()}}
+                            <button class="btn btn-primary">خروج</button>
+
+                        </form>
+
+
+                </span>
+            </div>
+
 
             <div class="collapse text-left" id="collapseCall">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
