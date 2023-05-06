@@ -11,9 +11,10 @@
                     </a>
                 </div>
             @endforeach
-            {{$galleries->links()}}
+
 
         </div>
+        {{$galleries->links()}}
     </div>
 @endsection
 
