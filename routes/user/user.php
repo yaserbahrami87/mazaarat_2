@@ -4,4 +4,4 @@ Route::get('/','HomeController@index');
 
 //competition
 
-Route::resource('competition','CompetitonController');
+Route::resource('competiton','CompetitonController');

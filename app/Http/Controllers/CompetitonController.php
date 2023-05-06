@@ -47,10 +47,10 @@ class CompetitonController extends BaseController
         $this->validate($request,
         [
            'image'                    =>'required|mimes:jpg,jpeg|max:2048',
-           'description'              =>'required|string|max:200',
+           'description'              =>'nullable|string|max:200',
            'competiton_category_id'   =>'required|numeric',
            'name_place'               =>'required|string|max:200',
-           'location'                 =>'required|string|max:200',
+           'location'                 =>'nullable|string|max:200',
         ]);
 
         $festival=festival::latest()->first();
@@ -117,7 +117,15 @@ class CompetitonController extends BaseController
      */
     public function edit(competiton $competiton)
     {
-        //
+            if(Auth::user()->id==$competiton->user_id)
+            {
+                return view('user_fa.competition.competition_edit')
+                                ->with('competiton',$competiton);
+            }
+            else
+            {
+                return abort(403);
+            }
     }
 
     /**
@@ -129,7 +137,44 @@ class CompetitonController extends BaseController
      */
     public function update(Request $request, competiton $competiton)
     {
-        //
+
+        $this->validate($request,
+            [
+                'image'                    =>'nullable|mimes:jpg,jpeg|max:2048',
+                'description'              =>'nullable|string|max:200',
+                'competiton_category_id'   =>'nullable|numeric',
+                'name_place'               =>'nullable|string|max:200',
+                'location'                 =>'nullable|string|max:200',
+            ]);
+
+        $status=$competiton->update($request->all());
+        if($request->has('image')&&$request->file('image')->isValid())
+        {
+            $image=$competiton->image;
+            $image_thumbnail='thumbnail_'.$competiton->image;
+            $path=public_path('/images/competition/');
+            $files=$request->file('image')->move($path, $image);
+            $request->image=$image;
+            $img=Image::make($files->getRealPath())
+                ->resize(200,null,function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save($path.$image_thumbnail);
+            $request->image=$image;
+            $competiton->image=$image;
+            $competiton->save();
+        }
+
+        if($status)
+        {
+            alert()->success('عکس بروزرسانی شد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در بروزرسانی')->persistent('بستن');
+        }
+
+        return redirect('/panel/competiton');
     }
 
     /**

@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/panel/competition/create" class="nav-link">
+                        <a href="/panel/competiton/create" class="nav-link">
                             <i class="nav-icon fa fa-album"></i>
                             <p>
                                 ارسال عکس
@@ -42,7 +42,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/panel/competition" class="nav-link">
+                        <a href="/panel/competiton" class="nav-link">
                             <i class="nav-icon fa fa-album"></i>
                             <p>
                                  عکس ارسال شده

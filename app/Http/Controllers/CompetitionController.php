@@ -57,7 +57,7 @@ class CompetitionController extends Controller
      */
     public function edit(competiton $competiton)
     {
-        //
+
     }
 
     /**
