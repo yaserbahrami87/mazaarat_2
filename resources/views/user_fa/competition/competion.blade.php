@@ -64,7 +64,7 @@
                             @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1) as $competiton )
                                 <div class="col-12 col-md-3 mb-3 "  >
                                     <div class="card bg-transparent">
-                                        <img src="/images/competition/{{$competiton->image}}" class="card-img-top mb-2 " alt="...">
+                                        <img src="/images/competition/{{$competiton->image}}" class="card-img-top mb-2 " alt="..." height="182px">
                                         <div class="card-body p-0  text-center">
                                             <h5 class="card-title text-light p-2 w-100">مکان: {{$competiton->name_place}}</h5>
                                             <h5 class="card-title text-light p-2 w-100">آدرس:{{$competiton->location}}</h5>
@@ -145,7 +145,7 @@
                             @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2) as $competiton )
                                 <div class="col-12 col-md-3 mb-5 "  >
                                     <div class="card bg-transparent">
-                                        <img src="/images/competition/{{$competiton->image}}" class="card-img-top mb-2 " alt="...">
+                                        <img src="/images/competition/{{$competiton->image}}" class="card-img-top mb-2 " alt="..." height="182px">
                                         <div class="card-body p-0  text-center">
                                             <h5 class="card-title text-light p-2 w-100">مکان: {{$competiton->name_place}}</h5>
                                             <h5 class="card-title text-light p-2 w-100">آدرس:{{$competiton->location}}</h5>
