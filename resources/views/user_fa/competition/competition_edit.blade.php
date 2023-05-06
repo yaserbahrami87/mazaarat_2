@@ -53,8 +53,9 @@
 @section('content')
     <div class="container">
     <div class="row">
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-3  mx-auto mb-b ">
             <div class="card col-12 mb-3 upload_pictures bg-transparent" >
+                <h3 class="text-muted text-center pb-3">ویرایش محتوی عکس</h3>
                 <form class="form" method="post" action="/panel/competiton/{{$competiton->id}}" enctype="multipart/form-data">
                     {{csrf_field()}}
                     {{method_field('PATCH')}}
