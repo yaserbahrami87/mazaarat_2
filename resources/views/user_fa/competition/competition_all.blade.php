@@ -39,7 +39,7 @@
                 <div class="row">
                     @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2) as $competiton)
                         <div class="card col-12 col-md-3" >
-                            <img src="/images/competiton/{{$competiton->image}}" class="card-img-top" alt="...">
+                            <img src="/images/competition/{{$competiton->image}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{$competiton->name_place}}</h5>
 

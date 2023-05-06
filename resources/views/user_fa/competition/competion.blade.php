@@ -1,6 +1,7 @@
-@extends('user_fa.master.index')
+@extends('farsi.master.index')
 
 @section('headerScript')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
         .files input {
             outline: 2px dashed #92b0b3;
@@ -52,16 +53,18 @@
 
 @section('content')
     <div class="col-12">
-        <div class="card">
-            <h5 class="card-header">بخش مزارات</h5>
-            <div class="card-body">
-                    <div class="row">
-                        @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1) as $competiton )
-                            <div class="card col-12 col-md-3" >
+        <div class="card bg-transparent">
+            <div class="card-header text-center">
+                <img src="/images/mazaarat.png" class="img-fluid" />
+            </div>
+            <div class="card-body bg-transparent">
+                <div class="row">
+                    @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1) as $competiton )
+                        <div class="col-12 col-md-2 mb-3"  >
+                            <div class="card">
                                 <img src="/images/competition/{{$competiton->image}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+                                <div class="card-body ">
                                     <h5 class="card-title">{{$competiton->name_place}}</h5>
-
                                 </div>
                                 <div class="card-footer text-muted">
                                     <a href="/panel/competiton/{{$competiton->id}}/edit" class="btn btn-warning">
@@ -77,16 +80,19 @@
                                     </form>
                                 </div>
                             </div>
-                        @endforeach
+                        </div>
+                    @endforeach
 
 
 
-                        @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<7)
-                            <div class="card col-12 col-md-3" >
+                    @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<7)
+
+                        <div class="col-12 col-md-3" >
+                            <div class="card" >
                                 <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
                                     {{csrf_field()}}
                                     <div class="row">
-                                        <div class="card col-12  mb-3">
+                                        <div class="card col-12  mb-3 bg-transparent ">
                                             <div class="form-group files">
 
                                                 <input type="file" class="form-control" name="image">
@@ -109,7 +115,7 @@
                                                 <input type="text" class="form-control"  name="location">
                                             </div>
                                         </div>
-                                        <div class="col-12">
+                                        <div class="col-12 text-center">
                                             <button type="submit" class="btn btn-success">
                                                 ثبت
                                             </button>
@@ -117,41 +123,42 @@
                                     </div>
                                 </form>
                             </div>
-
-                        @else
-                            <div class="col-12 alert alert-warning">
-                                حداکثر تعداد عکس های مورد نظر جشنواره ارسال شده است
-                            </div>
-                        @endif
-
-
-
-                    </div>
+                        </div>
+                    @else
+                        <div class="col-12 alert alert-warning">
+                            حداکثر تعداد عکس های مورد نظر جشنواره ارسال شده است
+                        </div>
+                    @endif
+                </div>
             </div>
         </div>
-        <div class="card">
-            <h5 class="card-header">بخش نیایش</h5>
+        <div class="card bg-transparent">
+            <div class="card-header text-center">
+                <img src="/images/niayesh.png" class="img-fluid" />
+            </div>
             <div class="card-body">
                 <div class="row">
                     @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2) as $competiton )
-                        <div class="card col-12 col-md-3" >
-                            <img src="/images/competition/{{$competiton->image}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$competiton->name_place}}</h5>
+                        <div class="col-12 col-md-2" >
+                            <div class="card" >
+                                <img src="/images/competition/{{$competiton->image}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$competiton->name_place}}</h5>
 
-                            </div>
-                            <div class="card-footer text-muted">
-                                <a href="/panel/competiton/{{$competiton->id}}/edit" class="btn btn-warning">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </a>
-                                <form class="d-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
-                                    {{csrf_field()}}
-                                    {{method_field('DELETE')}}
-                                    <input type="hidden" value="{{$competiton->id}}" name="competition_id" />
-                                    <button type="submit" class="btn btn-danger">
-                                        <i class="bi bi-trash3-fill"></i>
-                                    </button>
-                                </form>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <a href="/panel/competiton/{{$competiton->id}}/edit" class="btn btn-warning">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <form class="d-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
+                                        {{csrf_field()}}
+                                        {{method_field('DELETE')}}
+                                        <input type="hidden" value="{{$competiton->id}}" name="competition_id" />
+                                        <button type="submit" class="btn btn-danger">
+                                            <i class="bi bi-trash3-fill"></i>
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     @endforeach
