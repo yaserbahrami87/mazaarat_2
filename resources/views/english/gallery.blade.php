@@ -1,7 +1,7 @@
 @extends('english.master.index')
 
 @section('content')
-    <div class="container">
+    <div class="container en">
         <div class="row align-items-center mt-3 mb-3 gallery" id="gallery" >
             <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
                 <a href="/images/gallery/mazaar/13-11.jpg" rel="rel1" data-caption="" >

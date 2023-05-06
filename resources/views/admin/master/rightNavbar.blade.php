@@ -49,7 +49,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/admin/festival/create" class="nav-link active">
+                                <a href="/admin/festival/create" class="nav-link">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>تعریف جشنواره</p>
                                 </a>
@@ -58,7 +58,7 @@
                     </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-dashboard"></i>
+                            <i class="nav-icon fa fa-users"></i>
                             <p>
                                 کاربرها
                                 <i class="right fa fa-angle-left"></i>
@@ -66,7 +66,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/admin/user" class="nav-link active">
+                                <a href="/admin/user" class="nav-link ">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>همه کاربرها</p>
                                 </a>
@@ -74,7 +74,7 @@
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link ">
                             <i class="nav-icon fa fa-dashboard"></i>
                             <p>
                                 ارکان
@@ -83,7 +83,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/admin/pillar" class="nav-link active">
+                                <a href="/admin/pillar" class="nav-link ">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>همه ارکان</p>
                                 </a>
@@ -119,6 +119,50 @@
                                 </a>
                             </li>
 
+                        </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fa fa-image"></i>
+                            <p>
+                                گالری
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/admin/gallery" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>همه گالری</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/admin/gallery/create" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>اضافه کردن عکس</p>
+                                </a>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="#" class="nav-link ">
+                                    <i class="nav-icon fa fa-file"></i>
+                                    <p>
+                                        دسته بندی گالری
+                                        <i class="right fa fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="/admin/gallery_category" class="nav-link">
+                                            <i class="fa fa-circle-o nav-icon"></i>
+                                            <p>دسته بندی ها</p>
+                                        </a>
+                                        <a href="/admin/gallery_category/create" class="nav-link">
+                                            <i class="fa fa-circle-o nav-icon"></i>
+                                            <p>ایجاد دسته بندی</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
 

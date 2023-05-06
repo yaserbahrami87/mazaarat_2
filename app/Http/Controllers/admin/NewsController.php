@@ -47,6 +47,7 @@ class NewsController extends BaseController
             'content_fa'    =>'required|string|',
             'festival_id'   =>'required|numeric',
             'title_en'      =>'required|string|max:200|unique:news,title_en',
+            'description_en'=>'required|string|max:200',
             'content_en'    =>'required|string',
             'image'         =>'required|mimes:jpg,jpeg,png,bmp|max:2048',
         ]);
@@ -121,7 +122,9 @@ class NewsController extends BaseController
             'content_fa'    =>'required|string|',
             'festival_id'   =>'required|numeric',
             'title_en'      =>'required|string|max:200|unique:news,title_en,'.$news->id,
+            'description_en'=>'required|string|max:200',
             'content_en'    =>'required|string',
+
         ]);
 
 

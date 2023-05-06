@@ -41,4 +41,17 @@ class User extends Authenticatable
     {
         return $this->is_admin;
     }
+
+    public function isUser()
+    {
+        if($this->type==1)
+        {
+            return true;
+        }
+    }
+
+    public  function competitions()
+    {
+        return $this->hasMany('App\competiton');
+    }
 }

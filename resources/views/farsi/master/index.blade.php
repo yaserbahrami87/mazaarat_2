@@ -43,6 +43,8 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         @if(Auth::user()->is_admin==1)
                                             <a class="dropdown-item" href="/admin/panel">داشبورد</a>
+                                        @else
+                                            <a class="dropdown-item" href="/panel">داشبورد</a>
                                         @endif
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
@@ -57,7 +59,7 @@
                                 </li>
                             @endif
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="/farsi/upload">ارسال عکس</a>
+                                <a class="nav-link text-light" href="/panel/competition/create">ارسال عکس</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">

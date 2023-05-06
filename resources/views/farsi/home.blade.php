@@ -33,7 +33,7 @@
                             </li>
                         @endguest
                         <li class="nav-item">
-                            <a class="nav-link" href="/farsi/upload">ارسال عکس</a>
+                            <a class="nav-link" href="/panel/competition/create">ارسال عکس</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >گالری</a>
