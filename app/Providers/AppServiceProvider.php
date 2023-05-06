@@ -28,7 +28,8 @@ class AppServiceProvider extends ServiceProvider
     {
         $dateJalali=Verta::now()->formatDate();
         View::share('dateJalali',$dateJalali);
-        $festivals=festival::get();
+        $festivals=festival::orderby('id','desc')
+                        ->get();
         View::share('festivals',$festivals);
     }
 }
