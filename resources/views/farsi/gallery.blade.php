@@ -14,7 +14,12 @@
 
 
         </div>
-        {{$galleries->links()}}
+        <div class="row">
+            <div class="col-12">
+                {{$galleries->links()}}
+            </div>
+        </div>
+
     </div>
 @endsection
 
