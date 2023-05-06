@@ -1,7 +1,7 @@
 @extends('farsi.master.index')
 
 @section('content')
-    <div class="container">
+    <div class="container text-center">
         <div class="row align-items-center mt-3 mb-3 gallery" id="gallery">
 
             @foreach($galleries as $pic)
