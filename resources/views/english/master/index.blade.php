@@ -21,7 +21,7 @@
 <main class="container-fluid" id="main_gallery" dir="rtl">
     <div class="container">
         <div class="row">
-            <nav class="col-12 navbar navbar-expand-lg navbar-light bg-transparent mb-5" dir="ltr">
+            <nav class="col-12 navbar navbar-expand-lg navbar-light bg-transparent mb-5 en text-left" dir="ltr">
                 <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarVerticalContent_en" aria-controls="navbarVerticalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

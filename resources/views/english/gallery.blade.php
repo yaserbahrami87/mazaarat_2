@@ -1,80 +1,25 @@
 @extends('english.master.index')
 
 @section('content')
-    <div class="container en">
-        <div class="row align-items-center mt-3 mb-3 gallery" id="gallery" >
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/13-11.jpg" rel="rel1" data-caption="" >
-                    <img src="/images/gallery/mazaar/13-11.jpg" class="h-100"  />
-                </a>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/13-13.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/13-13.jpg" class="h-100"  />
-                </a>
+    <div class="container text-center">
+        <div class="row align-items-center mt-3 mb-3 gallery" id="gallery">
 
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/27-12.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/27-12.jpg" class="h-100"  />
-                </a>
+            @foreach($galleries as $pic)
+                <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
+                    <a href="/images/gallery/{{$pic->image}}" rel="{{$pic->fname_fa.' '.$pic->lname_fa}}" data-caption="{{$pic->fname_fa.' '.$pic->lname_fa}}" >
+                        <img src="/images/gallery/thumbnail_{{$pic->image}}" height="100%" width=""  />
+                    </a>
+                </div>
+            @endforeach
 
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/43-13.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/43-13.jpg" class="h-100"  />
-                </a>
-
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/44-14.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/44-14.jpg" class="h-100"  />
-                </a>
-
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/86-13.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/86-13.jpg" class="h-100"  />
-                </a>
-
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/94-11.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/94-11.jpg" class="h-100"  />
-                </a>
-
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/161-11.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/161-11.jpg" class="h-100"  />
-                </a>
-
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/179-11.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/179-11.jpg" class="h-100"  />
-                </a>
-
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/246-11.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/246-11.jpg" class="h-100"  />
-                </a>
-
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/260-13.jpg" rel="rel1"  >
-                    <img src="/images/gallery/mazaar/260-13.jpg" class="h-100"  />
-                </a>
-
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                <a href="/images/gallery/mazaar/277-14.jpg">
-                    <img src="/images/gallery/mazaar/277-14.jpg" class="h-100"  />
-                </a>
-            </div>
 
         </div>
+        <div class="row">
+            <div class="col-12">
+                {{$galleries->links()}}
+            </div>
+        </div>
+
     </div>
 @endsection
 

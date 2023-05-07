@@ -4,12 +4,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=no">
+    <meta name="author" content="Yaser Bahrami">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link href="/css/bootstrap-rtl.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/favicon.png">
-    <title></title>
+    <title> Mazaarat International Photo Festival</title>
+    <link rel="stylesheet" href="/plugins/intl-tel-input/build/css/intlTelInput.css">
+
+
 </head>
 <body>
 <main class="container-fluid" id="main_signup" dir="rtl">
@@ -83,6 +88,15 @@
                                 <span class="input-group-text" >Email</span>
                             </div>
                         </div>
+                        <!--
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="tel_tmp" id="tel_tmp"  />
+                            <input type="hidden" class="form-control" name="tel" id="tel"  />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >Tel</span>
+                            </div>
+                        </div>
+                        -->
                         <div class="input-group mb-3">
                             <input type="password" class="form-control" name="password" />
                             <div class="input-group-prepend">
@@ -116,7 +130,7 @@
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
                     <a href="/english/call"  class="d-inline-block text-center">
-                        Exhibit
+                        Call for Entries
                     </a>
                 </span>
             </div>
@@ -167,13 +181,13 @@
                             <a class="nav-link" data-toggle="collapse" href="#collapseNews" role="button" aria-expanded="true" aria-controls="collapseNews">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="collapse" href="#collapseCall" role="button" aria-expanded="true" aria-controls="collapseCall">Open Calls</a>
+                            <a class="nav-link" data-toggle="collapse" href="#collapseCall" role="button" aria-expanded="true" aria-controls="collapseCall">Call for Entries </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="collapse" href="#collapsePillars" role="button" aria-expanded="true" aria-controls="collapsePillars">Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Archive</a>
+                            <a class="nav-link" href="/farsi/home">Farsi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact us</a>

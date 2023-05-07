@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link href="/css/bootstrap-rtl.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
-    <title></title>
+    <title>جشنواره بین المللی عکس مزارات | Mazaarat International Photo Festival</title>
 </head>
 <body>
 <main class="container-fluid" id="main_home" dir="rtl">

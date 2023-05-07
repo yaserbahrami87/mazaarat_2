@@ -16,7 +16,8 @@ class FestivalController extends Controller
      */
     public function index()
     {
-        $festivals=festival::get();
+        $festivals=festival::orderby('id','desc')
+                    ->get();
 
         return view('admin.festival.festival_all')
                         ->with('festivals',$festivals);

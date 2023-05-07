@@ -9,6 +9,8 @@
     <link href="/css/bootstrap-rtl.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="/plugins/intl-tel-input/build/css/intlTelInput.css">
+
     <title></title>
 </head>
 <body>
@@ -49,7 +51,7 @@
                             <a class="nav-link" data-toggle="collapse" href="#collapsePillars" role="button" aria-expanded="true" aria-controls="collapsePillars">ارکان جشنواره</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">آرشیو</a>
+                            <a class="nav-link" href="/english/home">انگلیسی</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">تماس با ما</a>
@@ -133,6 +135,16 @@
                             </div>
                             <input type="text" class="form-control" name="email" />
                         </div>
+                        <!--
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >تلفن</span>
+                            </div>
+                            <input type="text" class="form-control" name="tel_tmp" id="tel_tmp"  />
+                            <input type="hidden" class="form-control" name="tel" id="tel"  />
+                        </div>
+                        -->
+
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" >رمز عبور</span>

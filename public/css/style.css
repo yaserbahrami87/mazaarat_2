@@ -95,9 +95,6 @@ body
     margin-left: 25px;
 }
 
-.signup_en *,.en *{
-    font-family: Arial;
-}
 
 .signup_en > div:last-child a:hover
 {
@@ -416,6 +413,8 @@ footer #whatsapp_footer
 
 @media only screen and (min-width:321px) and (max-width: 375px)
 {
+
+
     #main_gallery #gallery img
     {
         height: 142px;
@@ -654,4 +653,9 @@ footer #whatsapp_footer
 .upload_pictures .form-group input:first-child
 {
     border-radius: 0px;
+}
+
+
+.signup_en *,.en *{
+    font-family: Arial !important;
 }

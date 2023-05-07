@@ -16,5 +16,10 @@ class competiton extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function competition_category()
+    {
+        return $this->belongsTo('App\competiton_category');
+    }
+
 
 }

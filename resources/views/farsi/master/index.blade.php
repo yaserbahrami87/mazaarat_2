@@ -5,7 +5,10 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title></title>
+    <meta name="author" content="یاسر بهرامی">
+
+    <title>جشنواره بین المللی عکس مزارات | Mazaarat International Photo Festival</title>
+    <meta name="description" content="Online Tutorials for all type of brains">
 
 
     <!-- Bootstrap CSS -->
@@ -103,8 +106,12 @@
 
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">آرشیو</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false" >زبان سایت</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/farsi/home">فارسی</a>
+                                    <a class="dropdown-item" href="/english/home">انگلیسی</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="#">تماس با ما</a>

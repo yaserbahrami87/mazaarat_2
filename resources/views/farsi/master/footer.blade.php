@@ -15,15 +15,15 @@
 
             <p>مالکیت حقوقی و معنوی این تارنما متعلق به دبیرخانه جشنواره بین المللی عکس مزارات می باشد</p>
         </div>
-        <div class="col-md-2 align-items-center text-center p-0">
-            <a href="https://www.facebook.com/mazaar.photo/" target="_blank" class="d-inline-block social mr-3" id="facebook_footer"></a>
-            <a href="https://t.me/Mazaarat_2023" target="_blank" class="d-inline-block social mr-3" id="telegram_footer"></a>
-            <a href="" class="d-inline-block social mr-3" id="insta_footer"></a>
-            <a href="" class="d-inline-block social mr-3" id="whatsapp_footer"></a>
+        <div class="col-md-2 align-items-center text-center p-0 d-flex justify-content-around">
+            <a href="https://www.facebook.com/mazaar.photo/" target="_blank" class="d-inline-block social" id="facebook_footer"></a>
+            <a href="https://t.me/Mazaarat_2023" target="_blank" class="d-inline-block social" id="telegram_footer"></a>
+            <a href="" class="d-inline-block social" id="insta_footer"></a>
+            <a href="" class="d-inline-block social" id="whatsapp_footer"></a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 d-flex justify-content-around">
             <a href="https://www.aqart.ir/Maktab-Rezvan.aspx" target="_blank">
-                <img src="/images/logo_maktab.png" width="100px" class="mr-2" />
+                <img src="/images/logo_maktab.png" width="100px"  />
             </a>
 
             <a href="https://www.aqart.ir/" target="_blank">
@@ -149,6 +149,28 @@
 
 
 </script>
+
+<script src="/plugins/intl-tel-input/build/js/intlTelInput.js"></script>
+<script>
+    var input = document.querySelector("#tel_tmp");
+    var intl=intlTelInput(input,{
+        formatOnDisplay:false,
+        separateDialCode:true,
+        autoPlaceholder:'off',
+        preferredCountries:["ir", "gb"]
+    });
+
+    input.addEventListener("countrychange", function() {
+        document.querySelector("#tel").value=intl.getNumber();
+    });
+
+    $('#tel_tmp').change(function()
+    {
+        document.querySelector("#tel").value=intl.getNumber();
+    });
+</script>
+
+
 @yield('footerScript')
 </body>
 </html>

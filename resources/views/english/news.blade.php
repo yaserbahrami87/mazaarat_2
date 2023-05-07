@@ -4,17 +4,16 @@
     <link href="/slick/slick-theme.css" rel="stylesheet" />
 @endsection
 @section('content')
-    <div class="col-12 text-center mb-3">
-        <img src="/images/news.png" class="img-fluid " />
+    <div class="col-12 text-center mb-3 en">
+        <img src="/images/news_en.png" class="img-fluid " />
     </div>
-    <div class="col-12  mb-5 en" id="news" >
-        <div class="news_item"  dir="ltr">
+    <div class="col-12  mb-5 " id="news" >
+        <div class="news_item "  dir="ltr">
             @foreach($festival->news as $news)
                 <div class="card border-0 bg-transparent p-3 text-light">
                     <img src="/images/news/{{$news->image}}" class="card-img-top mb-3" alt="...">
-                    <div class="card-body p-0">
-                        <a href="#" class="btn w-100 mb-3 text-light">{{$news->title_en}}</a>
-                        <p class="card-text text-justify">{{$news->description_en}} </p>
+                    <div class="card-body p-0 en">
+                        <a href="/english/news/{{$news->title_en}}/show" class="btn w-100 mb-3 text-light">{{$news->title_en}}</a>
                     </div>
                 </div>
             @endforeach

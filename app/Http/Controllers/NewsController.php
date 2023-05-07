@@ -96,4 +96,10 @@ class NewsController extends Controller
         return view('farsi.news_single')
                         ->with('news',$news);
     }
+
+    public function news_single_en(news $news)
+    {
+        return view('english.news_single')
+            ->with('news',$news);
+    }
 }

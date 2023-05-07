@@ -56,6 +56,16 @@ class GalleryController extends Controller
                         ->with('festival',$festival);
     }
 
+    public function show_en(festival $festival)
+    {
+        $galleries=gallery::where('festival_id','=',$festival->id)
+            ->paginate(12);
+
+        return view('english.gallery')
+            ->with('galleries',$galleries)
+            ->with('festival',$festival);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

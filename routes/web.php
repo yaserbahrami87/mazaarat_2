@@ -88,15 +88,26 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::prefix('english')->group(function ()
+{
+    Route::get('/gallery/{festival}','GalleryController@show_en');
+
+
+    //News
+    Route::get('/news/{festival}','NewsController@show');
+    Route::get('/news/{news}/show','NewsController@news_single_en');
+});
+
+
 Route::get('/english/home',function()
 {
     return view('english.home');
 });
 
-Route::get('/english/gallery',function()
-{
-    return view('english.gallery');
-});
+//Route::get('/english/gallery',function()
+//{
+//    return view('english.gallery');
+//});
 
 Route::get('/english/news/{festival}','NewsController@show_en');
 
