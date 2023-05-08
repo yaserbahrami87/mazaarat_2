@@ -35,6 +35,13 @@ class CompetitonController extends BaseController
             ->with('festival',$festival);
     }
 
+    public function create_en()
+    {
+        $festival=festival::latest()->first();
+        return view('user_en.competition.competion')
+            ->with('festival',$festival);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -128,6 +135,19 @@ class CompetitonController extends BaseController
             }
     }
 
+    public function edit_en(competiton $competiton)
+    {
+        if(Auth::user()->id==$competiton->user_id)
+        {
+            return view('user_en.competition.competition_edit')
+                ->with('competiton',$competiton);
+        }
+        else
+        {
+            return abort(403);
+        }
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -174,7 +194,7 @@ class CompetitonController extends BaseController
             alert()->error('خطا در بروزرسانی')->persistent('بستن');
         }
 
-        return redirect('/panel/competiton/create');
+        return back();
     }
 
     /**

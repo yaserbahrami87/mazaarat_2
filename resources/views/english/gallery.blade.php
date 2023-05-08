@@ -6,7 +6,7 @@
 
             @foreach($galleries as $pic)
                 <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
-                    <a href="/images/gallery/{{$pic->image}}" rel="{{$pic->fname_fa.' '.$pic->lname_fa}}" data-caption="{{$pic->fname_fa.' '.$pic->lname_fa}}" >
+                    <a href="/images/gallery/{{$pic->image}}" rel="{{$pic->fname_en.' '.$pic->lname_en}}" data-caption="{{$pic->fname_en.' '.$pic->lname_en}}" >
                         <img src="/images/gallery/thumbnail_{{$pic->image}}" height="100%" width=""  />
                     </a>
                 </div>

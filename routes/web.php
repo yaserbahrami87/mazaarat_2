@@ -96,6 +96,16 @@ Route::prefix('english')->group(function ()
     //News
     Route::get('/news/{festival}','NewsController@show');
     Route::get('/news/{news}/show','NewsController@news_single_en');
+
+    //Auth
+    Route::post('/register','Auth_en\RegisterEnController@store');
+    Route::post('/login','Auth_en\LoginEnController@store');
+
+    Route::get('/register',function()
+    {
+        return view('english.auth.register');
+    });
+
 });
 
 
@@ -141,10 +151,6 @@ Route::get('/english/login',function()
     return view('english.auth.login');
 });
 
-Route::get('/english/register',function()
-{
-    return view('english.auth.register');
-});
 
 Route::get('/english/password/reset',function()
 {

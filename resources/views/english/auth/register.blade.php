@@ -8,11 +8,11 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="/english/register">
                         {{csrf_field()}}
 
                         <div class="form-group row">
-                            <label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('Fname:') }}</label>
+                            <label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('Name:') }}</label>
 
                             <div class="col-md-6">
                                 <input id="fname" type="text" class="form-control @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="lname" class="col-md-4 col-form-label text-md-right">{{ __('Lname:') }}</label>
+                            <label for="lname" class="col-md-4 col-form-label text-md-right">{{ __('Surename:') }}</label>
 
                             <div class="col-md-6">
                                 <input id="lname" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus>

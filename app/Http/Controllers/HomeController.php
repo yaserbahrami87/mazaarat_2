@@ -24,8 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         return view('user_fa.index');
+    }
+
+    public function index_en()
+    {
+        return view('user_en.index');
     }
 
     public function test(Request $request)

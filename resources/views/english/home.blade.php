@@ -34,8 +34,6 @@
                         </a>
                     </span>
                 @endforeach
-
-
             </div>
 
 
@@ -114,6 +112,27 @@
                 </div>
             </form>
 
+            <div class="collapse text-right" id="collapseAuth">
+                <img src="/images/after.png" class="img-fluid mb-3 "/>
+                <span class="d-block mb-2">
+                    <a href="/panel/english"  class="d-inline-block text-center mb-2">
+                        Dashboard
+                    </a>
+                </span>
+                <span class="d-block mb-2">
+
+                    <form  action="{{ route('logout') }}" method="POST" >
+                        {{csrf_field()}}
+                        <button class="btn btn-primary">Exit</button>
+
+                    </form>
+
+
+                </span>
+            </div>
+
+
+
             <div class="collapse text-right" id="collapseNews">
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 @foreach($festivals as $festival)
@@ -123,7 +142,6 @@
                         </a>
                     </span>
                 @endforeach
-
             </div>
 
             <div class="collapse text-right" id="collapseCall">
@@ -164,7 +182,7 @@
                         </li>
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="/home"  >{{Auth::user()->fname}}</a>
+                                <a class="nav-link"  data-toggle="collapse" href="#collapseAuth" role="button" aria-expanded="false" aria-controls="collapseAuth" id="link_auth"  >{{Auth::user()->fname}}</a>
                             </li>
                         @else
                             <li class="nav-item">
@@ -172,7 +190,7 @@
                             </li>
                         @endauth
                         <li class="nav-item">
-                            <a class="nav-link" href="/english/upload">Upload photo</a>
+                            <a class="nav-link" href="/panel/english/competiton/create">Upload photo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="collapse" href="#collapseGallery" role="button" aria-expanded="true" aria-controls="collapseGallery" >Gallery</a>
@@ -190,7 +208,7 @@
                             <a class="nav-link" href="/farsi/home">Farsi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact us</a>
+                            <a class="nav-link" href="mailto:info@mazaar.net">Contact us</a>
                         </li>
 
                     </ul>

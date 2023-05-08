@@ -10,3 +10,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/public/images/competition
+/public/images/gallery
+/public/images/news
+/public/images/pillars

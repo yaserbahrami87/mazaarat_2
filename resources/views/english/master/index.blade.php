@@ -18,7 +18,8 @@
 
 </head>
 <body>
-<main class="container-fluid" id="main_gallery" dir="rtl">
+@include('sweetalert::alert')
+<main class="container-fluid en" id="main_gallery" dir="rtl">
     <div class="container">
         <div class="row">
             <nav class="col-12 navbar navbar-expand-lg navbar-light bg-transparent mb-5 en text-left" dir="ltr">
@@ -32,7 +33,7 @@
                         </li>
                         @guest
                         <li class="nav-item active">
-                            <a class="nav-link text-light" href="#">Register <span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-light" href="/english/login">Register <span class="sr-only">(current)</span></a>
                         </li>
                         @else
                             <li class="nav-item dropdown">
@@ -53,7 +54,7 @@
                             </li>
                         @endif
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="/english/upload">Upload photo</a>
+                            <a class="nav-link text-light" href="/panel/english/competiton/create">Upload photo</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -100,7 +101,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Archive</a>
+                            <a class="nav-link text-light" href="/farsi/home">Farsi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#">Contact us</a>
@@ -111,6 +112,18 @@
 
                 </div>
             </nav>
+        </div>
+    </div>
+
+    <div class="container en text-right" dir="ltr">
+        <div class="row">
+            <div class="col-12">
+                @if($errors->any())
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-danger">{{$error}}</div>
+                    @endforeach
+                @endif
+            </div>
         </div>
     </div>
 
