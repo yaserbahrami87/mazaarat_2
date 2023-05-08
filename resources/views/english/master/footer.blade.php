@@ -1,0 +1,175 @@
+<footer class="container" dir="rtl">
+    <div class="col-12 text-center">
+        <img src="/images/footer.png" width="60px" class="position-relative" id="bolt-footer"/>
+    </div>
+    <div class="row pt-4  mb-3" dir="ltr">
+
+        <div class="col-md-4 text-right">
+            <b class="d-block">Contact us</b>
+            <p class="m-0 text-justify">Address: Astan Quds Razavi Art Institution of Afarineshha, No. 9 Kouhsangi Street, Edalat 18, Mashhad, Iran</p>
+            <a href="tel:+989390482732" class="ml-3">Tel: +989390482732</a>
+            <a href="mailto:info@mazaar.net" class="d-block">Email: info@mazaar.net</a>
+        </div>
+        <div class="col-md-2 align-items-center text-justify">
+
+            <p>All rights reserved by Mazaarat International Photo Festival</p>
+        </div>
+        <div class="col-md-2 align-items-center text-center p-0 d-flex justify-content-around">
+            <a href="https://www.facebook.com/mazaar.photo/" target="_blank" class="d-inline-block social" id="facebook_footer"></a>
+            <a href="https://t.me/Mazaarat_2023" target="_blank" class="d-inline-block social" id="telegram_footer"></a>
+            <a href="" class="d-inline-block social" id="insta_footer"></a>
+            <a href="" class="d-inline-block social" id="whatsapp_footer"></a>
+        </div>
+        <div class="col-md-4 d-flex justify-content-around">
+            <a href="https://www.aqart.ir/Maktab-Rezvan.aspx" target="_blank">
+                <img src="/images/logo_maktab.png" width="100px"  />
+            </a>
+
+            <a href="https://www.aqart.ir/" target="_blank">
+                <img src="/images/logo_aq.png" width="100px" />
+            </a>
+            <a href="https://www.aqart.ir/" target="_blank">
+                <img src="/images/logo_moavenat.png" width="100px" />
+            </a>
+
+        </div>
+
+    </div>
+</footer>
+
+<script src="/js/jquery.slim.min.js" ></script>
+<script src="/js/bootstrap.bundle.min.js" ></script>
+<script>
+    $('#collapseGallery').on('show.bs.collapse', function ()
+        {
+            $('#collapseExample').collapse('hide');
+            $('#collapseLogin').collapse('hide');
+            $('#collapseSignup').collapse('hide');
+            $('#collapseNews').collapse('hide');
+            $('#collapseCall').collapse('hide');
+            $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
+        }
+    )
+
+    $('#link_signup').on('show.bs.collapse', function ()
+        {
+            $('#collapseGallery').collapse('hide');
+            $('#collapseNews').collapse('hide');
+            $('#collapseCall').collapse('hide');
+            $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
+        }
+    )
+
+    $('#collapseLogin').on('show.bs.collapse', function ()
+    {
+        $('#collapseSignup').collapse('hide');
+        $('#collapseNews').collapse('hide');
+        $('#collapseCall').collapse('hide');
+        $('#collapsePillars').collapse('hide');
+        $('#collapseAuth').collapse('hide');
+    });
+
+    $('#collapseSignup').on('show.bs.collapse', function ()
+    {
+        $('#collapseLogin').collapse('hide');
+        $('#collapseNews').collapse('hide');
+        $('#collapseCall').collapse('hide');
+        $('#collapsePillars').collapse('hide');
+        $('#collapseAuth').collapse('hide');
+    });
+
+
+    $('#collapseExample').on('hide.bs.collapse', function ()
+    {
+        $('#collapseLogin').collapse('hide');
+        $('#collapseSignup').collapse('hide');
+        $('#collapseNews').collapse('hide');
+        $('#collapseCall').collapse('hide');
+        $('#collapsePillars').collapse('hide');
+        $('#collapseAuth').collapse('hide');
+    });
+
+    $('#collapseExample').on('show.bs.collapse', function ()
+        {
+            $('#collapseGallery').collapse('hide');
+            $('#link_signup').collapse('hide');
+            $('#collapseNews').collapse('hide');
+            $('#collapseCall').collapse('hide');
+            $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
+        }
+    );
+
+    $('#collapseNews').on('show.bs.collapse', function ()
+        {
+            $('#collapseGallery').collapse('hide');
+            $('#collapseExample').collapse('hide');
+            $('#collapseCall').collapse('hide');
+            $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
+
+        }
+    );
+
+    $('#collapseCall').on('show.bs.collapse', function ()
+        {
+            $('#collapseGallery').collapse('hide');
+            $('#collapseExample').collapse('hide');
+            $('#collapseNews').collapse('hide');
+            $('#collapsePillars').collapse('hide');
+            $('#collapseAuth').collapse('hide');
+
+        }
+    );
+
+    $('#collapsePillars').on('show.bs.collapse', function ()
+        {
+            $('#collapseGallery').collapse('hide');
+            $('#collapseExample').collapse('hide');
+            $('#collapseNews').collapse('hide');
+            $('#collapseCall').collapse('hide');
+            $('#collapseAuth').collapse('hide');
+
+        }
+    );
+
+    $('#collapseAuth').on('show.bs.collapse', function ()
+        {
+            $('#collapseGallery').collapse('hide');
+            $('#collapseExample').collapse('hide');
+            $('#collapseNews').collapse('hide');
+            $('#collapseCall').collapse('hide');
+            $('#collapsePillars').collapse('hide');
+
+        }
+    );
+
+
+</script>
+
+<script src="/plugins/intl-tel-input/build/js/intlTelInput.js"></script>
+<script>
+    var input = document.querySelector("#tel_tmp");
+    var intl=intlTelInput(input,{
+        formatOnDisplay:false,
+        separateDialCode:true,
+        autoPlaceholder:'off',
+        preferredCountries:["ir", "gb"]
+    });
+
+    input.addEventListener("countrychange", function() {
+        document.querySelector("#tel").value=intl.getNumber();
+    });
+
+    $('#tel_tmp').change(function()
+    {
+        document.querySelector("#tel").value=intl.getNumber();
+    });
+</script>
+
+
+@yield('footerScript')
+</body>
+</html>

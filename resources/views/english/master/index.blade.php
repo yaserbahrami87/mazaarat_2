@@ -35,6 +35,7 @@
                         <li class="nav-item active">
                             <a class="nav-link text-light" href="/english/login">Register <span class="sr-only">(current)</span></a>
                         </li>
+
                         @else
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -130,4 +131,4 @@
 
     @yield('content')
 </main>
-@include('farsi.master.footer')
+@include('english.master.footer')

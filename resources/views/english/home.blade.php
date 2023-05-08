@@ -215,10 +215,7 @@
                 </div>
             </nav>
         </div>
-
-
-
     </div>
 
 </main>
-@include('farsi.master.footer')
+@include('english.master.footer')
