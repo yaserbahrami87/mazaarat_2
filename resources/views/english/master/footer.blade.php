@@ -4,13 +4,13 @@
     </div>
     <div class="row pt-4  mb-3 en" dir="ltr">
 
-        <div class="col-md-4 text-right">
+        <div class="col-md-4 text-right mb2">
             <b class="d-block">Contact us</b>
             <p class="m-0 text-justify">Address: Astan Quds Razavi Art Institution of Afarineshha, No. 9 Kouhsangi Street, Edalat 18, Mashhad, Iran</p>
             <a href="tel:+989390482732" class="ml-3">Tel: +989390482732</a>
             <a href="mailto:info@mazaar.net" class="d-block">Email: info@mazaar.net</a>
         </div>
-        <div class="col-md-2 align-items-center text-justify">
+        <div class="col-md-2 align-items-center text-justify mb-2">
 
             <p>All rights reserved by Mazaarat International Photo Festival</p>
         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\festival;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
@@ -17,7 +18,10 @@ class UserController extends Controller
     {
         $users=User::orderby('id','desc')
                     ->paginate(10);
+
+        $festival=festival::latest()->first();
         return view('admin.users.users_all')
+                        ->with('festival',$festival)
                         ->with('users',$users);
     }
 
@@ -50,7 +54,11 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+
+        $festival=festival::latest()->first();
+        return view('admin.users.user')
+                        ->with('festival',$festival)
+                        ->with('user',$user);
     }
 
     /**

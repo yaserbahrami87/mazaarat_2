@@ -21,17 +21,23 @@
                 <th>ایمیل</th>
                 <th>تلفن</th>
                 <th>تاریخ ثبت نام</th>
+                <th>تعداد عکس ارسالی</th>
                 <th>مشاهده</th>
             </thead>
             <tbody>
             @foreach($users as $user)
                 <tr>
-                    <td>{{$user->fname.' '.$user->lname}}</td>
+                    <td>
+                        <a href="/admin/user/{{$user->id}}" >
+                                {{$user->fname.' '.$user->lname}}
+                        </a>
+                    </td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->tel}}</td>
-                    <td>{{$user->created_at}}</td>
+                    <td class="text-center">{{$user->created_at}}</td>
+                    <td class="text-center">{{$user->competitions->where('festival_id','=',$festival->id)->count()}}</td>
                     <td>
-                        <a href="" class="btn btn-warning">
+                        <a href="/admin/user/{{$user->id}}" class="btn btn-warning">
                             <i class="bi bi-eye-fill"></i>
                         </a>
                     </td>
