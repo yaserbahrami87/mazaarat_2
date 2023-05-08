@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/farsi/home',function()
-{
-    return view('farsi.home');
-});
+//Route::get('/farsi/home',function()
+//{
+//    return view('farsi.home');
+//});
 
 Route::prefix('farsi')->group(function ()
 {
@@ -109,10 +109,10 @@ Route::prefix('english')->group(function ()
 });
 
 
-Route::get('/english/home',function()
-{
-    return view('english.home');
-});
+Route::get('/{language}/home','SiteController@setLanguage');
+//{
+//    return view('english.home');
+//});
 
 //Route::get('/english/gallery',function()
 //{

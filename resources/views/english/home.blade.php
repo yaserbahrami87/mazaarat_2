@@ -148,7 +148,7 @@
                 <img src="/images/after.png" class="img-fluid mb-3 "/>
                 <span class="d-block mb-3">
                     <a href="/english/call"  class="d-inline-block text-center">
-                        Call for Entries
+                        Open Calls
                     </a>
                 </span>
             </div>

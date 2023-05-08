@@ -1,14 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth_en;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
-class RegisterEnController extends Controller
+class SiteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -38,22 +34,7 @@ class RegisterEnController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'fname' => ['required', 'string', 'max:255'],
-            'lname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-
-        $user=User::create([
-            'fname'     => $request->fname,
-            'lname'     => $request->lname,
-            'email'     => $request->email,
-            'password'  => Hash::make($request->password),
-        ]);
-
-        Auth::login($user);
-        return redirect('/panel/english/competiton/create');
+        //
     }
 
     /**
@@ -99,5 +80,20 @@ class RegisterEnController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function setLanguage($language)
+    {
+        if($language=='english')
+        {
+            session()->put('lang','english');
+            return view('english.home');
+        }
+        else
+        {
+            session()->put('lang','farsi');
+            return view('farsi.home');
+        }
+
     }
 }

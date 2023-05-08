@@ -24,12 +24,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user_fa.index');
+
+        if(session('lang')=='english')
+        {
+            return redirect('/panel/english/competiton/create');
+        }
+        else
+        {
+            return redirect('/panel/competiton/create');
+//            return view('user_fa.index');
+        }
+
+
     }
 
     public function index_en()
     {
-        return view('user_en.index');
+//        session()->put('lang','english');
+        return redirect('/home');
     }
 
     public function test(Request $request)
