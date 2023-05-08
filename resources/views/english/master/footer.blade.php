@@ -2,7 +2,7 @@
     <div class="col-12 text-center">
         <img src="/images/footer.png" width="60px" class="position-relative" id="bolt-footer"/>
     </div>
-    <div class="row pt-4  mb-3" dir="ltr">
+    <div class="row pt-4  mb-3 en" dir="ltr">
 
         <div class="col-md-4 text-right">
             <b class="d-block">Contact us</b>
