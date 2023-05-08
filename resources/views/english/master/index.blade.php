@@ -41,6 +41,7 @@
                                     {{Auth::user()->fname}}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/panel/english">Dashboard</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
@@ -104,7 +105,7 @@
                             <a class="nav-link text-light" href="/farsi/home">Farsi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Contact us</a>
+                            <a class="nav-link text-light" href="mailto:info@mazaar.net">Contact us</a>
                         </li>
 
 

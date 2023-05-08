@@ -114,7 +114,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="#">تماس با ما</a>
+                                <a class="nav-link text-light" href="mailto:info@mazaar.net">تماس با ما</a>
                             </li>
                         </ul>
                     </div>
