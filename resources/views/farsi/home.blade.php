@@ -135,15 +135,15 @@
                             </div>
                             <input type="text" class="form-control" name="email" />
                         </div>
-                        <!--
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" >تلفن</span>
-                            </div>
-                            <input type="text" class="form-control" name="tel_tmp" id="tel_tmp"  />
+
+                        <div class="input-group mb-3" dir="">
+                            <label for="tel_">تلفن</label>
+                            <input type="text" class="form-control" id="tel_"  />
                             <input type="hidden" class="form-control" name="tel" id="tel"  />
+                            <input type="hidden" class="form-control" name="country" id="country"  />
+                            <input type="hidden" class="form-control" name="code" id="code"  />
                         </div>
-                        -->
+
 
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">

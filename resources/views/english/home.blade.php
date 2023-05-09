@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/plugins/intl-tel-input/build/css/intlTelInput.css">
 
 
+
 </head>
 <body>
 <main class="container-fluid" id="main_signup" dir="rtl">
@@ -86,15 +87,13 @@
                                 <span class="input-group-text" >Email</span>
                             </div>
                         </div>
-                        <!--
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="tel_tmp" id="tel_tmp"  />
+                        <div class="input-group mb-3" dir="ltr">
+                            <label for="tel_">Tel</label>
+                            <input type="text" class="form-control" id="tel_"  />
                             <input type="hidden" class="form-control" name="tel" id="tel"  />
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" >Tel</span>
-                            </div>
+                            <input type="hidden" class="form-control" name="country" id="country"  />
+                            <input type="hidden" class="form-control" name="code" id="code"  />
                         </div>
-                        -->
                         <div class="input-group mb-3">
                             <input type="password" class="form-control" name="password" />
                             <div class="input-group-prepend">

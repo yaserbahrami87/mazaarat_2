@@ -151,22 +151,30 @@
 </script>
 
 <script src="/plugins/intl-tel-input/build/js/intlTelInput.js"></script>
+<script src="/plugins/intl-tel-input/build/js/utils.js"></script>
 <script>
-    var input = document.querySelector("#tel_tmp");
+    var input = document.querySelector("#tel_");
+
     var intl=intlTelInput(input,{
         formatOnDisplay:false,
         separateDialCode:true,
         autoPlaceholder:'off',
-        preferredCountries:["ir", "gb"]
+        preferredCountries:["ir", "gb"],
+        excludeCountries:["il"]
     });
 
     input.addEventListener("countrychange", function() {
         document.querySelector("#tel").value=intl.getNumber();
+        document.querySelector("#country").value="+"+intl.getSelectedCountryData().name;
+        document.querySelector("#code").value="+"+intl.getSelectedCountryData().dialCode;
     });
 
-    $('#tel_tmp').change(function()
+    $('#tel_').change(function()
     {
         document.querySelector("#tel").value=intl.getNumber();
+        document.querySelector("#country").value="+"+intl.getSelectedCountryData().name;
+        document.querySelector("#code").value="+"+intl.getSelectedCountryData().dialCode;
+
     });
 </script>
 

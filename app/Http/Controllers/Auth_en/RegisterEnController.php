@@ -43,12 +43,18 @@ class RegisterEnController extends Controller
             'lname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'tel'       => ['required', 'string', 'min:8'],
+            'country'   => ['required', 'string' ],
+            'code'      => ['required', 'string' ],
         ]);
 
         $user=User::create([
             'fname'     => $request->fname,
             'lname'     => $request->lname,
             'email'     => $request->email,
+            'tel'       => $request->tel,
+            'country'   => $request->country,
+            'code'      => $request->code,
             'password'  => Hash::make($request->password),
         ]);
 

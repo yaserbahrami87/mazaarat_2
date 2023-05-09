@@ -53,6 +53,21 @@
                             </div>
                         </div>
 
+                        <div class="form-group row" dir="">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('تلفن:') }}</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control text-right" id="tel_"  />
+                                <input type="hidden" class="form-control" name="tel" id="tel"  />
+                                <input type="hidden" class="form-control" name="country" id="country"  />
+                                <input type="hidden" class="form-control" name="code" id="code"  />
+                                @error('tel')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('رمز عبور:') }}</label>
 
