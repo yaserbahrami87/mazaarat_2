@@ -54,7 +54,7 @@
                             <a class="nav-link" href="/english/home">انگلیسی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/farsi/contactUs/create">تماس با ما</a>
+                            <a class="nav-link" href="/farsi/contactUs/create_fa">تماس با ما</a>
                         </li>
 
                     </ul>

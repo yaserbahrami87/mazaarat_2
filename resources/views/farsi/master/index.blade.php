@@ -116,7 +116,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="/farsi/contactUs/create">تماس با ما</a>
+                                <a class="nav-link text-light" href="/farsi/contactUs/create_fa">تماس با ما</a>
                             </li>
                         </ul>
                     </div>
