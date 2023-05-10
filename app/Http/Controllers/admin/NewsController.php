@@ -54,6 +54,8 @@ class NewsController extends BaseController
 
 
 
+
+
         $news=news::create($request->all()+
         [
             'insert_user_id'    =>Auth::user()->id,
@@ -116,6 +118,7 @@ class NewsController extends BaseController
      */
     public function update(Request $request, news $news)
     {
+
         $this->validate($request,[
             'title_fa'      =>'required|string|max:200|unique:news,title_fa,'.$news->id,
             'description_fa'=>'required|string|max:200',
@@ -126,6 +129,7 @@ class NewsController extends BaseController
             'content_en'    =>'required|string',
 
         ]);
+
 
 
         $status=$news->update($request->all()+[

@@ -64,6 +64,11 @@ body {
     font-family: 'Vazir', sans-serif !important;
 }
 
+.cke,.cke *
+{
+    font-family: 'sans-serif';
+}
+
 .ltr {
     direction:ltr;
 }

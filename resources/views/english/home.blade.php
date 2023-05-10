@@ -59,6 +59,9 @@
                                 <span class="input-group-text" >Password</span>
                             </div>
                         </div>
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                            {{ __('Forgot Your Password?') }}
+                        </a>
                         <input class="btn btn-primary" type="submit" value="Login" />
                     </div>
                 </div>

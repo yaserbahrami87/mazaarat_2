@@ -110,10 +110,7 @@
     <script src="/admin/ckeditor/ckeditor.js"></script>
     <script src="/admin/ckeditor/lang/fa.js"></script>
     <script>
-        CKEDITOR.replace('biography_fa',
-            {
-                language:'fa',
-            });
+        CKEDITOR.replace('biography_fa');
 
         CKEDITOR.replace('biography_en');
     </script>

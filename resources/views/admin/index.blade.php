@@ -28,6 +28,7 @@
             <a href="#" class="small-box-footer">اطلاعات بیشتر <i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
+
     <!-- ./col -->
     <div class="col-lg-3 col-6">
         <!-- small box -->

@@ -49,11 +49,11 @@
                                     {{ __('Register') }}
                                 </a>
                                 @if (Route::has('password.request'))
-                                <!--
-                                    <a class="btn btn-link" href="/farsi/password/reset">
-                                        {{ __('رمز خود را فراموش کردید؟') }}
+
+                                    <a class="btn btn-link" href="/password/reset">
+                                        {{ __('Forgot Your Password?') }}
                                     </a>
-                                    -->
+
                                 @endif
                             </div>
                         </div>

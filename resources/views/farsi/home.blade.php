@@ -108,6 +108,13 @@
                             <input type="password" class="form-control" name="password" />
                         </div>
                         <input class="btn btn-primary" type="submit" value="ورود" />
+                        @if (Route::has('password.request'))
+
+                            <a class="btn btn-link" href="/password/reset">
+                                {{ __('رمز خود را فراموش کردید؟') }}
+                            </a>
+
+                        @endif
                     </div>
                 </div>
             </form>

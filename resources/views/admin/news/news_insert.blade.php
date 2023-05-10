@@ -97,10 +97,7 @@
     <script src="/admin/ckeditor/ckeditor.js"></script>
     <script src="/admin/ckeditor/lang/fa.js"></script>
     <script>
-        CKEDITOR.replace('content_fa',
-            {
-                language:'fa',
-            });
+        CKEDITOR.replace('content_fa');
 
         CKEDITOR.replace('content_en');
     </script>
