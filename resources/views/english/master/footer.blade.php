@@ -175,6 +175,26 @@
         document.querySelector("#code").value="+"+intl.getSelectedCountryData().dialCode;
 
     });
+
+
+</script>
+
+<script>
+    let pass=document.querySelector('#password');
+    let show_pass=document.querySelector('#show_pass');
+    show_pass.addEventListener('click',function ()
+    {
+        if(pass.getAttribute('type')=='password')
+        {
+            pass.setAttribute('type','text')
+        }
+        else
+        {
+            pass.setAttribute('type','password')
+        }
+
+    });
+
 </script>
 
 

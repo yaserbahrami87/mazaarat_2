@@ -18,6 +18,7 @@
     <link href="/lightbox-gallery-blurred/jquery.lightbox.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="/plugins/intl-tel-input/build/css/intlTelInput.css">
+
     @yield('headerScript')
 
 </head>

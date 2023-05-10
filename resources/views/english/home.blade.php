@@ -13,6 +13,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <title> Mazaarat International Photo Festival</title>
     <link rel="stylesheet" href="/plugins/intl-tel-input/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
 
@@ -54,7 +55,12 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" class="form-control" name="password" />
+                            <div class="input-group-prepend">
+                                <button class="btn btn-secondary" type="button" id="show_pass" id>
+                                    <i class="bi bi-eye-fill"></i>
+                                </button>
+                            </div>
+                            <input type="password" class="form-control" name="password" id="password" />
                             <div class="input-group-prepend">
                                 <span class="input-group-text" >Password</span>
                             </div>

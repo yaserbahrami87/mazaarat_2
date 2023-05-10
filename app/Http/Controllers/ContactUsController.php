@@ -44,7 +44,7 @@ class ContactUsController extends Controller
         $this->validate($request,[
             'name'      =>'required|string|min:2',
             'email'     =>'required|email',
-            'comment'   =>'required|string|max:200',
+            'comment'   =>'required|string|min:10',
         ]);
 
         $contactUs=ContactUs::create($request->all());

@@ -10,6 +10,7 @@
     <link href="/css/style.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="/plugins/intl-tel-input/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <title></title>
 </head>
@@ -105,7 +106,12 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" >رمز عبور</span>
                             </div>
-                            <input type="password" class="form-control" name="password" />
+                            <input type="password" class="form-control" name="password" id="password"/>
+                            <div class="input-group-prepend">
+                                <button class="btn btn-secondary" type="button" id="show_pass" id>
+                                    <i class="bi bi-eye-fill"></i>
+                                </button>
+                            </div>
                         </div>
                         <input class="btn btn-primary" type="submit" value="ورود" />
                         @if (Route::has('password.request'))

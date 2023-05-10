@@ -166,6 +166,33 @@
 
                         </ul>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fa fa-email"></i>
+                            <p>
+                                پیام های ارسالی
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/admin/ContactUs" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>همه پیامها</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/admin/ContactUs?status=1" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>خوانده نشده</p>
+                                </a>
+                                <a href="/admin/ContactUs?status=0" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>خوانده شده</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a href="/panel/competiton" class="nav-link">
                             <i class="nav-icon fa fa-album"></i>
