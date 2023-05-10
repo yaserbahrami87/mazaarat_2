@@ -22,6 +22,7 @@
 
 </head>
 <body>
+@include('sweetalert::alert')
 <main class="container-fluid" id="main_gallery" dir="rtl">
     <div class="container">
         <div class="row">
@@ -115,7 +116,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="mailto:info@mazaar.net">تماس با ما</a>
+                                <a class="nav-link text-light" href="/farsi/contactUs/create">تماس با ما</a>
                             </li>
                         </ul>
                     </div>

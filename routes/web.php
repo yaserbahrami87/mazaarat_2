@@ -28,6 +28,10 @@ Route::prefix('farsi')->group(function ()
     Route::get('/news/{news}/show','NewsController@news_single');
 
 
+    //ContactUs
+    Route::get('/contactUs/create_fa','ContactUsController@create_fa');
+    Route::resource('contactUs','ContactUsController');
+
 });
 
 Route::get('/farsi/gallery',function()
@@ -105,6 +109,9 @@ Route::prefix('english')->group(function ()
     {
         return view('english.auth.register');
     });
+
+    //ContactUs
+    Route::resource('contactUs','ContactUsController');
 
 });
 

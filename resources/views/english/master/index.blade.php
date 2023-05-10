@@ -107,7 +107,7 @@
                             <a class="nav-link text-light" href="/farsi/home">Farsi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="mailto:info@mazaar.net">Contact us</a>
+                            <a class="nav-link text-light" href="/english/contactUs/create">Contact us</a>
                         </li>
 
 
