@@ -1,4 +1,4 @@
-@extends(session()->get('lang').'.master.index')
+@extends(session()->has('lang')? session()->get('lang').'.master.index' : 'english.master.index')
 
 @section('content')
 
