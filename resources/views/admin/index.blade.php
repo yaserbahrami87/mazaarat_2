@@ -34,9 +34,9 @@
         <!-- small box -->
         <div class="small-box bg-success">
             <div class="inner">
-                <h3>0<sup style="font-size: 20px">%</sup></h3>
+                <h3>{{$competition->where('competiton_category_id','=','1')->count()}}</h3>
 
-                <p>افزایش امتیاز</p>
+                <p>تعداد عکس مزارات</p>
             </div>
             <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -51,9 +51,9 @@
         <!-- small box -->
         <div class="small-box bg-danger">
             <div class="inner">
-                <h3>0</h3>
+                <h3>{{$competition->where('competiton_category_id','=','2')->count()}}</h3>
 
-                <p>بازدید جدید</p>
+                <p>تعداد عکس نیایش</p>
             </div>
             <div class="icon">
                 <i class="ion ion-pie-graph"></i>
