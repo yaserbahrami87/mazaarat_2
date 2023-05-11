@@ -1,5 +1,10 @@
 @extends('admin.master.index')
 
+@section('headerScript')
+    <link href="/plugins/dataTables/datatables.css" rel="stylesheet" />
+@endsection
+
+
 @section('content')
     <div class="12 col-md-3">
         <form method="post" action="/admin/">
@@ -14,7 +19,7 @@
         </form>
     </div>
     <div class="col-12 table-responsive">
-        <table class="table table-bordered table-hover table-striped ">
+        <table class="table table-bordered table-hover table-striped " id="dataTable">
             <thead>
 
                 <th>مشخصات</th>
@@ -52,6 +57,15 @@
             @endforeach
             </tbody>
         </table>
-        {{$users->links()}}
+
     </div>
+@endsection
+
+@section('footerScript')
+    <script src="/plugins/dataTables/datatables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTable').DataTable();
+        });
+    </script>
 @endsection

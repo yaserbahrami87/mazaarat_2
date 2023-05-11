@@ -17,7 +17,7 @@ class UserController extends Controller
     public function index()
     {
         $users=User::orderby('id','desc')
-                    ->paginate(10);
+                    ->get();
 
         $festival=festival::latest()->first();
         return view('admin.users.users_all')
