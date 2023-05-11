@@ -19,6 +19,7 @@ class UserController extends Controller
         $users=User::orderby('id','desc')
                     ->get();
 
+
         $festival=festival::latest()->first();
         return view('admin.users.users_all')
                         ->with('festival',$festival)
