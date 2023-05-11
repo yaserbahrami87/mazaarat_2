@@ -20,9 +20,13 @@
 
                                 <p>توضیحات: <b class="card-text">{{$competition->description}}</b></p>
 
-                                <a href="/images/competition/{{$competition->image}}" class="btn btn-primary" target="_blank">
+                            </div>
+                            <div class="card-footer">
+                                <a href="/images/competition/{{$competition->image}}" class="btn btn-primary btn-sm   " target="_blank">
                                     مشاهده
                                 </a>
+
+                                <span class="float-left">{{($competition->competition_category->category_fa)}}</span>
                             </div>
                         </div>
 
