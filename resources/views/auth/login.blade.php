@@ -2,7 +2,7 @@
 
 @section('content')
 
-@if(session()->get('lang')=='english')
+@if(session()->get('lang')=='english' || (!session()->has('lang')))
     <div class="container mb-5" dir="ltr">
         <div class="row justify-content-center">
             <div class="col-md-8">
