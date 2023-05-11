@@ -120,7 +120,7 @@
                                                     <div class="form-group files">
                                                         <input type="file" class="form-control" name="image">
                                                     </div>
-                                                    <!-- <input type="hidden" name="competiton_category_id" value="1" /> -->
+                                                    <input type="hidden" name="competiton_category_id" value="1" />
                                                     <div class="form-group">
                                                         <label >توضیحات:
                                                         </label>
