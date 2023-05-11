@@ -151,7 +151,7 @@
 
                         <div class="input-group mb-3" dir="">
                             <label for="tel_">تلفن</label>
-                            <input type="text" class="form-control" id="tel_"  />
+                            <input type="text" class="form-control text-right p-0" id="tel_"   />
                             <input type="hidden" class="form-control" name="tel" id="tel"  />
                             <input type="hidden" class="form-control" name="country" id="country"  />
                             <input type="hidden" class="form-control" name="code" id="code"  />

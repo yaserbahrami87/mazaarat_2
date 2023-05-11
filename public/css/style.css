@@ -11,6 +11,10 @@
          url("../fonts/AnjomanMaxFN-Regular.woff"),
          url("../fonts/AnjomanMaxFN-Regular.woff2");
 }
+.bg_color_mazarat
+{
+    background-color: #b9b9b9;
+}
 
 *
 {

@@ -14,12 +14,13 @@
         </form>
     </div>
     <div class="col-12 table-responsive">
-        <table class="table table-bordered table-hover table-striped">
+        <table class="table table-bordered table-hover table-striped ">
             <thead>
 
                 <th>مشخصات</th>
                 <th>ایمیل</th>
                 <th>تلفن</th>
+                <th>کشور</th>
                 <th>تاریخ ثبت نام</th>
                 <th>تعداد عکس ارسالی</th>
                 <th>مشاهده</th>
@@ -32,8 +33,9 @@
                                 {{$user->fname.' '.$user->lname}}
                         </a>
                     </td>
-                    <td>{{$user->email}}</td>
-                    <td>{{$user->tel}}</td>
+                    <td dir="ltr">{{$user->email}}</td>
+                    <td dir="ltr"> {{$user->tel}}</td>
+                    <td dir="ltr"> {{$user->country}}</td>
                     <td class="text-center">{{$user->created_at}}</td>
                     <td class="text-center">{{$user->competitions->where('festival_id','=',$festival->id)->count()}}</td>
                     <td>
