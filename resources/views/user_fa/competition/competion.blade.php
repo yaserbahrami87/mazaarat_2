@@ -137,16 +137,21 @@
                                                         </label>
                                                         <input type="text" class="form-control"  name="location">
                                                     </div>
+                                                    <!--
                                                     <div class="form-group">
                                                         <label for="competiton_category_id">موضوع
                                                             <span class="alert text-danger m-0 p-0">*</span>
                                                         </label>
+
+
                                                         <select class="form-control" name="competiton_category_id" id="competiton_category_id">
                                                             <option disabled selected>انتخاب کنید</option>
                                                             <option value="1">مزارات</option>
                                                             <option value="2">نیایش</option>
                                                         </select>
+
                                                     </div>
+                                                    -->
                                                 </div>
                                                 <div class="col-12 text-center">
                                                     <button type="submit" class="btn btn-success">
