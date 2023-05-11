@@ -1,5 +1,6 @@
 @extends('admin.master.index')
 @section('content')
+
     <div class="col-12">
         <div class="card">
             <h5 class="card-header">بروزرسانی خبر</h5>
@@ -11,13 +12,13 @@
                 <form method="post" action="/admin/news/{{$news->title_en}}" enctype="multipart/form-data">
                     {{csrf_field()}}
                     {{method_field('PATCH')}}
+
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-farsi" role="tabpanel" aria-labelledby="nav-farsi-tab">
                             <div class="alert alert-warning mt-1 mb-5">
                                 پر کردن فیلدهای ستاره دار اجباریست
                             </div>
                             <div class="col-12 col-md-6">
-
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="image">عکس خبر<span class="text-danger">*</span></span>
@@ -96,7 +97,7 @@
 @section('footerScript')
 
     <script src="/admin/ckeditor/ckeditor.js"></script>
-    <script src="/admin/ckeditor/lang/fa.js"></script>
+
     <script>
         CKEDITOR.replace('content_fa');
 

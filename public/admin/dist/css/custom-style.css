@@ -61,12 +61,12 @@
 /*---------------------------------- End of fonts ---------------------------------- */
 
 body {
-    font-family: 'Vazir', sans-serif !important;
+    font-family: 'Vazir', sans-serif ;
 }
 
-.cke,.cke *
+textarea
 {
-    font-family: 'sans-serif';
+    font-family: IRANSans, sans-serif !important;;
 }
 
 .ltr {

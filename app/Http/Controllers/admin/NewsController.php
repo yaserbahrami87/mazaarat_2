@@ -41,6 +41,7 @@ class NewsController extends BaseController
      */
     public function store(Request $request)
     {
+
         $this->validate($request,[
             'title_fa'      =>'required|string|max:200|unique:news,title_fa',
             'description_fa'=>'required|string|max:200',
