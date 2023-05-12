@@ -109,12 +109,10 @@
 
                                 </div>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false" >زبان سایت</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="/farsi/home">فارسی</a>
-                                    <a class="dropdown-item" href="/english/home">انگلیسی</a>
-                                </div>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="/english/home">
+                                    <img src="/images/united-kingdom-flag-icon.png" width="35px" />
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="/farsi/contactUs/create_fa">تماس با ما</a>
