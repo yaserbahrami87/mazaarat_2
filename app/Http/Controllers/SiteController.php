@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\news;
 use Illuminate\Http\Request;
 
-class SiteController extends Controller
+class SiteController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -84,15 +85,24 @@ class SiteController extends Controller
 
     public function setLanguage($language)
     {
+        $news=news::where('festival_id','=',$this->festival->id)
+            ->limit(4)
+            ->orderby('id','desc')
+            ->get();
+
+
         if($language=='english')
         {
+
             session()->put('lang','english');
-            return view('english.home');
+            return view('english.home')
+                            ->with('news',$news);
         }
         else
         {
             session()->put('lang','farsi');
-            return view('farsi.home');
+            return view('farsi.home')
+                            ->with('news',$news);
         }
 
     }

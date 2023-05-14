@@ -35,7 +35,7 @@
                     <div class="collapse navbar-collapse" id="navbarVerticalContent">
                         <ul class="navbar-nav mr-auto p-0">
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="/">خانه</a>
+                                <a class="nav-link text-light" href="/farsi/home">خانه</a>
                             </li>
                             @guest
                                 <li class="nav-item active">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\festival;
 use Illuminate\Http\Request;
 
 class BaseController extends Controller
@@ -11,5 +12,7 @@ class BaseController extends Controller
         $dateNow = verta();
         $this->dateNow = $dateNow->format('Y/m/d');
         $this->timeNow = $dateNow->format('H:i:s');
+
+        $this->festival=festival::latest()->first();
     }
 }

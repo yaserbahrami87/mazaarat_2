@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarVerticalContent_en">
                     <ul class="navbar-nav mr-auto p-0">
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="/">Home</a>
+                            <a class="nav-link text-light" href="/english/home">Home</a>
                         </li>
                         @guest
                         <li class="nav-item active">
