@@ -12,7 +12,7 @@
                     <div class="col-12 col-md-3">
 
                         <div class="card" >
-                            <img src="/images/competition/{{$competition->image}}" class="card-img-top" alt="..." height="160px">
+                            <img src="/images/competition/thumbnail_{{$competition->image}}" class="card-img-top" alt="..." height="160px">
                             <div class="card-body">
                                 <p > نام مکان: <b class="card-title">{{$competition->name_place}}</b></p>
 
