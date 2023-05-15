@@ -223,9 +223,7 @@
                                                             <textarea class="form-control" name="description" rows="3" placeholder="توضیحات"></textarea>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label>نام مکان:
-                                                                <span class="alert text-danger m-0 p-0">*</span>
-                                                            </label>
+                                                            <label>نام مکان:</label>
                                                             <input type="text" class="form-control"  name="name_place">
                                                         </div>
                                                         <div class="form-group">

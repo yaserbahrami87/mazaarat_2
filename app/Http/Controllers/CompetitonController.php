@@ -56,7 +56,7 @@ class CompetitonController extends BaseController
            'image'                    =>'required|mimes:jpg,jpeg|max:2048',
            'description'              =>'nullable|string|max:200',
            'competiton_category_id'   =>'required|numeric',
-           'name_place'               =>'required|string|max:200',
+           'name_place'               =>'required_if:competiton_category_id,1|max:200',
            'location'                 =>'nullable|string|max:200',
         ]);
 
