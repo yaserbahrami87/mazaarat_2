@@ -54,4 +54,16 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\competiton');
     }
+
+    public function state()
+    {
+        return $this->belongsTo('App\state','state_id','id');
+    }
+
+    public function city()
+    {
+        return $this->belongsTo('App\city','city_id','id');
+    }
+
+
 }

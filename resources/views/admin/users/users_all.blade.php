@@ -26,6 +26,8 @@
                 <th>ایمیل</th>
                 <th>تلفن</th>
                 <th>کشور</th>
+                <th>استان</th>
+                <th>شهرستان</th>
                 <th>تاریخ ثبت نام</th>
                 <th>تعداد عکس ارسالی</th>
                 <th>مزارات</th>
@@ -44,6 +46,8 @@
                     <td dir="ltr">{{$user->email}}</td>
                     <td dir="ltr"> {{$user->tel}}</td>
                     <td dir="ltr"> {{$user->country}}</td>
+                    <td dir="ltr"> {{$user->state['name']}}</td>
+                    <td dir="ltr"> {{$user->city['name']}}</td>
                     <td class="text-center">{{$user->created_at}}</td>
                     <td class="text-center">{{$user->competitions->where('festival_id','=',$festival->id)->count()}}</td>
                     <td class="text-center">{{($user->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=','1')->count())}}</td>
@@ -65,7 +69,9 @@
     <script src="/plugins/dataTables/datatables.js"></script>
     <script>
         $(document).ready(function () {
-            $('#dataTable').DataTable();
+            $('#dataTable').DataTable({
+                'order':[[6,'desc']],
+            });
         });
     </script>
 @endsection
