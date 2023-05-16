@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\news;
+use App\state;
 use Illuminate\Http\Request;
 
 class SiteController extends BaseController
@@ -81,6 +82,24 @@ class SiteController extends BaseController
     public function destroy($id)
     {
         //
+    }
+
+
+    public function register()
+    {
+        $states=state::orderby('name')
+                    ->get();
+
+        if(session('lang')=='farsi')
+        {
+            return view('farsi.auth.register')
+                        ->with('states',$states);
+        }
+        else
+        {
+            return view('english.auth.register')
+                        ->with('states',$states);
+        }
     }
 
     public function setLanguage($language)

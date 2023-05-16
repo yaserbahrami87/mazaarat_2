@@ -52,7 +52,6 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row" dir="">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('تلفن:') }}</label>
                             <div class="col-md-6">
@@ -67,6 +66,40 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row" id="states_register">
+                            <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('استان:') }}</label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="state" name="state_id">
+                                    <option disabled selected>انتخاب کنید</option>
+                                    @foreach($states as $state)
+                                        <option value="{{$state->id}}">{{$state->name}}</option>
+                                    @endforeach
+                                </select>
+                                @error('state')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row" id="cities_register">
+                            <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('شهرستان:') }}</label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="cities" name="city_id">
+                                    <option disabled selected>انتخاب کنید</option>
+                                    @foreach($states as $state)
+                                        <option value="{{$state->id}}">{{$state->name}}</option>
+                                    @endforeach
+                                </select>
+                                @error('state')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('رمز عبور:') }}</label>
@@ -106,4 +139,27 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('footerScript')
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script>
+        $("#state").change(function(){
+           let city=$('#state').val();
+           $.ajax({
+               type:'GET',
+               url:'/state/'+city,
+               success:function (data)
+               {
+                   let cities='';
+                   $.each(data,function(key,value){
+                       cities+="<option value='"+value.id+"'>"+value.name+"</option>"
+                   })
+                   $('#cities').html(cities);
+
+               }
+
+           });
+        });
+    </script>
 @endsection

@@ -58,7 +58,10 @@ class RegisterController extends Controller
             'tel'       => ['required', 'string', 'min:8'],
             'country'   => ['required', 'string' ],
             'code'      => ['required', 'string' ],
+            'state_id'  =>'required_if:code,+98','numeric',
+            'city_id'   =>'required_if:code,+98','numeric',
         ]);
+
     }
 
 
@@ -71,6 +74,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if(!isset($data['state_id']))
+        {
+            $data['state_id']=NULL;
+        }
+
+        if(!isset($data['city_id']))
+        {
+            $data['city_id']=NULL;
+        }
 
         return User::create([
             'fname'     => $data['fname'],
@@ -79,7 +91,9 @@ class RegisterController extends Controller
             'tel'       => $data['tel'],
             'country'   => $data['country'],
             'code'      => $data['code'],
-            'password' => Hash::make($data['password']),
+            'password'  => Hash::make($data['password']),
+            'state_id'  => $data['state_id'],
+            'city_id'   => $data['city_id'],
         ]);
     }
 }

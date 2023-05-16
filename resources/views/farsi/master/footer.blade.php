@@ -167,6 +167,16 @@
         document.querySelector("#tel").value=intl.getNumber();
         document.querySelector("#country").value="+"+intl.getSelectedCountryData().name;
         document.querySelector("#code").value="+"+intl.getSelectedCountryData().dialCode;
+        if(intl.getSelectedCountryData().dialCode==98)
+        {
+            document.querySelector('#states_register').setAttribute('class','form-group row');
+            document.querySelector('#cities_register').setAttribute('class','form-group row');
+        }
+        else
+        {
+            document.querySelector('#states_register').setAttribute('class','form-group row d-none');
+            document.querySelector('#cities_register').setAttribute('class','form-group row d-none');
+        }
     });
 
     $('#tel_').change(function()

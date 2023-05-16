@@ -69,10 +69,12 @@ Route::get('/farsi/login',function()
     return view('farsi.auth.login');
 });
 
-Route::get('/farsi/register',function()
-{
-    return view('farsi.auth.register');
-});
+//Route::get('/farsi/register',function()
+//{
+//    return view('farsi.auth.register');
+//});
+
+Route::get('/farsi/register','SiteController@register');
 
 Route::get('/farsi/password/reset',function()
 {
@@ -105,10 +107,12 @@ Route::prefix('english')->group(function ()
     Route::post('/register','Auth_en\RegisterEnController@store');
     Route::post('/login','Auth_en\LoginEnController@store');
 
-    Route::get('/register',function()
-    {
-        return view('english.auth.register');
-    });
+//    Route::get('/register',function()
+//    {
+//        return view('english.auth.register');
+//    });
+
+    Route::get('/register','SiteController@register');
 
     //ContactUs
     Route::resource('contactUs','ContactUsController');
@@ -171,6 +175,11 @@ Route::get('/test',function(){
 });
 
 Route::post('/test','HomeController@test');
+
+
+//ajax State
+Route::get('/state/{state}','StateController@show');
+
 
 
 Route::get('/migrate',function()
