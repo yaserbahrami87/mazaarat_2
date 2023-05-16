@@ -3,7 +3,6 @@
 @section('content')
     <div class="container text-center">
         <div class="row align-items-center mt-3 mb-3 gallery" id="gallery">
-
             @foreach($galleries as $pic)
                 <div class="col-12 col-md-4 col-lg-3 mb-4 box_image text-center">
                     <a href="/images/gallery/{{$pic->image}}" rel="{{$pic->fname_fa.' '.$pic->lname_fa}}" data-caption="{{$pic->fname_fa.' '.$pic->lname_fa}}" >

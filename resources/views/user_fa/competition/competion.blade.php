@@ -109,7 +109,7 @@
 
 
                             @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<7)
-                                @for($j=0;$j<(7-count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1)));$j++)
+
 
                                 <div class="col-12 col-md-3" >
                                     <div class="card bg-transparent" >
@@ -162,7 +162,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                @endfor
+
                             @else
                                 <div class="col-12 alert alert-warning">
                                     حداکثر تعداد عکس های مورد نظر جشنواره ارسال شده است
@@ -205,7 +205,7 @@
 
 
                             @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2))<7)
-                                @for($j=0;$j<(7-count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2)));$j++)
+
 
                                     <div class="col-12 col-md-3 mb-5" >
                                         <div class="card bg-transparent" >
@@ -241,7 +241,7 @@
                                             </form>
                                         </div>
                                     </div>
-                                @endfor
+
                             @else
                                 <div class="col-12 alert alert-warning">
                                     حداکثر تعداد عکس های مورد نظر جشنواره ارسال شده است

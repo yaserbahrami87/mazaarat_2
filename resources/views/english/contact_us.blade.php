@@ -10,24 +10,24 @@
 
                     <!-- Name input-->
                     <div class="form-group">
-                        <label class="col-md-3 control-label" for="name">Name: *</label>
-                        <div class="col-md-9">
+                        <label class=" control-label" for="name">Name: *</label>
+                        <div class="">
                             <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
                         </div>
                     </div>
 
                     <!-- Email input-->
                     <div class="form-group">
-                        <label class="col-md-3 control-label" for="email">Your E-mail: *</label>
-                        <div class="col-md-9">
+                        <label class=" control-label" for="email">Your E-mail: *</label>
+                        <div class="">
                             <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
                         </div>
                     </div>
 
                     <!-- Message body -->
                     <div class="form-group">
-                        <label class="col-md-3 control-label" for="comment">Your message: *</label>
-                        <div class="col-md-9">
+                        <label class=" control-label" for="comment">Your message: *</label>
+                        <div class="">
                             <textarea class="form-control" id="comment" name="comment" placeholder="Please enter your message here..." rows="5"></textarea>
                         </div>
                     </div>

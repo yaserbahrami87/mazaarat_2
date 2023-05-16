@@ -45,7 +45,7 @@ class GalleryController extends Controller
      * @param  \App\gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function show(festival $festival)
+    public function show(festival $festival,Request $request)
     {
 
         $galleries=gallery::where('festival_id','=',$festival->id)

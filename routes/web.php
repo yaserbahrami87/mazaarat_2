@@ -20,6 +20,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('farsi')->group(function ()
 {
+    //Auth
+    Route::get('/login',function()
+    {
+        return view('farsi.auth.login');
+    });
+
+
+    Route::get('/register','SiteController@register');
+
+    Route::get('/password/reset',function()
+    {
+        return view('farsi.auth.passwords.reset');
+    });
+
+
+    //Gallery
     Route::get('/gallery/{festival}','GalleryController@show');
 
 
@@ -32,54 +48,51 @@ Route::prefix('farsi')->group(function ()
     Route::get('/contactUs/create_fa','ContactUsController@create_fa');
     Route::resource('contactUs','ContactUsController');
 
-});
 
-Route::get('/farsi/gallery',function()
-{
-    return view('farsi.gallery');
-});
+    //pillars
+    Route::get('/pillars/{festival}','PillarController@show');
 
-Route::get('/farsi/pillars_category',function()
-{
-    return view('farsi.pillars_category');
-});
-
-//pillars
-Route::get('/farsi/pillars/{festival}','PillarController@show');
-
-//Call
-Route::get('/farsi/call','CallController@show');
+    //Call
+    Route::get('/call','CallController@show');
 
 
-Route::get('/farsi/upload',function()
-{
-    if(Auth::check())
+    Route::get('/upload',function()
     {
-        return redirect('/');
-    }
-    else
-    {
-        return redirect('/farsi/login');
-    }
+        if(Auth::check())
+        {
+            return redirect('/');
+        }
+        else
+        {
+            return redirect('/farsi/login');
+        }
+
+    });
 
 });
 
-Route::get('/farsi/login',function()
-{
-    return view('farsi.auth.login');
-});
+//Route::get('/farsi/gallery',function()
+//{
+//    return view('farsi.gallery');
+//});
+
+//Route::get('/farsi/pillars_category',function()
+//{
+//    return view('farsi.pillars_category');
+//});
+
+
+
+
+
+
+
+
 
 //Route::get('/farsi/register',function()
 //{
 //    return view('farsi.auth.register');
 //});
-
-Route::get('/farsi/register','SiteController@register');
-
-Route::get('/farsi/password/reset',function()
-{
-    return view('farsi.auth.passwords.reset');
-});
 
 
 
@@ -117,6 +130,45 @@ Route::prefix('english')->group(function ()
     //ContactUs
     Route::resource('contactUs','ContactUsController');
 
+    Route::get('/news/{festival}','NewsController@show_en');
+
+
+
+    Route::get('/pillars_category',function()
+    {
+        return view('english.pillars_category');
+    });
+
+
+    Route::get('/pillars/{festival}','PillarController@show_en');
+
+    Route::get('/upload',function()
+    {
+        if(Auth::check())
+        {
+            return redirect('/');
+        }
+        else
+        {
+            return redirect('/english/login');
+        }
+
+    });
+
+    Route::get('/call','CallController@show_en');
+
+
+    Route::get('/login',function()
+    {
+        return view('english.auth.login');
+    });
+
+
+    Route::get('/password/reset',function()
+    {
+        return view('english.auth.passwords.reset');
+    });
+
 });
 
 
@@ -130,43 +182,10 @@ Route::get('/{language}/home','SiteController@setLanguage');
 //    return view('english.gallery');
 //});
 
-Route::get('/english/news/{festival}','NewsController@show_en');
 
 
-Route::get('/english/pillars_category',function()
-{
-    return view('english.pillars_category');
-});
 
 
-Route::get('/english/pillars/{festival}','PillarController@show_en');
-
-Route::get('/english/upload',function()
-{
-    if(Auth::check())
-    {
-        return redirect('/');
-    }
-    else
-    {
-        return redirect('/english/login');
-    }
-
-});
-
-Route::get('/english/call','CallController@show_en');
-
-
-Route::get('/english/login',function()
-{
-    return view('english.auth.login');
-});
-
-
-Route::get('/english/password/reset',function()
-{
-    return view('english.auth.passwords.reset');
-});
 
 
 
