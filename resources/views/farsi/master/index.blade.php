@@ -111,7 +111,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="/english/home">
-                                    <img src="/images/united-kingdom-flag-icon.png" width="35px" />
+                                    EN
                                 </a>
                             </li>
                             <li class="nav-item">

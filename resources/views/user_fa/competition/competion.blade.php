@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="card p-5 mb-5">
+                <div class="card p-5 mb-5  bg_silver text-light">
                     <h3 class="text-center">خلاصه فراخوان</h3>
                     <p class="font-weight-bold">موضوعات جشنواره:</p>
                     <ol>

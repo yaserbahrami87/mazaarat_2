@@ -105,7 +105,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link text-light" href="/farsi/home">
-                                <img src="/images/iran-flag-icon.png" width="35px" />
+                                IR
                             </a>
                         </li>
                         <li class="nav-item">
