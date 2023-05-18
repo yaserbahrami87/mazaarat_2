@@ -25,9 +25,34 @@
                         <span class="sr-only">Next</span>
                     </button>
                 </div>
+            </div>
+            <div class="col-12 col-md-4 text-center p-5">
+                <div class="card" >
+                    <div class="card-body bg_silver ">
+                        <a href="/documents/EN.pdf" class="text-light" >English
+                            <img src="/images/PDF_icon.png" width="25px" />
+                        </a>
 
-
-
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center p-5">
+                <div class="card" >
+                    <div class="card-body bg_silver ">
+                        <a href="/documents/FA.pdf" class="text-light" >Farsi
+                            <img src="/images/PDF_icon.png" width="25px" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center p-5">
+                <div class="card" >
+                    <div class="card-body bg_silver ">
+                        <a href="/documents/AR.pdf" class="text-light" >Arabic
+                            <img src="/images/PDF_icon.png" width="25px" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
