@@ -8,7 +8,7 @@
     <meta name="author" content="یاسر بهرامی">
 
     <title>جشنواره بین المللی عکس مزارات | Mazaarat International Photo Festival</title>
-    <meta name="description" content="Online Tutorials for all type of brains">
+    <meta name="description" content="جشنواره بین المللی عکس مزارات | Mazaarat International Photo Festival">
 
 
     <!-- Bootstrap CSS -->

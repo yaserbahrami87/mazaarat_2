@@ -5,7 +5,9 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title></title>
+
+    <title> Mazaarat International Photo Festival</title>
+    <meta name="description" content="جشنواره بین المللی عکس مزارات | Mazaarat International Photo Festival">
 
 
     <!-- Bootstrap CSS -->
