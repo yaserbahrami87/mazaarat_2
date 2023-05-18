@@ -26,7 +26,7 @@
                     </button>
                 </div>
             </div>
-            <div class="col-12 col-md-4 text-center p-5">
+            <div class="col-12 col-md-3 text-center p-3">
                 <div class="card" >
                     <div class="card-body bg_silver ">
                         <a href="/documents/EN.pdf" class="text-light" >English
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 text-center p-5">
+            <div class="col-12 col-md-3 text-center p-3">
                 <div class="card" >
                     <div class="card-body bg_silver ">
                         <a href="/documents/FA.pdf" class="text-light" >Farsi
@@ -45,10 +45,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 text-center p-5">
+            <div class="col-12 col-md-3 text-center p-3">
                 <div class="card" >
                     <div class="card-body bg_silver ">
                         <a href="/documents/AR.pdf" class="text-light" >Arabic
+                            <img src="/images/PDF_icon.png" width="25px" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 text-center p-3">
+                <div class="card" >
+                    <div class="card-body bg_silver ">
+                        <a href="/documents/Ordu.pdf" class="text-light" >Ordu
                             <img src="/images/PDF_icon.png" width="25px" />
                         </a>
                     </div>
