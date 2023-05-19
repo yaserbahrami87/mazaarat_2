@@ -74,6 +74,38 @@
                     <p>آخرین مهلت ثبت نام و دریافت عکس‌ها: 26 خرداد 1402</p>
                     <p>داوری: 28 خرداد 1402</p>
                     <p>اعلام پذیرفته شدگان و نامزدهای جوایز از طریق ایمیل: 10 تیرماه1402 </p>
+
+                    <div class="alert alert-warning">
+                        <p><i class="bi bi-exclamation-triangle-fill mr-2"></i>شرکت کننده گرامی شما می‌توانید با تبلیغ جشنواره در صفحات اجتماعی خود و ارسال لینک آن اجازه ارسال یک اثر دیگر را به دست آورید.</p>
+                        @if(is_null(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()) )
+
+                            <form method="post" action="/panel/RequestLink">
+                                {{csrf_field()}}
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1">ارسال درخواست</button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" name="link" />
+                                </div>
+                            </form>
+                        @else
+                            @if(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->status==1)
+                                <div class="alert alert-success">
+                                    درخواست شما برای بارگذاری یک عکس بیشتر در جشنواره تایید شد
+                                </div>
+                            @elseif(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->status==2)
+                                <div class="alert alert-danger">
+                                    متاسفانه درخواست شما برای بارگذاری یک عکس بیشتر در جشنواره مورد تایید قرار نگرفت
+                                </div>
+                            @elseif(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->status==0)
+                                <div class="alert alert-warning">
+                                    درخواست شما برای بارگذاری یک عکس بیشتر در جشنواره در حال بررسی است
+                                </div>
+                            @endif
+
+                        @endif
+                    </div>
+
                 </div>
                 <div class="card bg-transparent">
                     <div class="card-header text-center">
@@ -82,7 +114,7 @@
                     <div class="card-body bg-transparent upload_pictures" >
                         <div class="row">
                             @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1) as $competiton )
-                                <div class="col-12 col-md-3 mb-3 "  >
+                                <div class="col-12 col-md-3 mb-3 mx-auto"  >
                                     <div class="card bg-transparent">
                                         <img src="/images/competition/{{$competiton->image}}" class="card-img-top mb-2 " alt="..." height="182px">
                                         <div class="card-body p-0  text-center">
@@ -107,11 +139,17 @@
                             @endforeach
 
 
-
-                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<7)
-
-
-                                <div class="col-12 col-md-3" >
+                            @if(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()['status']==1)
+                                @php
+                                    $num=8;
+                                @endphp
+                            @else
+                                    @php
+                                        $num=7;
+                                    @endphp
+                            @endif
+                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<$num)
+                                <div class="col-12 col-md-3 mx-auto" >
                                     <div class="card bg-transparent" >
                                         <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
                                             {{csrf_field()}}
@@ -168,6 +206,10 @@
                                     حداکثر تعداد عکس های مورد نظر جشنواره ارسال شده است
                                 </div>
                             @endif
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -178,7 +220,7 @@
                     <div class="card-body bg-transparent upload_pictures" >
                         <div class="row">
                             @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2) as $competiton )
-                                <div class="col-12 col-md-3 mb-5 "  >
+                                <div class="col-12 col-md-3 mb-5 mx-auto"  >
                                     <div class="card bg-transparent">
                                         <img src="/images/competition/{{$competiton->image}}" class="card-img-top mb-2 " alt="..." height="182px">
                                         <div class="card-body p-0  text-center">
@@ -204,10 +246,10 @@
 
 
 
-                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2))<7)
+                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2))<$num)
 
 
-                                    <div class="col-12 col-md-3 mb-5" >
+                                    <div class="col-12 col-md-3 mb-5 mx-auto" >
                                         <div class="card bg-transparent" >
                                             <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
                                                 {{csrf_field()}}

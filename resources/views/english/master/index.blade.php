@@ -67,7 +67,9 @@
                             </a>
                             <div class="dropdown-menu">
                                 @foreach($festivals as $festival)
-                                    <a class="dropdown-item" href="/english/gallery/{{$festival->festival_en}}">{{$festival->festival_en}}</a>
+                                    @if($loop->index!=0)
+                                        <a class="dropdown-item" href="/english/gallery/{{$festival->festival_en}}">{{$festival->festival_en}}</a>
+                                    @endif
                                 @endforeach
                             </div>
                         </li>

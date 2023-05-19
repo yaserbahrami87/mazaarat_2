@@ -65,5 +65,10 @@ class User extends Authenticatable
         return $this->belongsTo('App\city','city_id','id');
     }
 
+    public function requestLinks()
+    {
+        return $this->hasMany('App\RequestLink','user_id','id');
+    }
+
 
 }

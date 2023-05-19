@@ -68,13 +68,17 @@
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="/panel/competiton/create">ارسال عکس</a>
                             </li>
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                     گالری
                                 </a>
                                 <div class="dropdown-menu">
+
                                     @foreach($festivals as $festival)
-                                        <a class="dropdown-item" href="/farsi/gallery/{{$festival->festival_en}}">{{$festival->festival_fa}}</a>
+                                        @if($loop->index!=0)
+                                            <a class="dropdown-item" href="/farsi/gallery/{{$festival->festival_en}}">{{$festival->festival_fa}}</a>
+                                        @endif
                                     @endforeach
                                 </div>
                             </li>

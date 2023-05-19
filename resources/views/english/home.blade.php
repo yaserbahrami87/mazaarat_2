@@ -48,7 +48,7 @@
             <div class="col-12 col-md-3 text-center p-3">
                 <div class="card" >
                     <div class="card-body bg_silver ">
-                        <a href="/documents/AR.pdf" class="text-light" >Arabic
+                        <a href="/documents/AR.pdf" class="text-light" >دعوة المهرجان
                             <img src="/images/PDF_icon.png" width="25px" />
                         </a>
                     </div>
@@ -57,7 +57,7 @@
             <div class="col-12 col-md-3 text-center p-3">
                 <div class="card" >
                     <div class="card-body bg_silver ">
-                        <a href="/documents/Ordu.pdf" class="text-light" >Ordu
+                        <a href="/documents/Ordu.pdf" class="text-light" >اردو کال
                             <img src="/images/PDF_icon.png" width="25px" />
                         </a>
                     </div>

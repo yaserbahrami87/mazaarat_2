@@ -30,6 +30,9 @@ class AppServiceProvider extends ServiceProvider
         View::share('dateJalali',$dateJalali);
         $festivals=festival::orderby('id','desc')
                         ->get();
+        $festival=festival::latest()->first();
+
         View::share('festivals',$festivals);
+        View::share('festival',$festival);
     }
 }

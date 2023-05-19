@@ -3,8 +3,10 @@
 Route::get('/','HomeController@index');
 
 //competition
-
 Route::resource('competiton','CompetitonController');
+
+//Request Link
+Route::resource('RequestLink','RequestLinkController');
 
 
 Route::prefix('english')->group(function()

@@ -75,6 +75,37 @@
                     <p>Submissions close on: June 16, 2023</p>
                     <p>Judging the entries start on: June 18, 2023</p>
                     <p>Publishing the results and the nominees for prizes via e-mail: July 1, 2023</p>
+                    <div class="alert alert-warning">
+                        <p><i class="bi bi-exclamation-triangle-fill ml-2"></i> Dear participant, should you advertise Mazaarat International Photo Festival on your social media platforms and provide us with the respective link, you will be permitted to upload yet another photo.</p>
+                        @if(is_null(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()) )
+
+                            <form method="post" action="/panel/RequestLink">
+                                {{csrf_field()}}
+                                <div class="input-group mb-3" dir="ltr">
+
+                                    <input type="text" class="form-control" placeholder="" name="link" />
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1">submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        @else
+                            @if(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->status==1)
+                                <div class="alert alert-success">
+                                    Your request to upload one more photo at the festival has been approved
+                                </div>
+                            @elseif(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->status==2)
+                                <div class="alert alert-danger">
+                                    Unfortunately, your request to upload one more photo at the festival was not approved
+                                </div>
+                            @elseif(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->status==0)
+                                <div class="alert alert-warning">
+                                    Your request to upload one more photo at the festival is being reviewed
+                                </div>
+                            @endif
+
+                        @endif
+                    </div>
                 </div>
                 <div class="card bg-transparent">
                     <div class="card-header text-center">
@@ -107,9 +138,19 @@
                                 </div>
                             @endforeach
 
+                            @if(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()['status']==1)
+                                @php
+                                    $num=8;
+                                @endphp
+                            @else
+                                @php
+                                    $num=7;
+                                @endphp
+                            @endif
 
 
-                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<7)
+
+                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<$num)
 
                                 <div class="col-12 col-md-3" >
                                     <div class="card bg-transparent" >
@@ -189,7 +230,7 @@
 
 
 
-                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2))<7)
+                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2))<$num)
 
 
                                     <div class="col-12 col-md-3 mb-5" >
