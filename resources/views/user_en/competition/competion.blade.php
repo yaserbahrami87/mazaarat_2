@@ -152,7 +152,7 @@
 
                             @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<$num)
 
-                                <div class="col-12 col-md-3" >
+                                <div class="col-12 col-md-3 mx-auto" >
                                     <div class="card bg-transparent" >
                                         <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
                                             {{csrf_field()}}
@@ -233,7 +233,7 @@
                             @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2))<$num)
 
 
-                                    <div class="col-12 col-md-3 mb-5" >
+                                    <div class="col-12 col-md-3 mb-5 mx-auto" >
                                         <div class="card bg-transparent" >
                                             <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
                                                 {{csrf_field()}}
