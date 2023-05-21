@@ -14,4 +14,23 @@ class RequestLink extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function festival()
+    {
+        return $this->belongsTo('App\festival');
+    }
+
+    public function status()
+    {
+        switch ($this->status)
+        {
+            case 0:return "در حال بررسی";
+                        break;
+            case 1:return "تایید شده";
+                        break;
+            case 2:return "رد شده";
+                        break;
+            default:return "خطا";
+        }
+    }
 }

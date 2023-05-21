@@ -30,5 +30,10 @@ class festival extends Model
         return $this->hasMany('App\gallery');
     }
 
+    public function RequestLink()
+    {
+        return $this->hasMany('App\RequestLink','festival_id','id');
+    }
+
 
 }

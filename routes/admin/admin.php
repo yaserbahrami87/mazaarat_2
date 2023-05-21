@@ -22,5 +22,8 @@ Route::resource('gallery_category','GalleryCategoryController');
 //Contact Us
 Route::resource('ContactUs','ContactUsController');
 
+//
+Route::resource('RequestLink','RequestLinkController');
+
 Route::get('/panel','AdminController@index');
 

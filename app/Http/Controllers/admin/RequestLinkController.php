@@ -15,7 +15,11 @@ class RequestLinkController extends Controller
      */
     public function index()
     {
-        //
+        $RequestLinks=RequestLink::orderby('id','desc')
+                        ->get();
+
+        return view('admin.requestLink.requestLink_all')
+                                ->with('requestLinks',$RequestLinks);
     }
 
     /**
@@ -42,12 +46,13 @@ class RequestLinkController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\RequestLink  $requestLink
+     * @param  \App\RequestLink  $RequestLink
      * @return \Illuminate\Http\Response
      */
-    public function show(RequestLink $requestLink)
+    public function show(RequestLink $RequestLink)
     {
-        //
+        return view('admin.requestLink.requestLink_single')
+                    ->with('RequestLink',$RequestLink);
     }
 
     /**
@@ -56,21 +61,35 @@ class RequestLinkController extends Controller
      * @param  \App\RequestLink  $requestLink
      * @return \Illuminate\Http\Response
      */
-    public function edit(RequestLink $requestLink)
+    public function edit(RequestLink $RequestLink)
     {
-        //
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\RequestLink  $requestLink
+     * @param  \App\RequestLink  $RequestLink
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RequestLink $requestLink)
+    public function update(Request $request, RequestLink $RequestLink)
     {
-        //
+        $this->validate($request,[
+            'status'    =>'required|numeric|between:0,2',
+        ]);
+
+        $status=$RequestLink->update($request->all());
+        if($status)
+        {
+            alert()->success('بروزرسانی شد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در بروزرسانی')->persistent('بستن');
+        }
+
+        return redirect('/admin/RequestLink');
     }
 
     /**
@@ -79,7 +98,7 @@ class RequestLinkController extends Controller
      * @param  \App\RequestLink  $requestLink
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RequestLink $requestLink)
+    public function destroy(RequestLink $RequestLink)
     {
         //
     }
