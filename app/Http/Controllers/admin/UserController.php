@@ -101,6 +101,6 @@ class UserController extends Controller
     {
         Auth::loginUsingId($user->id);
         alert()->success('شما با اکانت '.$user->fname.' '.$user->lname.' وارد شده اید')->persistent('بستن');
-        return redirect('/');
+        return redirect('/panel/competiton/create');
     }
 }
