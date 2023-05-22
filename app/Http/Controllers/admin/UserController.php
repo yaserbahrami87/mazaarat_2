@@ -6,6 +6,7 @@ use App\festival;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -94,5 +95,12 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+    }
+
+    public function loginWithUser(User $user)
+    {
+        Auth::loginUsingId($user->id);
+        alert()->success('شما با اکانت '.$user->fname.' '.$user->lname.' وارد شده اید')->persistent('بستن');
+        return redirect('/');
     }
 }

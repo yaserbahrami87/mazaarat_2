@@ -44,7 +44,10 @@
                         </a>
                     </td>
                     <td dir="ltr">{{$user->email}}</td>
-                    <td dir="ltr"> {{$user->tel}}</td>
+                    <td dir="ltr">
+                        <a href="tel:{{$user->tel}}">{{$user->tel}}</a>
+
+                    </td>
                     <td dir="ltr"> {{$user->country}}</td>
                     <td dir="ltr"> {{$user->state['name']}}</td>
                     <td dir="ltr"> {{$user->city['name']}}</td>

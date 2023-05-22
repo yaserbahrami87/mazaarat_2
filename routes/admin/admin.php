@@ -11,6 +11,7 @@ Route::resource('pillar','PillarController');
 Route::resource('news','NewsController');
 
 //Users
+Route::post('/user/{user}/login','UserController@loginWithUser');
 Route::resource('user','UserController');
 
 //Gallery

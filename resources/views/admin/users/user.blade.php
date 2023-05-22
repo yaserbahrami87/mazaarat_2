@@ -5,6 +5,10 @@
     <div class="card">
         <div class="card-header">
             <h3>{{$user->fname.' '.$user->lname}}</h3>
+            <form method="post" action="/admin/user/{{$user->id}}/login">
+                {{csrf_field()}}
+                <button type="post" class="btn btn-primary">ورود با اکانت کاربر</button>
+            </form>
         </div>
         <div class="card-body">
             <div class="row">
