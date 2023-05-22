@@ -85,18 +85,18 @@ class CompetitonController extends BaseController
                'festival_id'            =>$festival->id,
            ]);
 
-           $image=Auth::user()->fname.'_'.Auth::user()->lname.'_'.$gallery_category.'_'.time().'.'.$request->file('image')->extension();
-           $image_thumbnail='thumbnail_'.Auth::user()->fname.'_'.Auth::user()->lname.'_'.$gallery_category.'_'.time().'.'.$request->file('image')->extension();
-           $path=public_path('/images/competition/');
-           $files=$request->file('image')->move($path, $image);
-           $request->image=$image;
-           $img=Image::make($files->getRealPath())
-               ->resize(200,null,function ($constraint) {
-                   $constraint->aspectRatio();
-               })
-               ->save($path.$image_thumbnail);
-           $competition->image=$image;
-           $competition->save();
+//           $image=Auth::user()->fname.'_'.Auth::user()->lname.'_'.$gallery_category.'_'.time().'.'.$request->file('image')->extension();
+//           $image_thumbnail='thumbnail_'.Auth::user()->fname.'_'.Auth::user()->lname.'_'.$gallery_category.'_'.time().'.'.$request->file('image')->extension();
+//           $path=public_path('/images/competition/');
+//           $files=$request->file('image')->move($path, $image);
+//           $request->image=$image;
+//           $img=Image::make($files->getRealPath())
+//               ->resize(200,null,function ($constraint) {
+//                   $constraint->aspectRatio();
+//               })
+//               ->save($path.$image_thumbnail);
+//           $competition->image=$image;
+//           $competition->save();
        }
 
 
