@@ -27,7 +27,7 @@
             <div class="col-12 col-md-3 text-center p-3">
                 <div class="card" >
                     <div class="card-body bg_silver ">
-                        <a href="/documents/EN.pdf" class="text-light" >English
+                        <a href="/documents/EN.pdf" class="text-light" >open call
                             <img src="/images/PDF_icon.png" width="25px" />
                         </a>
 
@@ -37,7 +37,7 @@
             <div class="col-12 col-md-3 text-center p-3">
                 <div class="card" >
                     <div class="card-body bg_silver ">
-                        <a href="/documents/FA.pdf" class="text-light" >Farsi
+                        <a href="/documents/FA.pdf" class="text-light" >فراخوان فارسی
                             <img src="/images/PDF_icon.png" width="25px" />
                         </a>
                     </div>
