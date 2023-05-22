@@ -17,8 +17,8 @@
         <div class="col-md-3 align-items-center text-center p-0 d-flex justify-content-around">
             <a href="https://www.facebook.com/mazaar.photo/" target="_blank" class="d-inline-block social" id="facebook_footer"></a>
             <a href="https://t.me/Mazaarat_2023" target="_blank" class="d-inline-block social" id="telegram_footer"></a>
-            <a href="" class="d-inline-block social" id="insta_footer"></a>
-            <a href="" class="d-inline-block social" id="whatsapp_footer"></a>
+            <a href="https://instagram.com/mazaar.photo" target="_blank" class="d-inline-block social" id="insta_footer"></a>
+            <a href="https://wa.me/message/JL4FATR7TRFPE1" target="_blank" class="d-inline-block social" id="whatsapp_footer"></a>
         </div>
         <div class="col-md-3 d-flex justify-content-around align-items-center">
             <a href="https://www.aqart.ir/Maktab-Rezvan.aspx" target="_blank">
