@@ -10,6 +10,9 @@
                             <img src="/images/banner-2stfestival.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
+                            <img src="/images/banner1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
                             <img src="/images/banner-02.jpg" class="d-block w-100" alt="...">
                         </div>
 
