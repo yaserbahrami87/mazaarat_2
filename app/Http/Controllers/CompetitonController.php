@@ -99,8 +99,15 @@ class CompetitonController extends BaseController
            $competition->save();
        }
 
+       if((session('lang'))=='farsi')
+       {
+           alert()->success('عکس  با موفقیت در جشنواره ثبت شد')->persistent('بستن');
+       }
+       else
+       {
+           alert()->success('Upload successfully')->persistent('بستن');
+       }
 
-       alert()->success('عکس  با موفقیت در جشنواره ثبت شد')->persistent('بستن');
        return back();
 
     }
