@@ -514,6 +514,7 @@ class ComposerStaticInit708d0948389f848a1b066862cc6d04b4
     );
 
     public static $classMap = array (
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\ContactUs' => __DIR__ . '/../..' . '/app/ContactUs.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -539,6 +540,7 @@ class ComposerStaticInit708d0948389f848a1b066862cc6d04b4
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsController.php',
         'App\\Http\\Controllers\\PillarController' => __DIR__ . '/../..' . '/app/Http/Controllers/PillarController.php',
+        'App\\Http\\Controllers\\RequestLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/RequestLinkController.php',
         'App\\Http\\Controllers\\SiteController' => __DIR__ . '/../..' . '/app/Http/Controllers/SiteController.php',
         'App\\Http\\Controllers\\StateController' => __DIR__ . '/../..' . '/app/Http/Controllers/StateController.php',
         'App\\Http\\Controllers\\admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/AdminController.php',
@@ -548,6 +550,7 @@ class ComposerStaticInit708d0948389f848a1b066862cc6d04b4
         'App\\Http\\Controllers\\admin\\GalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/GalleryController.php',
         'App\\Http\\Controllers\\admin\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/NewsController.php',
         'App\\Http\\Controllers\\admin\\PillarController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/PillarController.php',
+        'App\\Http\\Controllers\\admin\\RequestLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/RequestLinkController.php',
         'App\\Http\\Controllers\\admin\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\AdminAuthenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminAuthenticate.php',

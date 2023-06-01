@@ -33,4 +33,9 @@ class RequestLink extends Model
             default:return "خطا";
         }
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment','product_id')->where('type','=','RequestLink');
+    }
 }

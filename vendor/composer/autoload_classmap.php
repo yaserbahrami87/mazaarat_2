@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\ContactUs' => $baseDir . '/app/ContactUs.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -31,6 +32,7 @@ return array(
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\NewsController' => $baseDir . '/app/Http/Controllers/NewsController.php',
     'App\\Http\\Controllers\\PillarController' => $baseDir . '/app/Http/Controllers/PillarController.php',
+    'App\\Http\\Controllers\\RequestLinkController' => $baseDir . '/app/Http/Controllers/RequestLinkController.php',
     'App\\Http\\Controllers\\SiteController' => $baseDir . '/app/Http/Controllers/SiteController.php',
     'App\\Http\\Controllers\\StateController' => $baseDir . '/app/Http/Controllers/StateController.php',
     'App\\Http\\Controllers\\admin\\AdminController' => $baseDir . '/app/Http/Controllers/admin/AdminController.php',
@@ -40,6 +42,7 @@ return array(
     'App\\Http\\Controllers\\admin\\GalleryController' => $baseDir . '/app/Http/Controllers/admin/GalleryController.php',
     'App\\Http\\Controllers\\admin\\NewsController' => $baseDir . '/app/Http/Controllers/admin/NewsController.php',
     'App\\Http\\Controllers\\admin\\PillarController' => $baseDir . '/app/Http/Controllers/admin/PillarController.php',
+    'App\\Http\\Controllers\\admin\\RequestLinkController' => $baseDir . '/app/Http/Controllers/admin/RequestLinkController.php',
     'App\\Http\\Controllers\\admin\\UserController' => $baseDir . '/app/Http/Controllers/admin/UserController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\AdminAuthenticate' => $baseDir . '/app/Http/Middleware/AdminAuthenticate.php',

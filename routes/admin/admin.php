@@ -14,6 +14,9 @@ Route::resource('news','NewsController');
 Route::post('/user/{user}/login','UserController@loginWithUser');
 Route::resource('user','UserController');
 
+//Comments
+Route::resource('comment','CommentController');
+
 //Gallery
 Route::resource('gallery','GalleryController');
 

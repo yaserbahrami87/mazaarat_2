@@ -29,5 +29,30 @@
             </div>
             <button type="submit" class="btn btn-success" >بروزرسانی</button>
         </form>
+        <hr/>
+        <h3>سوابق پیام ها</h3>
+        @foreach($RequestLink->comments->sortbydesc('id') as $comment)
+            <small>تاریخ: {{substr($comment->created_at,0,10)}}</small>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">متن:</span>
+                </div>
+                <textarea class="form-control text-left" name="comment" disabled>{{$comment->comment}}</textarea>
+            </div>
+
+        @endforeach
+        <form method="post" action="/admin/comment">
+            {{csrf_field()}}
+            <input type="hidden" name="product_id" value="{{$RequestLink->id}}">
+            <input type="hidden" name="type" value="RequestLink">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">متن:</span>
+                </div>
+                <textarea class="form-control text-left" name="comment" ></textarea>
+            </div>
+            <input type="submit" value="ارسال پیام" class="btn btn-success" />
+        </form>
+
     </div>
 @endsection
