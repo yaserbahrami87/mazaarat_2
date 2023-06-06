@@ -114,11 +114,11 @@
         <div class="row">
             @foreach($galleries as $pic)
 
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="/images/gallery/{{$pic->image}}" class="fancybox" rel="ligthbox" title="{{$pic->fname_fa.' '.$pic->lname_fa}}">
-                    <img  src="/images/gallery/thumbnail_{{$pic->image}}" class="zoom img-fluid "  alt="">
-                </a>
-            </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a href="/images/gallery/{{$pic->image}}" class="fancybox" rel="ligthbox" title="{{$pic->fname_fa.' '.$pic->lname_fa}}">
+                        <img  src="/images/gallery/thumbnail_{{$pic->image}}" class="zoom img-fluid "  alt="">
+                    </a>
+                </div>
             @endforeach
             <div class="col-12  text-center">
                 {{$galleries->links()}}

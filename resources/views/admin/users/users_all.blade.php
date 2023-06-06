@@ -2,6 +2,7 @@
 
 @section('headerScript')
     <link href="/plugins/dataTables/datatables.css" rel="stylesheet" />
+    <link href="/plugins/dataTables/buttons.dataTables.min.css" rel="stylesheet" />
 @endsection
 
 
@@ -70,9 +71,25 @@
 
 @section('footerScript')
     <script src="/plugins/dataTables/datatables.js"></script>
+    <script src="/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="/plugins/dataTables/dataTables.buttons.min.js"></script>
+    <script src="/plugins/dataTables/jszip.min.js"></script>
+    <script src="/plugins/dataTables/vfs_fonts.js"></script>
+
+    <script src="/plugins/dataTables/buttons.html5.min.js"></script>
+    <script src="/plugins/dataTables/buttons.print.min.js"></script>
+
+
+
+
     <script>
         $(document).ready(function () {
             $('#dataTable').DataTable({
+
+                dom: 'Bfrltip',
+                buttons: [
+                    'copy',  'excel'
+                ],
                 'order':[[6,'desc']],
             });
         });
