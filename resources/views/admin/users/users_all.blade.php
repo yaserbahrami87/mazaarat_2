@@ -8,6 +8,7 @@
 
 @section('content')
     <div class="12 col-md-3">
+        <!--
         <form method="post" action="/admin/">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -18,6 +19,7 @@
                 <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
             </div>
         </form>
+        -->
     </div>
     <div class="col-12 table-responsive">
         <table class="table table-bordered table-hover table-striped " id="dataTable">

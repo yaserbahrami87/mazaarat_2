@@ -106,18 +106,20 @@
 
                         @endif
                     </div>
-                    @if(!is_null(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->comments))
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="text-dark">پیام های ارسال شده</h5>
-                                @foreach(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->comments as $comment)
-                                    <div class="alert alert-info">
-                                        {{$comment->comment}}
-                                        <small class="d-block">{{substr($comment->created_at,0,10)}}</small>
-                                    </div>
-                                @endforeach
+                    @if(!is_null(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()))
+                        @if(!is_null(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->comments))
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="text-dark">پیام های ارسال شده</h5>
+                                    @foreach(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()->comments as $comment)
+                                        <div class="alert alert-info">
+                                            {{$comment->comment}}
+                                            <small class="d-block">{{substr($comment->created_at,0,10)}}</small>
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
-                        </div>
+                        @endif
                     @endif
                 </div>
                 <div class="card bg-transparent">

@@ -175,6 +175,7 @@ class CompetitonController extends BaseController
             ]);
 
         $status=$competiton->update($request->all());
+
         if($request->has('image')&&$request->file('image')->isValid())
         {
             $image=$competiton->image;
@@ -191,6 +192,8 @@ class CompetitonController extends BaseController
             $competiton->image=$image;
             $competiton->save();
         }
+
+
 
         if($status)
         {
