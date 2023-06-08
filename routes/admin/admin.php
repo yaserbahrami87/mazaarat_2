@@ -26,8 +26,14 @@ Route::resource('gallery_category','GalleryCategoryController');
 //Contact Us
 Route::resource('ContactUs','ContactUsController');
 
-//
+//RequestLink
 Route::resource('RequestLink','RequestLinkController');
 
+//competiton
+Route::get('/competiton/{festival}/{competiton_category}','CompetitonController@category');
+Route::resource('competiton','CompetitonController');
+
+
 Route::get('/panel','AdminController@index');
+
 
