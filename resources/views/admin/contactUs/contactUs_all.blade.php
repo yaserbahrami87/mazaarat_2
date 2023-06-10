@@ -6,16 +6,16 @@
             <tr>
                 <th>مشخصات</th>
                 <th>پست الکترونیکی</th>
-                <th>پیام</th>
                 <th>وضعیت</th>
                 <th>تاریخ ارسال</th>
                 <th></th>
+                <th></th>
+
             </tr>
             @foreach($contacts as $contact)
                 <tr>
                     <td>{{$contact->name}}</td>
                     <td>{{$contact->email}}</td>
-                    <td>{{$contact->comment}}</td>
                     <td>{{$contact->status()}}</td>
                     <td>{{$contact->created_at}}</td>
                     <td>
@@ -28,6 +28,11 @@
                                 <button type="submit" class="btn btn-warning">خوانده شد</button>
                             </form>
                         @endif
+                    </td>
+                    <td>
+                        <a href="/admin/ContactUs/{{$contact->id}}">
+                            <i class="bi bi-eye-fill"></i>
+                        </a>
                     </td>
                 </tr>
             @endforeach

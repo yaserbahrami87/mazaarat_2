@@ -70,5 +70,10 @@ class User extends Authenticatable
         return $this->hasMany('App\RequestLink','user_id','id');
     }
 
+    public function comments()
+    {
+        return $this->hasMany('App\comment','user_id','id');
+    }
+
 
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Comment;
 use App\Http\Controllers\Controller;
+use App\Notifications\sendAnswerComment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,6 +38,7 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
+
        $this->validate($request,[
            'comment'    =>'required|string',
            'product_id' =>'required|numeric',
@@ -49,6 +51,9 @@ class CommentController extends Controller
 
        if($comment)
        {
+           $user=$comment->contactUs;
+           $user->notify(new sendAnswerComment($request->comment));
+
            alert()->success('پیام با موفقیت ارسال شد')->persistent('بستن');
        }
        else

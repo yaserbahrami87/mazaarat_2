@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class ContactUs extends Model
 {
     protected $table='contact_us';
+    use Notifiable;
 
     protected $fillable=[
         'name','email','comment','status'
@@ -22,5 +24,10 @@ class ContactUs extends Model
         {
             return "خوانده نشده";
         }
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment','product_id')->where('type','=','contactUs');
     }
 }

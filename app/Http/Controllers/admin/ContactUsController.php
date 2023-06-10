@@ -58,9 +58,18 @@ class ContactUsController extends Controller
      * @param  \App\ContactUs  $contactUs
      * @return \Illuminate\Http\Response
      */
-    public function show(ContactUs $contactUs)
+    public function show($id)
     {
-        //
+        $contactUs=ContactUs::find($id);
+        if($contactUs)
+        {
+            return view('admin.contactUs.contactUs_single')
+                        ->with('contactUs',$contactUs);
+        }
+        else
+        {
+            abort(403);
+        }
     }
 
     /**
