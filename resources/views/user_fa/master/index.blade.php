@@ -139,6 +139,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/admin/dist/js/demo.js"></script>
 
+
 @yield('footerScript')
 </body>
 </html>
