@@ -209,6 +209,13 @@
 
 </script>
 
+<script src="/js/jquery.flipper-responsive.js"></script>
+<script>
+    $(function(){
+        $('#myFlipper').flipper('init');
+    });
+</script>
+
 @yield('footerScript')
 </body>
 </html>
