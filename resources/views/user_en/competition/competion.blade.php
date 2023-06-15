@@ -173,7 +173,8 @@
                                             {{csrf_field()}}
                                             <div class="row mb-5">
                                                 <div class="card col-12  mb-3 bg-transparent ">
-                                                    <div class="form-group files">
+                                                    <div class="form-group">
+                                                        <label >Image</label>
                                                         <input type="file" class="form-control" name="image">
                                                     </div>
                                                     <input type="hidden" name="competiton_category_id" value="1" />
@@ -254,7 +255,8 @@
                                                 {{csrf_field()}}
                                                 <div class="row mb-3">
                                                     <div class="card col-12   bg-transparent ">
-                                                        <div class="form-group files">
+                                                        <div class="form-group ">
+                                                            <label >Image</label>
                                                             <input type="file" class="form-control" name="image">
                                                         </div>
                                                         <input type="hidden" name="competiton_category_id" value="2" />
