@@ -87,19 +87,40 @@ class SiteController extends BaseController
 
     public function register()
     {
-        $states=state::orderby('name')
-                    ->get();
-
-        if(session('lang')=='farsi')
+        if($this->festival->end_date_fa>$this->dateNow)
         {
-            return view('farsi.auth.register')
-                        ->with('states',$states);
+            //&&($this->festival->end_time_fa.':00'<$this->timeNow)
+            $states=state::orderby('name')
+                ->get();
+
+            if(session('lang')=='farsi')
+            {
+                return view('farsi.auth.register')
+                    ->with('states',$states);
+            }
+            else
+            {
+                return view('english.auth.register')
+                    ->with('states',$states);
+            }
         }
         else
         {
-            return view('english.auth.register')
-                        ->with('states',$states);
+            if(session('lang')=='farsi')
+            {
+                alert()->error('زمان ثبت نام در جشنواره به اتمام رسیده است')->persistent('بستن');
+                return redirect('/farsi/home');
+
+            }
+            else
+            {
+                alert()->error('The festival is over')->persistent('close');
+                return redirect('/english/home');
+            }
+
+
         }
+
     }
 
     public function setLanguage($language)
