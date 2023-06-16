@@ -240,7 +240,7 @@
         <div class="row pb-5">
             <div class="col-12">
                 <div class="flipper"
-                     data-datetime="2023-06-17 00:00:00"
+                     data-datetime="2023-06-17 02:30:00"
                      data-template="ddd|HH|ii|ss"
                      data-labels="Days|Hours|Minutes|Seconds"
                      data-reverse="true"

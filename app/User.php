@@ -50,6 +50,14 @@ class User extends Authenticatable
         }
     }
 
+    public function isReferee()
+    {
+        if($this->type==2)
+        {
+            return true;
+        }
+    }
+
     public  function competitions()
     {
         return $this->hasMany('App\competiton');
