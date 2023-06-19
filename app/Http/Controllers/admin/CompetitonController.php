@@ -45,7 +45,9 @@ class CompetitonController extends Controller
             ->where('festival_id',$festival->id)
             ->get();
 
-        $zip=Zip::create('test.zip');
+        ini_set('max_execution_time', '0');
+
+        $zip=Zip::create($festival->festival_en.'.zip');
         foreach ($competitons as $competiton)
         {
             if(!is_null($competiton->image))
@@ -61,7 +63,7 @@ class CompetitonController extends Controller
         }
 
         $zip->close();
-        return Response()->download(public_path()."/test.zip")->deleteFileAfterSend();
+        return Response()->download(public_path()."/".$festival->festival_en.'.zip')->deleteFileAfterSend();
 
     }
 
