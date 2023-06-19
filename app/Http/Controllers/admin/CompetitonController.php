@@ -45,11 +45,12 @@ class CompetitonController extends Controller
             ->where('festival_id',$festival->id)
             ->get();
 
-        ini_set('max_execution_time', '0');
+
 
         $zip=Zip::create($festival->festival_en.'.zip');
         foreach ($competitons as $competiton)
         {
+            ini_set('max_execution_time', 3600);
             if(!is_null($competiton->image))
             {
 
