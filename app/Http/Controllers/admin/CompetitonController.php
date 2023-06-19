@@ -6,10 +6,11 @@ use App\competiton_category;
 use App\festival;
 use App\Http\Controllers\Controller;
 use App\competiton;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Http\Request;
 use ZanySoft\Zip\Zip;
 
-class CompetitonController extends Controller
+class CompetitonController extends Controller implements ShouldQueue
 {
     /**
      * Display a listing of the resource.
