@@ -47,6 +47,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapWebRoutes();
         $this->mapAdminRoutes();
         $this->mapUserRoutes();
+        $this->mapRefereeRoutes();
 
         //
     }
@@ -97,5 +98,14 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->namespace)
             ->prefix('panel')
             ->group(base_path('routes/user/user.php'));
+    }
+
+    //Referee Routes
+    protected function mapRefereeRoutes()
+    {
+        Route::middleware(['web','auth','auth.referee'])
+            ->namespace($this->namespace."\Referee")
+            ->prefix('referee')
+            ->group(base_path('routes/referee/referee.php'));
     }
 }

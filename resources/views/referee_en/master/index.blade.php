@@ -28,9 +28,9 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-  @include('user_en.master.topBar')
+  @include('referee_en.master.topBar')
 
-  @include('user_en.master.leftBar')
+  @include('referee_en.master.leftBar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

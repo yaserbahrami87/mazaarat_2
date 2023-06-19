@@ -7,6 +7,7 @@ use App\festival;
 use App\Http\Controllers\Controller;
 use App\competiton;
 use Illuminate\Http\Request;
+use ZanySoft\Zip\Zip;
 
 class CompetitonController extends Controller
 {
@@ -33,7 +34,34 @@ class CompetitonController extends Controller
                         ->paginate(20);
 
         return view('admin.competition.competition_all')
+                            ->with('competiton_category',$competiton_category->id)
                             ->with('competitions',$competitons);
+
+    }
+
+    public function download(festival $festival,competiton_category $competiton_category)
+    {
+        $competitons=competiton::where('competiton_category_id','=',$competiton_category->id)
+            ->where('festival_id',$festival->id)
+            ->get();
+
+        $zip=Zip::create('test.zip');
+        foreach ($competitons as $competiton)
+        {
+            if(!is_null($competiton->image))
+            {
+
+                if(file_exists(public_path()."/images/competition/".$competiton->image))
+                {
+                    $zip->add(public_path()."/images/competition/".$competiton->image);
+
+                }
+            }
+
+        }
+
+        $zip->close();
+        return Response()->download(public_path()."/test.zip")->deleteFileAfterSend();
 
     }
 

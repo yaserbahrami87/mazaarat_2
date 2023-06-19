@@ -31,6 +31,7 @@ Route::resource('RequestLink','RequestLinkController');
 
 //competiton
 Route::get('/competiton/{festival}/{competiton_category}','CompetitonController@category');
+Route::get('/competiton/{festival}/{competiton_category}/download','CompetitonController@download');
 Route::resource('competiton','CompetitonController');
 
 

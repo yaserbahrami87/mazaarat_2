@@ -93,6 +93,7 @@ class SiteController extends BaseController
             $states=state::orderby('name')
                 ->get();
 
+
             if(session('lang')=='farsi')
             {
                 return view('farsi.auth.register')

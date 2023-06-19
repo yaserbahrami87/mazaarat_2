@@ -176,6 +176,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        ZanySoft\Zip\ZipServiceProvider::class,
+
 
 
     ],
@@ -231,6 +233,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Zip' => ZanySoft\Zip\Facades\Zip::class,
+
 
 
     ],
