@@ -29,10 +29,28 @@ class CompetitonController extends Controller implements ShouldQueue
 
     public function category(festival $festival,competiton_category $competiton_category)
     {
+
         $competitons=competiton::where('competiton_category_id','=',$competiton_category->id)
                         ->where('festival_id',$festival->id)
                         ->orderby('id','desc')
                         ->paginate(20);
+
+        $zip=Zip::create($festival->festival_en.'.zip');
+        foreach ($competitons as $competiton)
+        {
+            if(!is_null($competiton->image))
+            {
+
+                if(file_exists(public_path()."/images/competition/".$competiton->image))
+                {
+                    $zip->add(public_path()."/images/competition/".$competiton->image);
+
+                }
+            }
+
+        }
+
+        $zip->close();
 
         return view('admin.competition.competition_all')
                             ->with('competiton_category',$competiton_category->id)
@@ -51,7 +69,7 @@ class CompetitonController extends Controller implements ShouldQueue
         $zip=Zip::create($festival->festival_en.'.zip');
         foreach ($competitons as $competiton)
         {
-            ini_set('max_execution_time', 3600);
+            ini_set('max_execution_time', 0);
             if(!is_null($competiton->image))
             {
 
@@ -65,7 +83,7 @@ class CompetitonController extends Controller implements ShouldQueue
         }
 
         $zip->close();
-        return Response()->download(public_path()."/".$festival->festival_en.'.zip')->deleteFileAfterSend();
+//        return Response()->download(public_path()."/".$festival->festival_en.'.zip')->deleteFileAfterSend();
 
     }
 
