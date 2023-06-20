@@ -43,6 +43,7 @@ class CompetitonController extends Controller implements ShouldQueue
 
                 if(file_exists(public_path()."/images/competition/".$competiton->image))
                 {
+                    ini_set('max_execution_time', 0);
                     $zip->add(public_path()."/images/competition/".$competiton->image);
 
                 }
@@ -58,11 +59,14 @@ class CompetitonController extends Controller implements ShouldQueue
 
     }
 
-    public function download(festival $festival,competiton_category $competiton_category)
+    public function download()
     {
+        $festival=festival::latest()->first();
+        $competiton_category=competiton_category::where('id','=',1)
+                        ->first();
         $competitons=competiton::where('competiton_category_id','=',$competiton_category->id)
-            ->where('festival_id',$festival->id)
-            ->get();
+                        ->where('festival_id',$festival->id)
+                        ->get();
 
 
 
@@ -83,6 +87,7 @@ class CompetitonController extends Controller implements ShouldQueue
         }
 
         $zip->close();
+        return Response()->download(public_path()."/".$festival->festival_en.'.zip');
 //        return Response()->download(public_path()."/".$festival->festival_en.'.zip')->deleteFileAfterSend();
 
     }
