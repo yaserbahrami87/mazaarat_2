@@ -215,3 +215,9 @@ Route::get('/clear_cache',function()
     return "Clear cache";
 });
 
+Route::get('/download',function()
+{
+    Artisan::call('competiton:mausolea');
+    return "Clear cache";
+});
+

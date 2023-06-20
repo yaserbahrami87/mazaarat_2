@@ -87,7 +87,7 @@ class CompetitonController extends Controller implements ShouldQueue
         }
 
         $zip->close();
-        return Response()->download(public_path()."/".$festival->festival_en.'.zip');
+        //return Response()->download(public_path()."/".$festival->festival_en.'.zip');
 //        return Response()->download(public_path()."/".$festival->festival_en.'.zip')->deleteFileAfterSend();
 
     }
