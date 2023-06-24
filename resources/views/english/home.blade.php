@@ -239,7 +239,8 @@
     <div class="container">
         <div class="row pb-5">
             <div class="col-12">
-                @if($festival->end_date_fa>$dateJalali)
+
+                <!--
                     <div class="flipper"
                          data-datetime="2023-06-17 02:30:00"
                          data-template="ddd|HH|ii|ss"
@@ -247,7 +248,8 @@
                          data-reverse="true"
                          id="myFlipper">
                     </div>
-                @endif
+                    -->
+
             </div>
             <div class="col-12 mb-5">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
