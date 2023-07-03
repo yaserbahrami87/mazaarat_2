@@ -255,13 +255,12 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/images/banner-2stfestival.jpg" class="d-block w-100" alt="...">
+                            <a href="https://photo.mazaar.net/farsi/news/Announcing%20the%20results%20of%20the%20second%20International%20Mazaarat%20Photo%20Festival/show">
+                                <img src="/images/banner-2stfestival-END.jpg" class="d-block w-100" alt="...">
+                            </a>
                         </div>
                         <div class="carousel-item">
                             <img src="/images/banner1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/images/banner-02.jpg" class="d-block w-100" alt="...">
                         </div>
 
                     </div>
