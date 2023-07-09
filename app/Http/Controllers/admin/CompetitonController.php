@@ -35,23 +35,23 @@ class CompetitonController extends Controller implements ShouldQueue
                         ->orderby('id','desc')
                         ->paginate(20);
 
-        $zip=Zip::create($festival->festival_en.'.zip');
-        foreach ($competitons as $competiton)
-        {
-            if(!is_null($competiton->image))
-            {
-
-                if(file_exists(public_path()."/images/competition/".$competiton->image))
-                {
-                    ini_set('max_execution_time', 0);
-                    $zip->add(public_path()."/images/competition/".$competiton->image);
-
-                }
-            }
-
-        }
-
-        $zip->close();
+//        $zip=Zip::create($festival->festival_en.'.zip');
+//        foreach ($competitons as $competiton)
+//        {
+//            if(!is_null($competiton->image))
+//            {
+//
+//                if(file_exists(public_path()."/images/competition/".$competiton->image))
+//                {
+//                    ini_set('max_execution_time', 0);
+//                    $zip->add(public_path()."/images/competition/".$competiton->image);
+//
+//                }
+//            }
+//
+//        }
+//
+//        $zip->close();
 
         return view('admin.competition.competition_all')
                             ->with('competiton_category',$competiton_category->id)
