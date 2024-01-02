@@ -2,6 +2,23 @@
 @section('headerScript')
     <link href="/slick/slick.css" rel="stylesheet" />
     <link href="/slick/slick-theme.css" rel="stylesheet" />
+    <style>
+        #news img
+        {
+            border-radius:0px;
+        }
+
+        #news a:hover
+        {
+            background-color: transparent;
+            color: #000000;
+        }
+
+        #news .card
+        {
+            min-height: 425px;
+        }
+    </style>
 @endsection
 @section('content')
     <div class="container">
@@ -10,15 +27,27 @@
                 <img src="/images/news.png" class="img-fluid " />
             </div>
             <div class="col-12  mb-5" id="news">
-                <div class="news_item" >
+                <div class="row">
                     @foreach($festival->news as $news)
-                        <div class="card border-0 bg-transparent p-3 text-light">
-                            <img src="/images/news/{{$news->image}}" class="card-img-top mb-3" alt="...">
-                            <div class="card-body p-0">
-                                <a href="/farsi/news/{{$news->title_en}}/show" class="btn w-100 mb-3 text-light">{{$news->title_fa}}</a>
+                        <div class="col-12 col-md-3 mb-2">
+                            <div class="card" >
+                                <img src="/images/news/{{$news->image}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <a href="/farsi/news/{{$news->title_en}}/show" >
+                                        <h5 class="card-title">{{$news->title_fa}}</h5>
+                                    </a>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    {{$news->diff()}}
+                                </div>
                             </div>
                         </div>
                     @endforeach
+                </div>
+                <div class="news_item" >
+
+
+
                 </div>
             </div>
         </div>

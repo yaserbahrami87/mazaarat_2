@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class news extends Model
@@ -18,5 +19,50 @@ class news extends Model
     public function festival()
     {
         return $this->belongsTo('App\festival');
+    }
+
+    public function diff()
+    {
+
+        date_default_timezone_set('UTC');
+        $dt=Carbon::now('Asia/Tehran');
+        if (($dt->diffInSeconds($this->created_at))<=59)
+        {
+            return $dt->diffInMinutes($this->created_at)." ثانیه ";
+        }
+        else if( ($dt->diffInMinutes($this->created_at))<=59)
+        {
+            return $dt->diffInMinutes($this->created_at)." دقیقه ";
+        }
+        else if( ($dt->diffInHours($this->created_at))<=23)
+        {
+            return $dt->diffInHours($this->created_at)." ساعت ";
+        }
+        else
+        {
+            return $dt->diffInDays($this->created_at)." روز ";
+        }
+    }
+
+    public function diff_en()
+    {
+        date_default_timezone_set('UTC');
+        $dt=Carbon::now('Asia/Tehran');
+        if (($dt->diffInSeconds($this->created_at))<=59)
+        {
+            return $dt->diffInMinutes($this->created_at)." Seconds ";
+        }
+        else if( ($dt->diffInMinutes($this->created_at))<=59)
+        {
+            return $dt->diffInMinutes($this->created_at)." Minutes ";
+        }
+        else if( ($dt->diffInHours($this->created_at))<=23)
+        {
+            return $dt->diffInHours($this->created_at)." Hours ";
+        }
+        else
+        {
+            return $dt->diffInDays($this->created_at)." Days ";
+        }
     }
 }
