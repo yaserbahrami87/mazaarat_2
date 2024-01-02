@@ -16,10 +16,21 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        if($request->has('festivals'))
+        {
+            $festival=festival::where('festival_en',$request->festivals)
+                                ->first();
+        }
+        else
+        {
+            $festival=festival::latest()->first();
+        }
         $users=User::get();
-        $festival=festival::latest()->first();
+
+
         $competition=competiton::where('festival_id','=',$festival->id)
                             ->get();
 
@@ -54,6 +65,7 @@ class AdminController extends Controller
                         ->with('iranian',$iranian)
                         ->with('notIranian',$notIranian)
                         ->with('NullNationality',$NullNationality)
+                        ->with('festival',$festival)
                         ->with('users',$users);
     }
 

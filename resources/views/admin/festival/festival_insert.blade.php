@@ -34,6 +34,10 @@
                                         <textarea id="call_fa" name="call_fa">{{old('call_fa')}}</textarea>
                                     </div>
                                     <div class="input-group mb-3">
+                                        <label for="summary_call_fa">خلاصه فراخوان فارسی:</label>
+                                        <textarea id="summary_call_fa" name="summary_call_fa">{{old('summary_call_fa')}}</textarea>
+                                    </div>
+                                    <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" >تاریخ شروع</span>
                                         </div>
@@ -108,6 +112,10 @@
                                             <textarea class="form-control" id="call_en" name="call_en">{{old('call_en')}}</textarea>
                                         </div>
                                         <div class="input-group mb-3">
+                                            <label for="summary_call_en">خلاصه فراخوان انگلیسی:</label>
+                                            <textarea id="summary_call_en" name="summary_call_en">{{old('summary_call_en')}}</textarea>
+                                        </div>
+                                        <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" >تاریخ شروع</span>
                                             </div>
@@ -179,6 +187,8 @@
             });
 
         CKEDITOR.replace('call_en');
+        CKEDITOR.replace('summary_call_fa');
+        CKEDITOR.replace('summary_call_en');
     </script>
 
     <script src="/admin/plugins/kamadatepicker/kamadatepicker.min.js"></script>

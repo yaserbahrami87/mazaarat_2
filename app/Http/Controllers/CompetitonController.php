@@ -30,16 +30,33 @@ class CompetitonController extends BaseController
      */
     public function create()
     {
+
         $festival=festival::latest()->first();
-        return view('user_fa.competition.competion')
-            ->with('festival',$festival);
+        if(($this->dateNow > $festival->start_date_fa)&& ($this->dateNow < $festival->end_date_fa) )
+        {
+            return view('user_fa.competition.competion')
+                ->with('festival',$festival);
+        }
+        else
+        {
+            alert()->error('شما خارج از زمان ارسال محتوی اقدام کرده اید')->persistent('بستن');
+            return redirect('/');
+        }
+
     }
 
     public function create_en()
     {
         $festival=festival::latest()->first();
-        return view('user_en.competition.competion')
-            ->with('festival',$festival);
+        if(($this->dateNow > $festival->start_date_fa)&& ($this->dateNow < $festival->end_date_fa) ) {
+            return view('user_en.competition.competion')
+                ->with('festival', $festival);
+        }
+        else
+        {
+            alert()->error('You have acted outside the content posting time')->persistent('Close');
+            return redirect('/');
+        }
     }
 
     /**

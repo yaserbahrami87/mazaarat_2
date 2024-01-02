@@ -2,10 +2,12 @@
 
 @section('content')
     <div class="col-12 card " >
+        {{--
         <div class="card-header">
             عکسهای فرستاده شده
             <a href="/admin/competiton/{{$festival->festival_en}}/{{$competiton_category}}/download">دانلود همه عکسها</a>
         </div>
+        --}}
         <div class="card-body">
             <div class="row">
                 @foreach($competitions as $competition)

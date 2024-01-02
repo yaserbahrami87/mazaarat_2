@@ -44,6 +44,7 @@ class FestivalController extends Controller
         $this->validate($request,[
             'festival_fa'       =>'required|string|unique:festivals,festival_fa',
             'call_fa'           =>'required|string',
+            'summary_call_fa'   =>'required|string',
             'start_date_fa'     =>'required|string|max:11',
             'start_time_fa'     =>'nullable|string|max:5',
             'end_date_fa'       =>'required|string|max:11',
@@ -54,6 +55,7 @@ class FestivalController extends Controller
             'winner_time_fa'    =>'nullable|string|max:5',
             'festival_en'       =>'required|string|unique:festivals,festival_en',
             'call_en'           =>'required|string',
+            'summary_call_en'   =>'required|string',
             'start_date_en'     =>'required|string|max:11',
             'start_time_en'     =>'nullable|string|max:5',
             'end_date_en'       =>'required|string|max:11',
@@ -118,6 +120,7 @@ class FestivalController extends Controller
         $this->validate($request,[
             'festival_fa'       =>'required|string|unique:festivals,festival_fa,'.$festival->id,
             'call_fa'           =>'required|string',
+            'summary_call_fa'   =>'required|string',
             'start_date_fa'     =>'required|string|max:11',
             'start_time_fa'     =>'nullable|string|max:5',
             'end_date_fa'       =>'required|string|max:11',
@@ -128,6 +131,7 @@ class FestivalController extends Controller
             'winner_time_fa'    =>'nullable|string|max:5',
             'festival_en'       =>'required|string|unique:festivals,festival_en,'.$festival->id,
             'call_en'           =>'required|string',
+            'summary_call_en'   =>'required|string',
             'start_date_en'     =>'required|string|max:11',
             'start_time_en'     =>'nullable|string|max:5',
             'end_date_en'       =>'required|string|max:11',

@@ -10,6 +10,7 @@
     <title>جشنواره بین المللی عکس مزارات | Mazaarat International Photo Festival</title>
 </head>
 <body>
+@include('sweetalert::alert')
 <main class="container-fluid" id="main_home" dir="rtl">
     <div class="row align-items-center h-100 d-flex">
         <div class="col-12 col-md-4 text-right ml-auto ">

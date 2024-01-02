@@ -58,23 +58,7 @@
             <div class="col-12">
                 <div class="card p-5 mb-5 bg_silver text-light">
                     <h3 class="text-center">Summary of the call</h3>
-                    <p class="font-weight-bold">Categories:</p>
-                    <ol>
-                        <li>Islamic mausoleums</li>
-                        <li>Prayer in divine religions </li>
-                    </ol>
-                    <p class="font-weight-bold">Regulations and requirements: </p>
-                    <ol>
-                        <li>The largest side of the photo must be less than 2000 pixels. That is, neither width nor height of any photo should exceed 2000 pixels. </li>
-                        <li>The format of the photos needs to be JPEG, and, maximum size of each photo should be 2 megabytes.</li>
-                        <li>Each photographer is allowed to send 7 photos per category, thus a total of 14 photos all in all.</li>
-
-                    </ol>
-                    <p class="font-weight-bold">Timeline: </p>
-                    <p>Registration and submissions start on: May 6, 2023</p>
-                    <p>Submissions close on: June 16, 2023</p>
-                    <p>Judging the entries start on: June 18, 2023</p>
-                    <p>Publishing the results and the nominees for prizes via e-mail: July 1, 2023</p>
+                    {!! $festival->summary_call_en !!}
                     <div class="alert alert-warning">
                         <p><i class="bi bi-exclamation-triangle-fill ml-2"></i> Dear participant, should you advertise Mazaarat International Photo Festival on your social media platforms and provide us with the respective link, you will be permitted to upload yet another photo.</p>
                         @if(is_null(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()) )
