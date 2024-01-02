@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\festival;
+use App\setting;
 use Hekmatinasser\Verta\Verta;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -32,7 +33,10 @@ class AppServiceProvider extends ServiceProvider
                         ->get();
         $festival=festival::latest()->first();
 
+        $settings=setting::get();
+
         View::share('festivals',$festivals);
         View::share('festival',$festival);
+        View::share('settings',$settings);
     }
 }

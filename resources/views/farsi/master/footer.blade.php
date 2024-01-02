@@ -6,20 +6,19 @@
 
         <div class="col-md-4">
             <b class="d-block">ارتباط با ما</b>
-            <p class="m-0 text-justify">مشـهـد مقدس. خیـابـان کـوهـسنـگی 11. عـدالـت 18. پـلاک 9
-                مـوسســــه آفــرینـش‌هــــای هـنـــــری آستـــــان قــــدس رضــــــوی</p>
-            <a href="tel:09390482732" class="mr-3">09390482732</a>
-            <a href="mailto:info@mazaar.net" class="d-block">info@mazaar.net</a>
+            <p class="m-0 text-justify">{{$settings->where('setting','address')->first()['value']}}</p>
+            <a href="tel:{{$settings->where('setting','tel')->first()['value']}}" class="mr-3">{{$settings->where('setting','tel')->first()['value']}}</a>
+            <a href="mailto:{{$settings->where('setting','email')->first()['value']}}" class="d-block">{{$settings->where('setting','email')->first()['value']}}</a>
         </div>
         <div class="col-md-2 align-items-center text-justify">
 
             <p>مالکیت حقوقی و معنوی این تارنما متعلق به دبیرخانه جشنواره بین المللی عکس مزارات می باشد</p>
         </div>
         <div class="col-md-3 align-items-center text-center p-0 d-flex justify-content-around">
-            <a href="https://www.facebook.com/mazaar.photo/" target="_blank" class="d-inline-block social" id="facebook_footer"></a>
-            <a href="https://t.me/Mazaarat_2023" target="_blank" class="d-inline-block social" id="telegram_footer"></a>
-            <a href="https://instagram.com/mazaar.photo" target="_blank" class="d-inline-block social" id="insta_footer"></a>
-            <a href="https://wa.me/message/JL4FATR7TRFPE1" target="_blank" class="d-inline-block social" id="whatsapp_footer"></a>
+            <a href="{{$settings->where('setting','facebook')->first()['value']}}" target="_blank" class="d-inline-block social" id="facebook_footer"></a>
+            <a href="{{$settings->where('setting','telegram')->first()['value']}}" target="_blank" class="d-inline-block social" id="telegram_footer"></a>
+            <a href="{{$settings->where('setting','instagram')->first()['value']}}" target="_blank" class="d-inline-block social" id="insta_footer"></a>
+            <a href="{{$settings->where('setting','whatsapp')->first()['value']}}" target="_blank" class="d-inline-block social" id="whatsapp_footer"></a>
         </div>
         <div class="col-md-3 d-flex justify-content-around align-items-center">
             <a href="https://www.aqart.ir/Maktab-Rezvan.aspx" target="_blank">

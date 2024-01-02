@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Comment' => $baseDir . '/app/Comment.php',
+    'App\\Console\\Commands\\ZipComepition' => $baseDir . '/app/Console/Commands/ZipComepition.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\ContactUs' => $baseDir . '/app/ContactUs.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -79,6 +80,7 @@ return array(
     'App\\news' => $baseDir . '/app/news.php',
     'App\\pillar' => $baseDir . '/app/pillar.php',
     'App\\refereeing' => $baseDir . '/app/refereeing.php',
+    'App\\setting' => $baseDir . '/app/setting.php',
     'App\\state' => $baseDir . '/app/state.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/CorsService.php',
