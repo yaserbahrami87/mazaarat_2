@@ -10,7 +10,7 @@
             <div class="card-header">
                 پوستر صفحه های اول
             </div>
-            <div class="card-body">
+            <div class="card-body table-responsive">
                 <form class="mb-5" method="post" action="/admin/setting/sliders_home" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <div class="col-12">
