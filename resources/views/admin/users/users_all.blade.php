@@ -7,20 +7,27 @@
 
 
 @section('content')
-    <div class="12 col-md-3">
-        <!--
-        <form method="post" action="/admin/">
+
+    <div class="col-12 col-md-3">
+        <form method="get" action="">
             <div class="input-group mb-3">
+
+                <select class="custom-select" id="festivals" name="festivals" >
+                    <option selected disabled>انتخاب کنید</option>
+                    <option value="all">همه کاربرها</option>
+                    @foreach($festivals as $item)
+                        <option value="{{$item->festival_en}}" @if($festival->festival_en                                    ==$item->festival_en) selected @endif>{{$item->festival_fa}}</option>
+                    @endforeach
+                </select>
                 <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">
-                        <i class="bi bi-search"></i>
-                    </button>
+                    <button class="btn btn-outline-secondary" type="submit">نمایش آمار</button>
                 </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
             </div>
         </form>
-        -->
+        <small> آمار: {{$festival->festival_fa}}</small>
+
     </div>
+
     <div class="col-12 table-responsive">
         <table class="table table-bordered table-hover table-striped " id="dataTable">
             <thead>
@@ -35,6 +42,7 @@
                 <th>تعداد عکس ارسالی</th>
                 <th>مزارات</th>
                 <th>نیایش</th>
+                <th>دسترسی</th>
                 <th>مشاهده</th>
             </thead>
             <tbody>
@@ -58,6 +66,11 @@
                     <td class="text-center">{{$user->competitions->where('festival_id','=',$festival->id)->count()}}</td>
                     <td class="text-center">{{($user->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=','1')->count())}}</td>
                     <td class="text-center">{{($user->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=','2')->count())}}</td>
+                    <td class="text-center">
+                        <a href="/admin/user/{{$user->id}}/accessLevel" class="btn btn-outline-primary">
+                            <i class="bi bi-award-fill"></i>
+                        </a>
+                    </td>
                     <td>
                         <a href="/admin/user/{{$user->id}}" class="btn btn-warning">
                             <i class="bi bi-eye-fill"></i>

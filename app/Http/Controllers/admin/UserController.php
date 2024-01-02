@@ -15,13 +15,63 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users=User::orderby('id','desc')
+
+        if($request->has('festivals') && $request->festivals!='all')
+        {
+
+            $festival=festival::where('festival_en',$request->festivals)
+                                ->first();
+
+            if(is_null($festival))
+            {
+                alert()->error('جشنوار مورد نظر یافت نشد')->persistent('بستن');
+                return back();
+            }
+            else
+            {
+                $users=User::when($request->has('nationality'),function ($query) use ($request)
+                {
+                    if($request->nationality=='iranian')
+                    {
+                        $query->where('code','+98');
+                    }
+                    elseif($request->nationality=='foreign')
+                    {
+                        $query->where('code','<>','+98');
+                    }
+                    else
+                    {
+                        $query->wherenull('code');
+                    }
+
+                })
+                    ->with('competitions')
+                    ->wherehas('competitions',function ($query) use ($festival)
+                    {
+
+                         $query->where('festival_id',$festival->id);
+
+                    })
                     ->get();
+            }
+
+        }
+        else
+        {
+            $users=User::orderby('id','desc')
+                        ->get();
+
+            $festival=festival::latest()->first();
+        }
 
 
-        $festival=festival::latest()->first();
+
+
+
+
+
         return view('admin.users.users_all')
                         ->with('festival',$festival)
                         ->with('users',$users);
@@ -102,5 +152,40 @@ class UserController extends Controller
         Auth::loginUsingId($user->id);
         alert()->success('شما با اکانت '.$user->fname.' '.$user->lname.' وارد شده اید')->persistent('بستن');
         return redirect('/panel/competiton/create');
+    }
+
+    public function accessLevel(User $user)
+    {
+
+        return view('admin.users.accessLevel.accessLevel')
+                    ->with('user',$user);
+    }
+
+    public function accessLevel_store(Request $request,User $user)
+    {
+        $this->validate($request,[
+           'accessLevel'    =>'required|numeric|between:1,3'
+        ]);
+
+        if($request->accessLevel==1)
+        {
+            $user->type=$request->accessLevel;
+            $user->is_admin=0;
+        }
+        elseif($request->accessLevel==2)
+        {
+            $user->type=$request->accessLevel;
+            $user->is_admin=0;
+        }
+        elseif($request->accessLevel==3)
+        {
+            $user->type=1;
+            $user->is_admin=1;
+        }
+
+        $user->save();
+        alert()->success('سطح دسترسی با موفقیت تغییر کرد')->persistent('بستن');
+
+        return back();
     }
 }

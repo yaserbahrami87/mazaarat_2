@@ -12,6 +12,8 @@ Route::resource('news','NewsController');
 
 //Users
 Route::post('/user/{user}/login','UserController@loginWithUser');
+Route::get('/user/{user}/accessLevel','UserController@accessLevel');
+Route::post('/user/{user}/accessLevel','UserController@accessLevel_store');
 Route::resource('user','UserController');
 
 //Comments
