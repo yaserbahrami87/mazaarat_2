@@ -22,7 +22,7 @@ class festival extends Model
 
     public function news()
     {
-        return $this->hasMany('App\news');
+        return $this->hasMany('App\news')->orderBy('id','desc');
     }
 
     public function gallery()
