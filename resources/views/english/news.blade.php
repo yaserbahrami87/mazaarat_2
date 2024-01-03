@@ -33,7 +33,7 @@
                             <div class="card" >
                                 <img src="/images/news/{{$news->image}}" class="card-img-top" alt="...">
                                 <div class="card-body text-right">
-                                    <a href="/farsi/news/{{$news->title_en}}/show" >
+                                    <a href="/english/news/{{$news->title_en}}/show" >
                                         <h5 class="card-title">{{$news->title_en}}</h5>
                                     </a>
                                 </div>
