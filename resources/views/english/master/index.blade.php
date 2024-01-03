@@ -44,7 +44,7 @@
                                 <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                     {{Auth::user()->fname}}
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/panel/english">Dashboard</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -65,7 +65,7 @@
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                 Gallery
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu text-right">
                                 @foreach($festivals as $festival)
                                     @if($loop->index!=0)
                                         <a class="dropdown-item" href="/english/gallery/{{$festival->festival_en}}">{{$festival->festival_en}}</a>
@@ -78,7 +78,7 @@
                                 News
                             </a>
 
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu text-right">
                                 @foreach($festivals as $festival)
                                     <a class="dropdown-item" href="/english/news/{{$festival->festival_en}}">{{$festival->festival_en}}</a>
                                 @endforeach
@@ -89,7 +89,7 @@
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                 Call for Entries
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu text-right">
                                 <a class="dropdown-item" href="/english/call">Open Calls</a>
                             </div>
                         </li>
@@ -97,7 +97,7 @@
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                                 Team
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu text-right">
                                 <!--
                                 <a class="dropdown-item" href="">First edition</a>
                                 -->
