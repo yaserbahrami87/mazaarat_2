@@ -47,14 +47,14 @@ class UserController extends Controller
                     }
 
                 })
-                    ->with('competitions')
-                    ->wherehas('competitions',function ($query) use ($festival)
-                    {
+                ->with('competitions')
+                ->wherehas('competitions',function ($query) use ($festival)
+                {
 
-                         $query->where('festival_id',$festival->id);
+                     $query->where('festival_id',$festival->id);
 
-                    })
-                    ->get();
+                })
+                ->get();
             }
 
         }

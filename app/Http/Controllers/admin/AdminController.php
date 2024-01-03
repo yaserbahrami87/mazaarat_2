@@ -38,8 +38,9 @@ class AdminController extends Controller
                                 ->with('user')
                                 ->wherehas('user',function($query)
                                 {
-                                    $query->where('code','=','+98');
+                                    $query->where('code','+98');
                                 })
+                                ->groupby('user_id')
                                 ->get();
 
         $notIranian=competiton::where('festival_id','=',$festival->id)
@@ -49,6 +50,7 @@ class AdminController extends Controller
                 $query->where('code','<>','+98')
                         ->wherenotnull('code');
             })
+            ->groupby('user_id')
             ->get();
 
         $NullNationality=competiton::where('festival_id','=',$festival->id)
@@ -57,6 +59,7 @@ class AdminController extends Controller
             {
                 $query->wherenull('code');
             })
+            ->groupby('user_id')
             ->get();
 
 
