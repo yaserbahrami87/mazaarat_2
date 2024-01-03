@@ -43,6 +43,7 @@
                 <th>مزارات</th>
                 <th>نیایش</th>
                 <th>دسترسی</th>
+                <th>تغییر دسترسی</th>
                 <th>مشاهده</th>
             </thead>
             <tbody>
@@ -66,6 +67,16 @@
                     <td class="text-center">{{$user->competitions->where('festival_id','=',$festival->id)->count()}}</td>
                     <td class="text-center">{{($user->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=','1')->count())}}</td>
                     <td class="text-center">{{($user->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=','2')->count())}}</td>
+                    <td class="text-center">
+
+                        @if(($user->type==1) && ($user->is_admin==0))
+                            کاربر ساده
+                        @elseif($user->type==2)
+                            داور
+                        @elseif($user->is_admin==1)
+                            مدیر
+                        @endif
+                    </td>
                     <td class="text-center">
                         <a href="/admin/user/{{$user->id}}/accessLevel" class="btn btn-outline-primary">
                             <i class="bi bi-award-fill"></i>
