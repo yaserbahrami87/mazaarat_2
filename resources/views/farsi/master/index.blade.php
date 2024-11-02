@@ -50,6 +50,8 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         @if(Auth::user()->is_admin==1)
                                             <a class="dropdown-item" href="/admin/panel">داشبورد</a>
+                                        @elseif(Auth::user()->isReferee())
+                                            <a class="dropdown-item" href="/referee">داشبورد</a>
                                         @else
                                             <a class="dropdown-item" href="/panel">داشبورد</a>
                                         @endif
