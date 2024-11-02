@@ -27,6 +27,7 @@
                                 <a href="/images/competition/{{$competition->image}}" class="btn btn-primary btn-sm   " target="_blank">
                                     مشاهده
                                 </a>
+                                <a class="btn btn-outline-warning btn-sm   " href="{{ route('admin.competition.scores', ['festival'=>$festival->festival_en,'competiton'=>$competition->id,]) }}">امتیازات</a>
 
                                 <span class="float-left">{{($competition->competition_category->category_fa)}}</span>
                             </div>

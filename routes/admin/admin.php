@@ -34,6 +34,11 @@ Route::resource('RequestLink','RequestLinkController');
 //competiton
 Route::get('/competiton/{festival}/{competiton_category}','CompetitonController@category');
 Route::get('/competiton/{festival}/{competiton_category}/download','CompetitonController@download');
+Route::get('/competiton/{festival}/{competiton}/scores','CompetitonController@showScores')->name('competition.scores');
+
+//Refereeing
+Route::get('/{festival}/topRefereeings','RefereeingController@showRankedCompetitions')->name('competition.ranked');
+
 Route::resource('competiton','CompetitonController');
 
 //Settings
@@ -63,5 +68,7 @@ Route::prefix('setting')->group(function () {
 });
 
 Route::get('/panel','AdminController@index');
+
+
 
 

@@ -21,5 +21,46 @@ class competiton extends Model
         return $this->belongsTo('App\competiton_category','competiton_category_id','id');
     }
 
+    public function referee()
+    {
+        return $this->hasMany('App\competition');
+    }
+
+    public function referees()
+    {
+        return $this->hasMany(refereeing::class);
+    }
+
+    public function scopeUnrefereed($query)
+    {
+        return $query->whereDoesntHave('referees');
+    }
+
+    public function scopeUnrefereedBy($query, $userId)
+    {
+        return $query->whereDoesntHave('referees', function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        });
+    }
+
+    // در مدل Competition
+    public function refereeScores()
+    {
+        return $this->hasMany(Refereeing::class)->where('is_public', false);
+    }
+
+    public function publicScore()
+    {
+        return $this->hasOne(Refereeing::class)->where('is_public', true);
+    }
+
+
+
+
+
+
+
+
+
 
 }

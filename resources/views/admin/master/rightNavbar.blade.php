@@ -2,6 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
+
         <img src="/images/{{$settings->where('setting','logo')->first()['value']}}" alt="مزارات" class="brand-image img-circle elevation-3"
              style="opacity: .8">
         <span class="brand-text font-weight-light">پنل مدیریت</span>
@@ -165,6 +166,14 @@
                             </li>
 
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/{{$festival->festival_en}}/topRefereeings" class="nav-link">
+                            <i class="nav-icon fa fa-th"></i>
+                            <p>
+                                داوری ها
+                            </p>
+                        </a>
                     </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">

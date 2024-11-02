@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Referee;
+namespace App\Http\Controllers\admin;
 
 use App\competiton;
 use App\festival;
 use App\Http\Controllers\Controller;
+use App\refereeing;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class homeController extends Controller
+class RefereeingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,16 +17,7 @@ class homeController extends Controller
      */
     public function index()
     {
-
-        $festival=festival::latest()->first();
-        $competition=competiton::where('festival_id','=',$festival->id)
-                                    ->get();
-
-        $unrefereedCompetitions = competiton::unrefereedBy(Auth::user()->id)->get();
-        return view('referee_en.index')
-                    ->with('competition',$competition)
-                    ->with('unrefereedCompetitions',$unrefereedCompetitions)
-                    ->with('festival',$festival);
+        //
     }
 
     /**
@@ -53,10 +44,10 @@ class homeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\refereeing  $refereeing
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(refereeing $refereeing)
     {
         //
     }
@@ -64,10 +55,10 @@ class homeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\refereeing  $refereeing
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(refereeing $refereeing)
     {
         //
     }
@@ -76,10 +67,10 @@ class homeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\refereeing  $refereeing
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, refereeing $refereeing)
     {
         //
     }
@@ -87,11 +78,25 @@ class homeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\refereeing  $refereeing
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(refereeing $refereeing)
     {
         //
+    }
+
+    public function showRankedCompetitions(festival $festival)
+    {
+
+        $competitions = competiton::with('refereeScores')
+            ->withCount(['refereeScores as total_score' => function ($query) {
+                $query->select(\DB::raw('SUM(score)'))->where('is_public', false);
+            }])
+            ->having('total_score', '>', 0) // فقط آثاری که داوری شده‌اند
+            ->orderByDesc('total_score')     // مرتب‌سازی بر اساس جمع امتیاز
+            ->get();
+
+        return view('admin.competition.competitions_ranked', compact('competitions'));
     }
 }

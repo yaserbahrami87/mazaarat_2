@@ -23,7 +23,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                 <li class="nav-item">
-                    <a href="/panel/english" class="nav-link">
+                    <a href="/referee" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Dashboard
@@ -31,18 +31,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/panel/english/competiton/create" class="nav-link">
+                    <a href="/referee/refereeing" class="nav-link">
                         <i class="nav-icon fas fa-media"></i>
                         <p>
-                            Upload image
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/home" class="nav-link">
-                        <i class="nav-icon fas fa-media"></i>
-                        <p>
-                            Farsi
+                            Competition/رای گیری
                         </p>
                     </a>
                 </li>

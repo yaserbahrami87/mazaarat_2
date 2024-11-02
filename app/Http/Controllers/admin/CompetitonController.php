@@ -157,4 +157,16 @@ class CompetitonController extends Controller implements ShouldQueue
     {
         //
     }
+
+
+    public function showScores(festival $festival,competiton $competiton)
+    {
+
+        $competition = competiton::with(['refereeScores', 'publicScore'])->findOrFail($competiton->id);
+
+
+        return view('admin.refereeing.competition_scores', compact('competition'));
+    }
+
+
 }

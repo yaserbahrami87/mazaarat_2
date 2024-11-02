@@ -1,6 +1,7 @@
 <?php
 Route::get('/','HomeController@index');
 
-Route::resource('refereeing','RefereeingController');
+Route::get('/refereeing','RefereeingController@index');
+Route::post('/refereeing','RefereeingController@store');
 
 

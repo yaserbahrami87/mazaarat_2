@@ -31,7 +31,6 @@
     <div class="col-12 table-responsive">
         <table class="table table-bordered table-hover table-striped " id="dataTable">
             <thead>
-
                 <th>مشخصات</th>
                 <th>ایمیل</th>
                 <th>تلفن</th>
@@ -61,8 +60,16 @@
 
                     </td>
                     <td dir="ltr"> {{$user->country}}</td>
-                    <td dir="ltr"> {{$user->state['name']}}</td>
-                    <td dir="ltr"> {{$user->city['name']}}</td>
+                    <td dir="ltr">
+                        @if(!is_null($user->state))
+                            {{$user->state['name']}}
+                        @endif
+                    </td>
+                    <td dir="ltr">
+                        @if(!is_null($user->city))
+                            {{$user->city['name']}}
+                        @endif
+                    </td>
                     <td class="text-center">{{$user->created_at}}</td>
                     <td class="text-center">{{$user->competitions->where('festival_id','=',$festival->id)->count()}}</td>
                     <td class="text-center">{{($user->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=','1')->count())}}</td>

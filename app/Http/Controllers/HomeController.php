@@ -46,19 +46,19 @@ class HomeController extends Controller
 
     public function test(Request $request)
     {
-        $status=$request->file('email')->move(public_path('/'),$request->file('email')->getClientOriginalName());
-        dd($request->file('email').xml_());
-
-
-        xmlrpc_get_type($status);
-
-
-
-
-
-
-        dd(xattr_get($status));
-
+//        $status=$request->file('email')->move(public_path('/'),$request->file('email')->getClientOriginalName());
+//        dd($request->file('email').xml_());
+//
+//
+//        xmlrpc_get_type($status);
+//
+//
+//
+//
+//
+//
+//        dd(xattr_get($status));
+        return view('user_fa.index');
 
 
     }
