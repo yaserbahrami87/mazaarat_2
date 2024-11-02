@@ -97,6 +97,16 @@ class RefereeingController extends Controller
             ->orderByDesc('total_score')     // مرتب‌سازی بر اساس جمع امتیاز
             ->get();
 
-        return view('admin.competition.competitions_ranked', compact('competitions'));
+
+        // جمع امتیازات مردمی برای آثاری که فقط داوری مردمی دارند
+        $competitions_public = competiton::with('publicScore')
+            ->withCount(['publicScore as total_public_score' => function ($query) {
+                $query->select(\DB::raw('SUM(score)'))->where('is_public', true);
+            }])
+            ->having('total_public_score', '>', 0) // فقط آثاری که امتیاز مردمی دارند
+            ->orderByDesc('total_public_score')     // مرتب‌سازی بر اساس جمع امتیاز مردمی
+            ->get();
+
+        return view('admin.competition.competitions_ranked', compact('competitions','competitions_public'));
     }
 }
