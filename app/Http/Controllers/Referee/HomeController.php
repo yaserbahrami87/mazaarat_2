@@ -22,7 +22,9 @@ class homeController extends Controller
         $competition=competiton::where('festival_id','=',$festival->id)
                                     ->get();
 
-        $unrefereedCompetitions = competiton::unrefereedBy(Auth::user()->id)->get();
+        $unrefereedCompetitions = competiton::unrefereedBy(Auth::user()->id)
+                                        ->where('festival_id',$festival->id)
+                                        ->get();
         return view('referee_en.index')
                     ->with('competition',$competition)
                     ->with('unrefereedCompetitions',$unrefereedCompetitions)

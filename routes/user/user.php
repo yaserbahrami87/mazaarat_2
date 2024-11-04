@@ -5,6 +5,11 @@ Route::get('/','HomeController@index');
 //competition
 Route::resource('competiton','CompetitonController');
 
+
+//Referee
+Route::get('/competitions/next-vote', 'CompetitonController@showNextCompetitionForVote')->name('competitions.next.vote');
+Route::post('/competitions/{competiton}/vote', 'CompetitonController@storeUserVote')->name('competitions.vote.store');
+
 //Request Link
 Route::resource('RequestLink','RequestLinkController');
 
@@ -19,4 +24,5 @@ Route::prefix('english')->group(function()
     Route::get('/competiton/create','CompetitonController@create_en');
 //    Route::resource('competiton','CompetitonController');
 });
+
 

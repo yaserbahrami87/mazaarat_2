@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -133,7 +134,23 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+           'fname'  =>'nullable|string|min:2|max:100',
+           'lname'  =>'nullable|string|min:2|max:100',
+        ]);
+
+        $status=$user->update($request->all());
+
+        if($status)
+        {
+            alert()->success('اطلاعات با موفقیت بروزرسانی شد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->success('خطا در بروزرسانی')->persistent('بستن');
+        }
+
+        return back();
     }
 
     /**
@@ -187,5 +204,28 @@ class UserController extends Controller
         alert()->success('سطح دسترسی با موفقیت تغییر کرد')->persistent('بستن');
 
         return back();
+    }
+
+    public function changePassword(User $user,Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+
+        $user->password=Hash::make($request->password);
+        $status=$user->save();
+        if($status)
+        {
+            alert()->success('رمز با موفقیت تغییر کرد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در بروزرسانی')->persistent('بستن');
+        }
+
+        return back();
+
+
     }
 }

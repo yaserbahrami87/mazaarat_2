@@ -46,13 +46,15 @@ class competiton extends Model
     // در مدل Competition
     public function refereeScores()
     {
-        return $this->hasMany(Refereeing::class)->where('is_public', false);
+        return $this->hasMany(refereeing::class)->where('is_public', false);
     }
 
     public function publicScore()
     {
-        return $this->hasOne(Refereeing::class)->where('is_public', true);
+        return $this->hasOne(refereeing::class)->where('is_public', true);
     }
+
+
 
 
 

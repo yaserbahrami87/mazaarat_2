@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\competiton;
 use App\festival;
+use App\refereeing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -261,4 +262,47 @@ class CompetitonController extends BaseController
         return back();
 
     }
+
+    public function showNextCompetitionForVote()
+    {
+        $festival=festival::latest()->first();
+        // یافتن اولین اثری که کاربر به آن رأی نداده
+        $competition = competiton::whereDoesntHave('publicScore', function ($query) {
+            $query->where('user_id', Auth::user()->id);
+        })
+        ->where('festival_id',$festival->id)
+        ->first();
+
+        // اگر اثری پیدا نشد، کاربر به صفحه‌ای برای اطلاع‌رسانی هدایت می‌شود
+        if (!$competition) {
+            alert()->error('اثری برای رای گیری وجود ندارد')->persistent('بستن');
+            return redirect('/');
+        }
+
+        return view('user_fa.referee.referee', compact('competition'));
+    }
+
+    public function storeUserVote(Request $request,competiton $competiton)
+    {
+        $festival=festival::latest()->first();
+        $request->validate([
+            'score' => 'required|integer|min:1|max:10',
+        ]);
+
+        refereeing::create([
+            'competiton_id' => $competiton->id,
+            'user_id' => Auth::user()->id,
+            'score' => $request->score,
+            'festival_id'  =>$festival->id,
+            'description' => $request->description,
+            'is_public' => true,
+            'date_fa'   =>$this->dateNow,
+            'time_fa'   =>$this->timeNow,
+        ]);
+        alert()->success('رای شما با موفقیت ثبت شد')->persistent('بستن');
+        return redirect('/panel/competitions/next-vote');
+    }
+
+
+
 }

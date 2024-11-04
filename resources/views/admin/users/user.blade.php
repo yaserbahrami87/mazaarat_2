@@ -26,6 +26,9 @@
 
                             </div>
                             <div class="card-footer">
+                                <small class="text-muted">{{$competition->time_fa}}</small>
+                                <small class="text-muted">{{$competition->date_fa}}</small>
+                                <hr/>
                                 <a href="/images/competition/{{$competition->image}}" class="btn btn-primary btn-sm   " target="_blank">
                                     مشاهده
                                 </a>

@@ -97,8 +97,28 @@
     <script src="/admin/ckeditor/ckeditor.js"></script>
     <script src="/admin/ckeditor/lang/fa.js"></script>
     <script>
-        CKEDITOR.replace('content_fa');
+        CKEDITOR.replace('content_fa',
+            {
+                filebrowserImageBrowseUrl: '/admin/file-manager/ckeditor',
+            });
 
         CKEDITOR.replace('content_en');
     </script>
+    <script src="/admin/ckeditor/file-manager/js/file-manager.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.getElementById('button-image').addEventListener('click', (event) => {
+                event.preventDefault();
+
+                window.open('/file-manager/fm-button', 'fm', 'width=900,height=800');
+            });
+        });
+
+        // set file link
+        function fmSetLink($url) {
+            document.getElementById('image_label').value = $url;
+        }
+    </script>
+
 @endsection
