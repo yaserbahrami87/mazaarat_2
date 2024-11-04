@@ -54,6 +54,8 @@
                                             <a class="dropdown-item" href="/referee">داشبورد</a>
                                         @else
                                             <a class="dropdown-item" href="/panel">داشبورد</a>
+                                            <a class="dropdown-item" href="/panel/competitions/next-vote">مشارکت در داوری</a>
+
                                         @endif
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
