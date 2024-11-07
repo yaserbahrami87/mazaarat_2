@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Auth;
 
 class RefereeingController extends BaseController
 {
+    public function __construct()
+    {
+        $this->middleware(['auth','verified']);
+    }
+
     /**
      * Display a listing of the resource.
      *

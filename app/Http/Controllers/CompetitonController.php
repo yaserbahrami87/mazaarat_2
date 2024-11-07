@@ -12,6 +12,8 @@ use Intervention\Image\Facades\Image;
 
 class CompetitonController extends BaseController
 {
+
+
     /**
      * Display a listing of the resource.
      *
