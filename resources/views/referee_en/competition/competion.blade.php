@@ -75,9 +75,9 @@
             <!-- امتیازدهی از 1 تا 10 -->
             <div class="mb-3">
 
-                <label for="score" class="form-label">امتیاز خود را انتخاب کنید:<span class="text-danger">*</span></label>
+                <label for="score" class="form-label">امتیاز خود را انتخاب کنید / Please choose your score:<span class="text-danger">*</span></label>
                 <select name="score" id="score" class="form-select" required>
-                    <option selected disabled >انتخاب کنید</option>
+                    <option selected disabled >Choose/انتخاب کنید</option>
                     @for ($i = 1; $i <= 10; $i++)
                         <option value="{{ $i }}">{{ $i }}</option>
                     @endfor
@@ -86,11 +86,11 @@
 
             <!-- توضیحات داور -->
             <div class="mb-3">
-                <label for="description" class="form-label">توضیحات شما:</label>
-                <textarea name="description" id="description" rows="4" class="form-control" placeholder="توضیحات خود را وارد کنید..."></textarea>
+                <label for="description" class="form-label">توضیحات شما / Please your description :</label>
+                <textarea name="description" id="description" rows="4" class="form-control" placeholder="توضیحات خود را وارد کنید.../ Please enter your description"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">ثبت امتیاز</button>
+            <button type="submit" class="btn btn-primary w-100">ثبت امتیاز / Register point</button>
     </form>
     </div>
 @endsection

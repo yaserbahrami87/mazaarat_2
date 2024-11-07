@@ -32,6 +32,8 @@ Route::resource('ContactUs','ContactUsController');
 //RequestLink
 Route::resource('RequestLink','RequestLinkController');
 
+Route::get('/file-manager/ckeditor');
+
 //competiton
 Route::get('/competiton/{festival}/{competiton_category}','CompetitonController@category');
 Route::get('/competiton/{festival}/{competiton_category}/download','CompetitonController@download');

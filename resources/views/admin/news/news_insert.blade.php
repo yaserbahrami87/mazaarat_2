@@ -94,12 +94,13 @@
 
 @section('footerScript')
 
-    <script src="/admin/ckeditor/ckeditor.js"></script>
-    <script src="/admin/ckeditor/lang/fa.js"></script>
+    <script src="/plugins/ckeditor4/ckeditor.js"></script>
+    <script src="/plugins/ckeditor4/lang/fa.js"></script>
     <script>
         CKEDITOR.replace('content_fa',
             {
-                filebrowserImageBrowseUrl: '/admin/file-manager/ckeditor',
+                language:'fa',
+                filebrowserImageBrowseUrl: '/file-manager/ckeditor'
             });
 
         CKEDITOR.replace('content_en');

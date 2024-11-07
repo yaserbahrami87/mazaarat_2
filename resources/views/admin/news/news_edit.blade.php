@@ -99,8 +99,15 @@
     <script src="/admin/ckeditor/ckeditor.js"></script>
 
     <script>
-        CKEDITOR.replace('content_fa');
+        CKEDITOR.replace('content_fa',{
+            language:'fa',
+            filebrowserImageBrowseUrl: '/file-manager/ckeditor'
+        });
 
-        CKEDITOR.replace('content_en');
+        CKEDITOR.replace('content_en',
+            {
+                language:'fa',
+                filebrowserImageBrowseUrl: '/file-manager/ckeditor'
+            });
     </script>
 @endsection

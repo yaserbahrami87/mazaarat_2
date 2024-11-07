@@ -50,7 +50,7 @@
             @foreach ($competitions_public as $competition)
                 <tr>
                     <td>{{ $competition->user->fname.' '.$competition->user->lname }}</td>
-                    <td>{{ $competition->total_score }}</td>
+                    <td>{{ $competition->publicScore->score }}</td>
                     <td>
                         <a href="/admin/competiton/{{$festival->festival_en}}/{{$competition->id}}/scores" class="btn btn-primary btn-sm   " target="_blank">
                             مشاهده

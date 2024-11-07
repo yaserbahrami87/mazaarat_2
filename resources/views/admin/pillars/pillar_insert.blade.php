@@ -108,8 +108,14 @@
     <script src="/admin/ckeditor/ckeditor.js"></script>
     <script src="/admin/ckeditor/lang/fa.js"></script>
     <script>
-        CKEDITOR.replace('biography_fa');
+        CKEDITOR.replace('biography_fa',{
+            language:'fa',
+                filebrowserImageBrowseUrl: '/file-manager/ckeditor'
+        });
 
-        CKEDITOR.replace('biography_en');
+        CKEDITOR.replace('biography_en',{
+            language:'fa',
+            filebrowserImageBrowseUrl: '/file-manager/ckeditor'
+        });
     </script>
 @endsection
