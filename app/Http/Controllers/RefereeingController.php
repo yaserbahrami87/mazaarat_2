@@ -14,7 +14,7 @@ class RefereeingController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
