@@ -4,10 +4,12 @@ namespace App\Http\Controllers\admin;
 
 use App\festival;
 use App\Http\Controllers\Controller;
+use App\state;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -85,7 +87,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $states=state::get();
+        return view('admin.users.user_insert')
+                        ->with('states',$states);
     }
 
     /**
@@ -96,7 +100,50 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'fname'     => ['required', 'string', 'max:255'],
+            'lname'     => ['required', 'string', 'max:255'],
+            'email'     => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password'  => ['required', 'string', 'min:8', 'confirmed'],
+            'tel'       => ['required', 'string', 'min:8'],
+            'country'   => ['required', 'string' ],
+            'code'      => ['required', 'string' ],
+            'state_id'  =>'required_if:code,+98','numeric',
+            'city_id'   =>'required_if:code,+98','numeric',
+        ]);
+
+        if(!isset($request['state_id']))
+        {
+            $request['state_id']=NULL;
+        }
+
+        if(!isset($request['city_id']))
+        {
+            $request['city_id']=NULL;
+        }
+
+        $user=User::create([
+            'fname'     => $request['fname'],
+            'lname'     => $request['lname'],
+            'email'     => $request['email'],
+            'tel'       => $request['tel'],
+            'country'   => $request['country'],
+            'code'      => $request['code'],
+            'password'  => Hash::make($request['password']),
+            'state_id'  => $request['state_id'],
+            'city_id'   => $request['city_id'],
+        ]);
+
+        if($user)
+        {
+            alert()->success('کاربر با موفقیت ثبت نام شد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در ثبت نام کاربر')->persistent('بستن');
+        }
+
+        return back();
     }
 
     /**

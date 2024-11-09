@@ -272,6 +272,7 @@ class CompetitonController extends BaseController
         $competition = competiton::whereDoesntHave('publicScore', function ($query) {
             $query->where('user_id', Auth::user()->id);
         })
+        ->where('user_id','<>',Auth::user()->id)
         ->where('festival_id',$festival->id)
         ->first();
 
