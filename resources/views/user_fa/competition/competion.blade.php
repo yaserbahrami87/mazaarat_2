@@ -49,6 +49,10 @@
             text-align: center;
         }
     </style>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 @endsection
 
 @section('content')
@@ -112,99 +116,127 @@
                     </div>
                     <div class="card-body bg-transparent upload_pictures" >
                         <div class="row">
-                            @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1) as $competiton )
-                                <div class="col-12 col-md-3 mb-3 mx-auto"  >
-                                    <div class="card bg-transparent">
-                                        <img src="/images/competition/{{$competiton->image}}" class="card-img-top mb-2 " alt="..." height="182px">
-                                        <div class="card-body p-0  text-center">
-                                            <h5 class="card-title text-light p-2 w-100">مکان: {{$competiton->name_place}}</h5>
-                                            <h5 class="card-title text-light p-2 w-100">آدرس:{{$competiton->location}}</h5>
-                                        </div>
-                                        <div class="card-footer text-muted text-center">
-                                            <a href="/panel/competiton/{{$competiton->id}}/edit" class="btn btn-warning">
-                                                <i class="bi bi-pencil-fill"></i>
-                                            </a>
-                                            <form class="d-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
-                                                {{csrf_field()}}
-                                                {{method_field('DELETE')}}
-                                                <input type="hidden" value="{{$competiton->id}}" name="competition_id" />
-                                                <button type="submit" class="btn btn-danger">
-                                                    <i class="bi bi-trash3-fill"></i>
-                                                </button>
-                                            </form>
+                            @if(Auth::user()->competitions->count()>0)
+                                @foreach(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1) as $competiton )
+
+                                    <div class="col-12 col-md-3 mb-3 mx-auto"  >
+                                        <div class="card bg-transparent">
+                                            <img src="/images/competition/{{$competiton->image}}" class="card-img-top mb-2 " alt="..." height="182px">
+                                            <div class="card-body p-0  text-center">
+                                                <h5 class="card-title text-light p-2 w-100">مکان: {{$competiton->name_place}}</h5>
+                                                <h5 class="card-title text-light p-2 w-100">آدرس:{{$competiton->location}}</h5>
+
+                                            </div>
+                                            <div class="card-footer text-muted text-center">
+                                                <a href="/panel/competiton/{{$competiton->id}}/edit" class="btn btn-warning">
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a>
+                                                <form class="d-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
+                                                    {{csrf_field()}}
+                                                    {{method_field('DELETE')}}
+                                                    <input type="hidden" value="{{$competiton->id}}" name="competition_id" />
+                                                    <button type="submit" class="btn btn-danger">
+                                                        <i class="bi bi-trash3-fill"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            @endif
 
 
-                            @if(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()['status']==1)
-                                @php
-                                    $num=8;
-                                @endphp
-                            @else
+                            @if(!is_null(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()))
+                                @if(Auth::user()->requestLinks->where('festival_id','=',$festival->id)->first()['status']==1)
+                                    @php
+                                        $num=8;
+                                    @endphp
+                                @else
                                     @php
                                         $num=7;
                                     @endphp
-                            @endif
-                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<$num)
-                                <div class="col-12 col-md-3 mx-auto" >
-                                    <div class="card bg-transparent" >
-                                        <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
-                                            {{csrf_field()}}
-                                            <div class="row mb-5">
-                                                <div class="card col-12  mb-3 bg-transparent ">
-                                                    <div class="form-group">
-                                                        <label >عکس</label>
-                                                        <input type="file" class="form-control" name="image">
-                                                    </div>
-                                                    <input type="hidden" name="competiton_category_id" value="1" />
-                                                    <div class="form-group">
-                                                        <label >توضیحات:
-                                                        </label>
-                                                        <textarea class="form-control" name="description" rows="3" placeholder="توضیحات"></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>نام مکان:
-                                                            <span class="alert text-danger m-0 p-0">*</span>
-                                                        </label>
-                                                        <input type="text" class="form-control"  name="name_place">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>آدرس مکان:
-                                                        </label>
-                                                        <input type="text" class="form-control"  name="location">
-                                                    </div>
-                                                    <!--
-                                                    <div class="form-group">
-                                                        <label for="competiton_category_id">موضوع
-                                                            <span class="alert text-danger m-0 p-0">*</span>
-                                                        </label>
-
-
-                                                        <select class="form-control" name="competiton_category_id" id="competiton_category_id">
-                                                            <option disabled selected>انتخاب کنید</option>
-                                                            <option value="1">مزارات</option>
-                                                            <option value="2">نیایش</option>
-                                                        </select>
-
-                                                    </div>
-                                                    -->
-                                                </div>
-                                                <div class="col-12 text-center">
-                                                    <button type="submit" class="btn btn-success">
-                                                        ثبت
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-
+                                @endif
                             @else
-                                <div class="col-12 alert alert-warning">
-                                    حداکثر تعداد عکس‌های مجاز در این بخش ارسال شده است
-                                </div>
+                                @php
+                                    $num=7;
+                                @endphp
+
+                            @endif
+
+
+
+
+                           @if(!is_null(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1)))
+                               @if(isset($num))
+                                    @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1))<$num)
+                                        <div class="col-12 col-md-3 mx-auto" >
+                                            <div class="card bg-transparent" >
+                                                <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
+                                                    {{csrf_field()}}
+                                                    <div class="row mb-5">
+                                                        <div class="card col-12  mb-3 bg-transparent ">
+                                                            <div class="form-group">
+                                                                <label >عکس</label>
+                                                                <input type="file" class="form-control" name="image">
+                                                            </div>
+                                                            <input type="hidden" name="competiton_category_id" value="1" />
+                                                            <div class="form-group">
+                                                                <label >توضیحات:
+                                                                </label>
+                                                                <textarea class="form-control" name="description" rows="3" placeholder="توضیحات"></textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>نام مکان:
+                                                                    <span class="alert text-danger m-0 p-0">*</span>
+                                                                </label>
+                                                                <input type="text" class="form-control"  name="name_place">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>آدرس مکان:
+                                                                </label>
+                                                                <input type="text" class="form-control"  name="location">
+                                                            </div>
+
+                                                            <div  class="form-group"    >
+                                                                <label for="location_map">انتخاب موقعیت مکانی:</label>
+                                                                <div id="map" style="height: 400px;"></div>
+                                                                <input type="text" id="location_map" name="location_map" readonly required>
+                                                            </div>
+
+                                                            <!--
+                                                            <div class="form-group">
+                                                                <label for="competiton_category_id">موضوع
+                                                                    <span class="alert text-danger m-0 p-0">*</span>
+                                                                </label>
+
+
+                                                                <select class="form-control" name="competiton_category_id" id="competiton_category_id">
+                                                                    <option disabled selected>انتخاب کنید</option>
+                                                                    <option value="1">مزارات</option>
+                                                                    <option value="2">نیایش</option>
+                                                                </select>
+
+                                                            </div>
+                                                            -->
+                                                        </div>
+                                                        <div class="col-12 text-center">
+                                                            <button type="submit" class="btn btn-success">
+                                                                ثبت
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    @else
+                                        <div class="col-12 alert alert-warning">
+                                            حداکثر تعداد عکس‌های مجاز در این بخش ارسال شده است
+                                        </div>
+                                    @endif
+
+                                @endif
+
                             @endif
 
 
@@ -245,50 +277,51 @@
                             @endforeach
 
 
+                            @if(isset($num))
+                                @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2))<$num)
 
-                            @if(count(Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',2))<$num)
 
-
-                                    <div class="col-12 col-md-3 mb-5 mx-auto" >
-                                        <div class="card bg-transparent" >
-                                            <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
-                                                {{csrf_field()}}
-                                                <div class="row mb-3">
-                                                    <div class="card col-12   bg-transparent ">
-                                                        <div class="form-group">
-                                                            <label >عکس</label>
-                                                            <input type="file" class="form-control" name="image">
+                                        <div class="col-12 col-md-3 mb-5 mx-auto" >
+                                            <div class="card bg-transparent" >
+                                                <form class="form" method="post" action="/panel/competiton" enctype="multipart/form-data">
+                                                    {{csrf_field()}}
+                                                    <div class="row mb-3">
+                                                        <div class="card col-12   bg-transparent ">
+                                                            <div class="form-group">
+                                                                <label >عکس</label>
+                                                                <input type="file" class="form-control" name="image">
+                                                            </div>
+                                                            <input type="hidden" name="competiton_category_id" value="2" />
+                                                            <div class="form-group">
+                                                                <label >توضیحات:
+                                                                </label>
+                                                                <textarea class="form-control" name="description" rows="3" placeholder="توضیحات"></textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>نام مکان:</label>
+                                                                <input type="text" class="form-control"  name="name_place">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>آدرس مکان:
+                                                                </label>
+                                                                <input type="text" class="form-control"  name="location">
+                                                            </div>
                                                         </div>
-                                                        <input type="hidden" name="competiton_category_id" value="2" />
-                                                        <div class="form-group">
-                                                            <label >توضیحات:
-                                                            </label>
-                                                            <textarea class="form-control" name="description" rows="3" placeholder="توضیحات"></textarea>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>نام مکان:</label>
-                                                            <input type="text" class="form-control"  name="name_place">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>آدرس مکان:
-                                                            </label>
-                                                            <input type="text" class="form-control"  name="location">
+                                                        <div class="col-12 text-center">
+                                                            <button type="submit" class="btn btn-success">
+                                                                ثبت
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 text-center">
-                                                        <button type="submit" class="btn btn-success">
-                                                            ثبت
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                                </form>
+                                            </div>
                                         </div>
-                                    </div>
 
-                            @else
-                                <div class="col-12 alert alert-warning">
-                                    حداکثر تعداد عکس‌های مجاز در این بخش ارسال شده است
-                                </div>
+                                @else
+                                    <div class="col-12 alert alert-warning">
+                                        حداکثر تعداد عکس‌های مجاز در این بخش ارسال شده است
+                                    </div>
+                                @endif
                             @endif
                         </div>
                     </div>
@@ -296,4 +329,24 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('footerScript')
+    <script>
+        var map = L.map('map').setView([35.6892, 51.3890], 13); // موقعیت پیش‌فرض (تهران)
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var marker;
+
+        map.on('click', function(e) {
+            if (marker) {
+                map.removeLayer(marker);
+            }
+            marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+            document.getElementById('location_map').value = e.latlng.lat + ',' + e.latlng.lng;
+        });
+    </script>
 @endsection

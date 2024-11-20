@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -25,14 +26,17 @@ class HomeController extends Controller
     public function index()
     {
 
-        if(session('lang')=='english')
+        if(Auth::user()->isSuperAdmin())
         {
-            return redirect('/panel/english/competiton/create');
+            return redirect('/admin/panel');
         }
-        else
+        elseif(Auth::user()->isUser())
         {
             return redirect('/panel/competiton/create');
-//            return view('user_fa.index');
+        }
+        elseif(Auth::user()->isReferee())
+        {
+            return redirect('/panel');
         }
 
 

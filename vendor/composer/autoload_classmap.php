@@ -80,6 +80,7 @@ return array(
     'App\\Http\\Controllers\\SettingController' => $baseDir . '/app/Http/Controllers/SettingController.php',
     'App\\Http\\Controllers\\SiteController' => $baseDir . '/app/Http/Controllers/SiteController.php',
     'App\\Http\\Controllers\\StateController' => $baseDir . '/app/Http/Controllers/StateController.php',
+    'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Controllers\\admin\\AdminController' => $baseDir . '/app/Http/Controllers/admin/AdminController.php',
     'App\\Http\\Controllers\\admin\\CommentController' => $baseDir . '/app/Http/Controllers/admin/CommentController.php',
     'App\\Http\\Controllers\\admin\\CompetitonController' => $baseDir . '/app/Http/Controllers/admin/CompetitonController.php',

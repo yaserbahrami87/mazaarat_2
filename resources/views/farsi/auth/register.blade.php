@@ -12,7 +12,7 @@
                         {{csrf_field()}}
 
                         <div class="form-group row">
-                            <label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('نام:') }}</label>
+                            <label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('نام:') }}<span class="text-danger">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="fname" type="text" class="form-control @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="lname" class="col-md-4 col-form-label text-md-right">{{ __('نام خانوادگی:') }}</label>
+                            <label for="lname" class="col-md-4 col-form-label text-md-right">{{ __('نام خانوادگی:') }}<span class="text-danger">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="lname" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('پست الکترونیکی:') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('پست الکترونیکی:') }}<span class="text-danger">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="form-group row" dir="">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('تلفن:') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('تلفن:') }}<span class="text-danger">*</span></label>
                             <div class="col-md-6">
                                 <input type="text" class="form-control text-right" id="tel_"  />
                                 <input type="hidden" class="form-control" name="tel" id="tel"  />
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="form-group row" id="states_register">
-                            <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('استان:') }}</label>
+                            <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('استان:') }}<span class="text-danger">*</span></label>
                             <div class="col-md-6">
                                 <select class="form-control" id="state" name="state_id">
                                     <option disabled selected>انتخاب کنید</option>
@@ -84,13 +84,11 @@
                         </div>
 
                         <div class="form-group row" id="cities_register">
-                            <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('شهرستان:') }}</label>
+                            <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('شهرستان:') }}<span class="text-danger">*</span></label>
                             <div class="col-md-6">
                                 <select class="form-control" id="cities" name="city_id">
                                     <option disabled selected>انتخاب کنید</option>
-                                    @foreach($states as $state)
-                                        <option value="{{$state->id}}">{{$state->name}}</option>
-                                    @endforeach
+
                                 </select>
                                 @error('state')
                                 <span class="invalid-feedback" role="alert">
@@ -102,7 +100,7 @@
 
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('رمز عبور:') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('رمز عبور:') }}<span class="text-danger">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -116,7 +114,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('تکرار رمز عبور:') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('تکرار رمز عبور:') }}<span class="text-danger">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">

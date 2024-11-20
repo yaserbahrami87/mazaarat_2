@@ -48,6 +48,10 @@
             text-align: center;
         }
     </style>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 @endsection
 
 @section('content')
@@ -80,6 +84,11 @@
                                 </label>
                                 <input type="text" class="form-control"  name="location" value="{{$competiton->location}}">
                             </div>
+                            <div  class="form-group"    >
+                                <label for="location_map">انتخاب موقعیت مکانی:</label>
+                                <div id="map" style="height: 400px;"></div>
+                                <input type="text" id="location_map" name="location_map" value="{{$competiton->location_map}}"  readonly required>
+                            </div>
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn btn-success">
@@ -93,4 +102,30 @@
         </div>
     </div>
     </div>
+@endsection
+
+@section('footerScript')
+    <script>
+        var map = L.map('map').setView([35.6892, 51.3890], 13); // موقعیت پیش‌فرض (تهران)
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        var tmp="{{$competiton->location_map}}";
+        console.log(typeof(tmp));
+        var location1 = tmp.split(',');
+        console.log(location1);
+
+        var marker = L.marker([location1[0], location1[1]]).addTo(map);
+        map.setView([location1[0], location1[1]], 13);
+
+        map.on('click', function(e) {
+            if (marker) {
+                map.removeLayer(marker);
+            }
+            marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+            document.getElementById('location_map').value = e.latlng.lat + ',' + e.latlng.lng;
+        });
+
+    </script>
 @endsection

@@ -53,7 +53,8 @@
                                         @elseif(Auth::user()->isReferee())
                                             <a class="dropdown-item" href="/referee">داشبورد</a>
                                         @else
-                                            <a class="dropdown-item" href="/panel">داشبورد</a>
+                                            <a class="dropdown-item" href="/panel/profile">پروفایل</a>
+                                            <a class="dropdown-item" href="/panel">شرکت در جشنواره</a>
                                             <a class="dropdown-item" href="/panel/competitions/next-vote">مشارکت در داوری</a>
 
                                         @endif

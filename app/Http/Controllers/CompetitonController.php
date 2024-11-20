@@ -35,9 +35,11 @@ class CompetitonController extends BaseController
     {
 
         $festival=festival::latest()->first();
+        $mazaarat=Auth::user()->competitions->where('festival_id','=',$festival->id)->where('competiton_category_id','=',1);
         if(($this->dateNow > $festival->start_date_fa)&& ($this->dateNow < $festival->end_date_fa) )
         {
             return view('user_fa.competition.competion')
+                ->with('mazaarat',$mazaarat)
                 ->with('festival',$festival);
         }
         else
@@ -78,6 +80,7 @@ class CompetitonController extends BaseController
            'competiton_category_id'   =>'required|numeric',
            'name_place'               =>'required_if:competiton_category_id,1|max:200',
            'location'                 =>'nullable|string|max:200',
+           'location_map'             => 'required|string',
         ]);
 
         $festival=festival::latest()->first();
@@ -103,6 +106,7 @@ class CompetitonController extends BaseController
                'competiton_category_id' =>$request['competiton_category_id'],
                'user_id'                =>Auth::user()->id,
                'festival_id'            =>$festival->id,
+               'location_map'           =>$request->location_map
            ]);
 
            $image=Auth::user()->id.'_'.$gallery_category.'_'.time().'.'.$request->file('image')->extension();
@@ -192,6 +196,7 @@ class CompetitonController extends BaseController
                 'competiton_category_id'   =>'nullable|numeric',
                 'name_place'               =>'nullable|string|max:200',
                 'location'                 =>'nullable|string|max:200',
+                'location_map'             => 'required|string',
             ]);
 
         $status=$competiton->update($request->all());

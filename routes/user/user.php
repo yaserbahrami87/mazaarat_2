@@ -1,6 +1,9 @@
 <?php
 
 Route::get('/','HomeController@index')->name('verification.notice');
+Route::get('/profile','UserController@create');
+Route::patch('/profile','UserController@store');
+
 
 //competition
 Route::resource('competiton','CompetitonController');
