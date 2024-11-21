@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class CompetitonController extends BaseController
 {
@@ -311,6 +312,16 @@ class CompetitonController extends BaseController
         return redirect('/panel/competitions/next-vote');
     }
 
+    public function generateQrCode($id)
+    {
+        $competiton = competiton::findOrFail($id);
+        $url = asset("/images/competition/".$competiton->image);    // لینک اختصاصی
+
+        // تولید QR Code
+        $qrCode = QrCode::size(300)->generate($url);
+
+        return view('user_fa.competition.qrcode', compact('qrCode', 'competiton'));
+    }
 
 
 }

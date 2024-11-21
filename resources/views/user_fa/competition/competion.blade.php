@@ -125,12 +125,15 @@
                                             <div class="card-body p-0  text-center">
                                                 <h5 class="card-title text-light p-2 w-100">مکان: {{$competiton->name_place}}</h5>
                                                 <h5 class="card-title text-light p-2 w-100">آدرس:{{$competiton->location}}</h5>
-
                                             </div>
                                             <div class="card-footer text-muted text-center">
                                                 <a href="/panel/competiton/{{$competiton->id}}/edit" class="btn btn-warning">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a>
+                                                <a href="/panel/competiton/{{$competiton->id}}/qrcode" class="btn btn-primary">
+                                                    <i class="bi bi-qr-code"></i>
+                                                </a>
+
                                                 <form class="d-inline" method="post" action="/panel/competiton/{{$competiton->id}}" onsubmit="return window.confirm('آیا از حذف عکس مورد نظر اطمینان دارید؟')">
                                                     {{csrf_field()}}
                                                     {{method_field('DELETE')}}
@@ -202,6 +205,7 @@
                                                                 <div id="map" style="height: 400px;"></div>
                                                                 <input type="text" id="location_map" name="location_map" readonly required>
                                                             </div>
+
 
                                                             <!--
                                                             <div class="form-group">

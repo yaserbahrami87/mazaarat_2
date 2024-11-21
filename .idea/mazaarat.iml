@@ -119,6 +119,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/zanysoft/laravel-zip" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/alexusmai/laravel-file-manager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/intervention/imagecache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/simplesoftwareio/simple-qrcode" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dasprid/enum" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bacon/bacon-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jorenvanhocht/laravel-share" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

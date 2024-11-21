@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c4fcdd47161af5d17571849645450dfb6d07a4fd',
+        'reference' => 'f02355b12a8c797eb341e71c9ec42c35ba1a1e7b',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -28,6 +28,15 @@
             'reference' => '73e5b88775c64ccc0b84fb60836b30dc9d92ac4a',
             'dev_requirement' => false,
         ),
+        'bacon/bacon-qr-code' => array(
+            'pretty_version' => '2.0.8',
+            'version' => '2.0.8.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../bacon/bacon-qr-code',
+            'aliases' => array(),
+            'reference' => '8674e51bb65af933a5ffaf1c308a660387c35c22',
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.9.3',
             'version' => '0.9.3.0',
@@ -42,6 +51,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'dasprid/enum' => array(
+            'pretty_version' => '1.0.6',
+            'version' => '1.0.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dasprid/enum',
+            'aliases' => array(),
+            'reference' => '8dfd07c6d2cf31c8da90c53b83c026c7696dda90',
+            'dev_requirement' => false,
         ),
         'davedevelopment/hamcrest-php' => array(
             'dev_requirement' => true,
@@ -439,6 +457,15 @@
             'reference' => '86136575a62d3634b51f196a998fce4a583b49bb',
             'dev_requirement' => false,
         ),
+        'jorenvanhocht/laravel-share' => array(
+            'pretty_version' => '4.2.0',
+            'version' => '4.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jorenvanhocht/laravel-share',
+            'aliases' => array(),
+            'reference' => '86af334068038a840567ed62f2082fe3ac981476',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -460,7 +487,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c4fcdd47161af5d17571849645450dfb6d07a4fd',
+            'reference' => 'f02355b12a8c797eb341e71c9ec42c35ba1a1e7b',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -955,6 +982,15 @@
             'aliases' => array(),
             'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
             'dev_requirement' => true,
+        ),
+        'simplesoftwareio/simple-qrcode' => array(
+            'pretty_version' => '4.2.0',
+            'version' => '4.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../simplesoftwareio/simple-qrcode',
+            'aliases' => array(),
+            'reference' => '916db7948ca6772d54bb617259c768c9cdc8d537',
+            'dev_requirement' => false,
         ),
         'swiftmailer/swiftmailer' => array(
             'pretty_version' => 'v6.3.0',

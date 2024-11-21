@@ -1,5 +1,6 @@
 @extends('farsi.master.index')
 @section('headerScript')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
 
         .gallery-title
@@ -118,6 +119,21 @@
                     <a href="/images/gallery/{{$pic->image}}" class="fancybox" rel="ligthbox" title="{{$pic->fname_fa.' '.$pic->lname_fa}}">
                         <img  src="/images/gallery/thumbnail_{{$pic->image}}" class="zoom img-fluid "  alt="">
                     </a>
+                    <a href="https://api.whatsapp.com/send?text={{ urlencode(asset('/images/gallery/'.$pic->image)) }}" target="_blank">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/share/url?url={{ urlencode(asset('/images/gallery/'.$pic->image)) }}" target="_blank">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(asset('/images/gallery/'.$pic->image)) }}" target="_blank">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url={{ urlencode(asset('/images/gallery/'.$pic->image)) }}&text=این+متن+اشتراک‌گذاری" target="_blank">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+
+
                 </div>
             @endforeach
             <div class="col-12  text-center">
@@ -156,6 +172,9 @@
 @endsection
 
 @section('footerScript')
+
+
+
     <script src="/js/jquery-3.6.4.min.js"></script>
     <script src="/lightbox-gallery-blurred/jquery.lightbox.js"></script>
     <script>
@@ -211,4 +230,5 @@
         });
 
     </script>
+
 @endsection
