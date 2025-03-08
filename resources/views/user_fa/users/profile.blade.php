@@ -40,6 +40,18 @@
                         @enderror
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label for="father_name" class="col-md-4 col-form-label text-md-right">{{ __('نام پدر:') }}</label>
+
+                    <div class="col-md-6">
+                        <input id="father_name" type="text" class="form-control @error('father_name') is-invalid @enderror" name="father_name" value="{{ old('father_name',Auth::user()->father_name) }}" required autocomplete="father_name" autofocus>
+                        @error('father_name')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    </div>
+                </div>
 
                 <div class="form-group row">
                     <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('پست الکترونیکی:') }}<span class="text-danger">*</span></label>

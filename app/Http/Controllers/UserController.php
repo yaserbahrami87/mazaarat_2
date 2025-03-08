@@ -56,6 +56,7 @@ class UserController extends Controller
         [
            'fname'    =>'required|persian_alpha|max:20',
            'lname'    =>'required|persian_alpha|max:20',
+           'father_name'    =>'nullable|persian_alpha|max:20',
            'email'    =>'required|email|max:100',
            'datebirth'=>'nullable|date|max:11',
            'state_id' =>'required|numeric|',
