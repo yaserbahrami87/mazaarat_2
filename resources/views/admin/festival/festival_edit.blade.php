@@ -191,6 +191,22 @@
         CKEDITOR.replace('summary_call_fa');
         CKEDITOR.replace('summary_call_en');
     </script>
+    <script src="/admin/ckeditor/file-manager/js/file-manager.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.getElementById('button-image').addEventListener('click', (event) => {
+                event.preventDefault();
+
+                window.open('/file-manager/fm-button', 'fm', 'width=900,height=800');
+            });
+        });
+
+        // set file link
+        function fmSetLink($url) {
+            document.getElementById('image_label').value = $url;
+        }
+    </script>
 
     <script src="/admin/plugins/kamadatepicker/kamadatepicker.min.js"></script>
     <script src="/admin/plugins/kamadatepicker/kamadatepicker.holidays.js"></script>
