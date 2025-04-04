@@ -97,7 +97,7 @@
 @section('footerScript')
 
     <script src="/admin/ckeditor/ckeditor.js"></script>
-
+    <script src="/plugins/ckeditor4/lang/fa.js"></script>
     <script>
         CKEDITOR.replace('content_fa',{
             language:'fa',

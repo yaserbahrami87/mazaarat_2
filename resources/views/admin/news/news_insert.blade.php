@@ -105,7 +105,7 @@
 
         CKEDITOR.replace('content_en');
     </script>
-    <script src="/admin/ckeditor/file-manager/js/file-manager.js"></script>
+    <script src="/admin/ckeditor/file-manager.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
 

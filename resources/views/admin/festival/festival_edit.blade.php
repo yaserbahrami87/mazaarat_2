@@ -191,7 +191,7 @@
         CKEDITOR.replace('summary_call_fa');
         CKEDITOR.replace('summary_call_en');
     </script>
-    <script src="/admin/ckeditor/file-manager/js/file-manager.js"></script>
+    <script src="/admin/ckeditor/file-manager.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
 
