@@ -2,9 +2,10 @@
 
 @section('content')
     <div class="row">
-
+        <div class="col-12 text-center mb-5">
+            <b>آثار داوری شده توسط {{$user->fname.' '.$user->lname}}</b>
+        </div>
         @foreach($user->refereeings->where('festival_id','=',$festival->id) as $referee)
-
             <div class="col-12 col-md-3">
 
                 <div class="card" >
@@ -27,6 +28,7 @@
                         <a class="btn btn-outline-warning btn-sm   " href="{{ route('admin.competition.scores', ['festival'=>$festival->festival_en,'competiton'=>$referee->competition->id,]) }}">امتیازات</a>
 
                         <span class="float-left">{{($referee->competition->competition_category->category_fa)}}</span>
+                        <p class="pt-3 text-center">امتیاز {{$user->fname.' '.$user->lname}} : {{($referee->score)}}</p>
                     </div>
                 </div>
 
