@@ -76,6 +76,7 @@ Route::prefix('report')->group(function()
 {
     Route::get('/report','ReportController@index');
     Route::get('/refereeing','ReportController@refereeing');
+    Route::get('/refereeing/{user}','ReportController@refereeing_user');
 });
 
 

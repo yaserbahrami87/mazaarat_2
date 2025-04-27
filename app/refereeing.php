@@ -12,7 +12,7 @@ class refereeing extends Model
 
     public function competition()
     {
-        return $this->belongsTo(Competition::class);
+        return $this->belongsTo(competiton::class,'competiton_id','id');
     }
 
 

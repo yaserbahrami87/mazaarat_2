@@ -104,4 +104,10 @@ class ReportController extends BaseController
                         ->with('competitons',$competitons)
                         ->with('refereis',$refereis);
     }
+
+    public function refereeing_user(User $user)
+    {
+        return view('admin.reports.refereeing_report_user')
+                        ->with('user',$user);
+    }
 }
