@@ -91,6 +91,7 @@ return array(
     'App\\Http\\Controllers\\admin\\NewsController' => $baseDir . '/app/Http/Controllers/admin/NewsController.php',
     'App\\Http\\Controllers\\admin\\PillarController' => $baseDir . '/app/Http/Controllers/admin/PillarController.php',
     'App\\Http\\Controllers\\admin\\RefereeingController' => $baseDir . '/app/Http/Controllers/admin/RefereeingController.php',
+    'App\\Http\\Controllers\\admin\\ReportController' => $baseDir . '/app/Http/Controllers/admin/ReportController.php',
     'App\\Http\\Controllers\\admin\\RequestLinkController' => $baseDir . '/app/Http/Controllers/admin/RequestLinkController.php',
     'App\\Http\\Controllers\\admin\\SettingController' => $baseDir . '/app/Http/Controllers/admin/SettingController.php',
     'App\\Http\\Controllers\\admin\\UserController' => $baseDir . '/app/Http/Controllers/admin/UserController.php',

@@ -243,6 +243,30 @@
                         </ul>
                     </li>
 
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fa fa-email"></i>
+                            <p>
+                                گزارشات
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/admin/report/report" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p> تمام گزارشات</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/admin/report/refereeing" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>گزارشات داوری</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item">
                         <a href="/panel/competiton" class="nav-link">
                             <i class="nav-icon fa fa-album"></i>

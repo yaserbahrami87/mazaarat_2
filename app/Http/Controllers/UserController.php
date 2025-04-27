@@ -54,9 +54,9 @@ class UserController extends Controller
 
         $this->validate($request,
         [
-           'fname'    =>'required|persian_alpha|max:20',
-           'lname'    =>'required|persian_alpha|max:20',
-           'father_name'    =>'nullable|persian_alpha|max:20',
+           'fname'    =>'required|string|max:20',
+           'lname'    =>'required|string|max:20',
+           'father_name' =>'nullable|persian_alpha|max:20',
            'email'    =>'required|email|max:100',
            'datebirth'=>'nullable|date|max:11',
            'state_id' =>'required|numeric|',
@@ -64,8 +64,10 @@ class UserController extends Controller
            'gender'   =>'nullable|boolean|',
            'shenasnameh'=>'nullable|numeric|',
            'codemelli'=>'nullable|numeric',
+           'zipcode'  =>'nullable|string|max:30',
+           'address'  =>'nullable|string|max:200',
            'image'    =>'nullable|mimes:jpeg,jpg,bmp,png|max:600',
-           'resume'   =>'nullable|mimes:jpeg,jpg,bmp,png,pdf,doc|max:600',
+           'resume'   =>'nullable|mimes:jpeg,jpg,bmp,png,pdf,doc,docx|max:600',
         ]);
 
         $status=Auth::user()->update($request->all());

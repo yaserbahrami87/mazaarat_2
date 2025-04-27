@@ -10,10 +10,10 @@
                     دانلود اثر
                 </a>
             </div>
-            <div class="col-12">
+            <div class="col-12 bg-light">
                 <!-- نمایش امتیازات داورها -->
                 <h3>امتیازات داورها:</h3>
-                <table class="table table-bordered">
+                <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
                         <th>شناسه داور</th>

@@ -29,4 +29,3 @@ Route::prefix('english')->group(function()
 //    Route::resource('competiton','CompetitonController');
 });
 
-

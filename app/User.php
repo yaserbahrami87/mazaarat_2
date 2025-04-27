@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'fname','lname', 'email','father_name' ,'password','is_admin','type','type','code','country','tel','state_id','city_id','gender','datebirth','shenasnameh','codemelli','image','education','reshteh','resume'
+        'fname','lname', 'email','father_name' ,'password','is_admin','type','type','code','country','tel','state_id','city_id','gender','datebirth','shenasnameh','codemelli','image','education','reshteh','resume','address','zipcode'
     ];
 
     /**
@@ -81,6 +81,11 @@ class User extends Authenticatable
     public function comments()
     {
         return $this->hasMany('App\comment','user_id','id');
+    }
+
+    public function refereeings()
+    {
+        return $this->hasMany(refereeing::class);
     }
 
 

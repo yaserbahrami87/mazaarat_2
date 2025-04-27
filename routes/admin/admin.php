@@ -70,6 +70,16 @@ Route::prefix('setting')->group(function () {
 
 });
 
+
+//Reports
+Route::prefix('report')->group(function()
+{
+    Route::get('/report','ReportController@index');
+    Route::get('/refereeing','ReportController@refereeing');
+});
+
+
+
 Route::get('/panel','AdminController@index');
 
 

@@ -15,6 +15,11 @@ class RefereeingController extends BaseController
     public function __construct()
     {
         $this->middleware(['auth','verified']);
+        $dateNow = verta();
+        $this->dateNow = $dateNow->format('Y/m/d');
+        $this->timeNow = $dateNow->format('H:i:s');
+
+        $this->festival=festival::latest()->first();
     }
 
     /**

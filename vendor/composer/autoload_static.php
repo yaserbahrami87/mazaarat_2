@@ -635,6 +635,7 @@ class ComposerStaticInit708d0948389f848a1b066862cc6d04b4
         'App\\Http\\Controllers\\admin\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/NewsController.php',
         'App\\Http\\Controllers\\admin\\PillarController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/PillarController.php',
         'App\\Http\\Controllers\\admin\\RefereeingController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/RefereeingController.php',
+        'App\\Http\\Controllers\\admin\\ReportController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/ReportController.php',
         'App\\Http\\Controllers\\admin\\RequestLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/RequestLinkController.php',
         'App\\Http\\Controllers\\admin\\SettingController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/SettingController.php',
         'App\\Http\\Controllers\\admin\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/UserController.php',

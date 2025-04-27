@@ -44,7 +44,7 @@
                     <label for="father_name" class="col-md-4 col-form-label text-md-right">{{ __('نام پدر:') }}</label>
 
                     <div class="col-md-6">
-                        <input id="father_name" type="text" class="form-control @error('father_name') is-invalid @enderror" name="father_name" value="{{ old('father_name',Auth::user()->father_name) }}" required autocomplete="father_name" autofocus>
+                        <input id="father_name" type="text" class="form-control @error('father_name') is-invalid @enderror" name="father_name" value="{{ old('father_name',Auth::user()->father_name) }}"  autocomplete="father_name" autofocus>
                         @error('father_name')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -216,6 +216,30 @@
                             <a href="/images/users/{{Auth::user()->resume}}" target="_blank">دانلود رزومه</a>
                         @endif
                         @error('resume')
+                            <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group row" >
+                    <label for="zipcode" class="col-md-4 col-form-label text-md-right">{{ __('کدپستی:') }}</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control text-right" id="zipcode" value="{{ old('zipcode',Auth::user()->zipcode) }}"  name="zipcode" />
+
+                        @error('zipcode')
+                        <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group row" >
+                    <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('آدرس:') }}</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control text-right" id="address" value="{{ old('address',Auth::user()->address) }}"  name="address" />
+
+                        @error('address')
                             <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                             </span>
