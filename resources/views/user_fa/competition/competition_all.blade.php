@@ -26,7 +26,7 @@
                                     </button>
                                 </form>
                                 <small class="float-left">امتیاز: {{$competiton->referees->sum('score')}}</small>
-                                <button class="btn btn-block" >ثبت شکایت</button>
+                                <a  class="btn btn-block btn-outline-info mt-2" href="/panel/competiton/{{$competiton->id}}/complaint" >ثبت اعتراض {{$competiton->complaints->count()}}</a>
                             </div>
                         </div>
                     @endforeach
