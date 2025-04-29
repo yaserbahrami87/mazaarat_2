@@ -40,6 +40,7 @@ class RefereeingController extends BaseController
 
 
         $unrefereedCompetitions = competiton::unrefereedBy(Auth::user()->id)
+                                            ->where('festival_id',$festival->id)
                                             ->first();
 
         return view('referee_en.competition.competion')
@@ -153,6 +154,8 @@ class RefereeingController extends BaseController
         $refereeing=refereeing::where('user_id',Auth::user()->id)
                             ->where('festival_id','=',$this->festival->id)
                             ->paginate(16);
+
+        dd($refereeing);
         return view('referee_fa.referee.judge')
                             ->with('refereeing',$refereeing);
     }

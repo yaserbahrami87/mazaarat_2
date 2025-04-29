@@ -1,7 +1,7 @@
 @extends('admin.master.index')
 
 @section('content')
-    <div class="row">
+
         <div class="col-12 text-center mb-5">
             <b>آثار داوری شده توسط {{$user->fname.' '.$user->lname}}</b>
         </div>
@@ -34,5 +34,5 @@
 
             </div>
         @endforeach
-    </div>
+
 @endsection
