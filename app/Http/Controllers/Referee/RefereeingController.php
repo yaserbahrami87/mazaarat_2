@@ -155,7 +155,7 @@ class RefereeingController extends BaseController
                             ->where('festival_id','=',$this->festival->id)
                             ->paginate(16);
 
-        dd($refereeing);
+
         return view('referee_fa.referee.judge')
                             ->with('refereeing',$refereeing);
     }
