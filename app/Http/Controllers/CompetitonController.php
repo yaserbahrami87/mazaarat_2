@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\competiton;
 use App\festival;
 use App\refereeing;
@@ -321,6 +322,34 @@ class CompetitonController extends BaseController
         $qrCode = QrCode::size(300)->generate($url);
 
         return view('user_fa.competition.qrcode', compact('qrCode', 'competiton'));
+    }
+
+    public function complaint_create(competiton $competiton)
+    {
+        return view('user_fa.complaint.complaint')
+                        ->with('competiton',$competiton);
+    }
+
+    public function complaint_store(competiton $competiton,Request $request)
+    {
+        $status=Comment::create([
+            'user_id'=>Auth::user()->id,
+            'comment'=>$request->comment,
+            'product_id'=>$competiton->id,
+            'type'      =>'complaint',
+
+        ]);
+
+        if($status)
+        {
+            alert()->success('اعتراض با موفقیت ثبت شد');
+        }
+        else
+        {
+            alert()->error('خطا در ثبت اعتراض');
+        }
+
+        return back();
     }
 
 

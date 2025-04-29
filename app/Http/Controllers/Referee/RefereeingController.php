@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Referee;
 
+use App\Comment;
 use App\competiton;
 use App\festival;
 use App\Http\Controllers\BaseController;
@@ -145,5 +146,42 @@ class RefereeingController extends BaseController
     public function destroy(refereeing $refereeing)
     {
         //
+    }
+
+    public function judged()
+    {
+        $refereeing=refereeing::where('user_id',Auth::user()->id)
+                            ->where('festival_id','=',$this->festival->id)
+                            ->paginate(16);
+        return view('referee_fa.referee.judge')
+                            ->with('refereeing',$refereeing);
+    }
+
+    public function complaint_create(competiton $competiton)
+    {
+        return view('referee_fa.complaint.complaint')
+            ->with('competiton',$competiton);
+    }
+
+    public function complaint_store(competiton $competiton,Request $request)
+    {
+        $status=Comment::create([
+            'user_id'=>Auth::user()->id,
+            'comment'=>$request->comment,
+            'product_id'=>$competiton->id,
+            'type'      =>'complaint',
+
+        ]);
+
+        if($status)
+        {
+            alert()->success('اعتراض با موفقیت ثبت شد');
+        }
+        else
+        {
+            alert()->error('خطا در ثبت اعتراض');
+        }
+
+        return back();
     }
 }

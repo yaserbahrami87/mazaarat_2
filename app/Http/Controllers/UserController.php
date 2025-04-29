@@ -35,7 +35,7 @@ class UserController extends Controller
         }
         else
         {
-            $cities=NULL;
+            $cities=[];
         }
 
         return view('user_fa.users.profile')

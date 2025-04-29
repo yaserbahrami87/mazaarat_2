@@ -181,6 +181,14 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/admin/complaints" class="nav-link">
+                            <i class="nav-icon fa fa-th"></i>
+                            <p>
+                                اعتراض ها
+                            </p>
+                        </a>
+                    </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fa fa-wrench"></i>

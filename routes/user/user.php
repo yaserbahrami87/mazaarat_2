@@ -7,6 +7,8 @@ Route::patch('/profile','UserController@store');
 
 //competition
 Route::get('/competiton/{competition}/qrcode','CompetitonController@generateQrCode');
+Route::get('/competiton/{competiton}/complaint','CompetitonController@complaint_create');
+Route::post('/competiton/{competiton}/complaint','CompetitonController@complaint_store');
 Route::resource('competiton','CompetitonController');
 
 

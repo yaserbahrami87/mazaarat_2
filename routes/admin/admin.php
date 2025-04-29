@@ -42,7 +42,11 @@ Route::get('/competiton/{festival}/{competiton}/scores','CompetitonController@sh
 //Refereeing
 Route::get('/{festival}/topRefereeings','RefereeingController@showRankedCompetitions')->name('competition.ranked');
 
+
+Route::get('complaints','CompetitonController@complaints');
+Route::post('/complaint/{comment}/changeStatus','CompetitonController@complaints_changeStatus');
 Route::resource('competiton','CompetitonController');
+
 
 //Settings
 //Material

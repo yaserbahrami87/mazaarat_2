@@ -36,6 +36,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/referee/judged" class="nav-link">
+                        <i class="nav-icon fas fa-media"></i>
+                        <p>
+                            Judged/داوری شده
+                        </p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <form  action="{{ route('logout') }}" method="POST" >

@@ -54,6 +54,11 @@ class competiton extends Model
         return $this->hasOne(refereeing::class)->where('is_public', true);
     }
 
+    public function complaints()
+    {
+        return $this->hasMany('App\comment','product_id','id')->where('type','complaint');
+    }
+
 
 
 

@@ -28,8 +28,8 @@
                                     مشاهده
                                 </a>
                                 <a class="btn btn-outline-warning btn-sm   " href="{{ route('admin.competition.scores', ['festival'=>$festival->festival_en,'competiton'=>$competition->id,]) }}">امتیازات</a>
-
                                 <span class="float-left">{{($competition->competition_category->category_fa)}}</span>
+                                <a  class="btn btn-block btn-outline-info mt-2" href="/panel/competiton/{{$competition->id}}/complaint" >ثبت اعتراض {{$competition->complaints->count()}}</a>
                             </div>
                         </div>
 

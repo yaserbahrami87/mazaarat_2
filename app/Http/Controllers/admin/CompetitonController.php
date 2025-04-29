@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Comment;
 use App\competiton_category;
 use App\festival;
 use App\Http\Controllers\Controller;
@@ -166,6 +167,36 @@ class CompetitonController extends Controller implements ShouldQueue
 
 
         return view('admin.refereeing.competition_scores', compact('competition'));
+    }
+
+    public function complaints()
+    {
+        $complaints=Comment::where('type','complaint')
+                        ->where('status',0)
+                        ->get();
+
+        return view('admin.complaints.complaints')
+                                ->with('complaints',$complaints);
+    }
+
+    public function complaints_changeStatus(Request $request,Comment $comment)
+    {
+        $this->validate($request,[
+            'status'    =>'required|boolean'
+        ]);
+
+        $comment->status=$request->status;
+        $status=$comment->save();
+        if($status)
+        {
+            alert()->success('تغییرات با موفقیت اعمال شد');
+        }
+        else
+        {
+            alert()->error('خطا در تغییر');
+        }
+
+        return back();
     }
 
 
