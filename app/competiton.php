@@ -56,7 +56,7 @@ class competiton extends Model
 
     public function complaints()
     {
-        return $this->hasMany('App\comment','product_id','id')->where('type','complaint');
+        return $this->hasMany('App\Comment','product_id','id')->where('type','complaint');
     }
 
 
