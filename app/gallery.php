@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class gallery extends Model
 {
     protected $fillable=[
-        'fname_fa','lname_fa','description_fa','image','fname_en','lname_en','description_en','gallery_category_id','gallery_category_id','status','insert_user_id','festival_id'
+        'fname_fa','lname_fa','description_fa','image','fname_en','lname_en','description_en','gallery_category_id','gallery_category_id','status','insert_user_id','festival_id','view'
     ];
 
     public function gallery_category()

@@ -24,35 +24,34 @@ class CompetitonController extends Controller implements ShouldQueue
             'festival' => 'requried|',
             'q' => 'required|'
         ]);
+
+
+
         return view('admin.competition.competition_all');
 
     }
 
-    public function category(festival $festival,competiton_category $competiton_category)
+    public function category(festival $festival,competiton_category $competiton_category,Request $request)
     {
 
-        $competitons=competiton::where('competiton_category_id','=',$competiton_category->id)
-                        ->where('festival_id',$festival->id)
-                        ->orderby('id','desc')
-                        ->paginate(20);
+        if(($request->has('start_date'))&&($request->has('end_date')))
+        {
+            $competitons=competiton::where('competiton_category_id','=',$competiton_category->id)
+                ->where('festival_id',$festival->id)
+                ->wherebetween('date_fa',[$request->start_date,$request->end_date])
+                ->orderby('id','desc')
+                ->paginate(20);
+        }
+        else
+        {
+            $competitons=competiton::where('competiton_category_id','=',$competiton_category->id)
+                ->where('festival_id',$festival->id)
+                ->orderby('id','desc')
+                ->paginate(20);
+        }
 
-//        $zip=Zip::create($festival->festival_en.'.zip');
-//        foreach ($competitons as $competiton)
-//        {
-//            if(!is_null($competiton->image))
-//            {
-//
-//                if(file_exists(public_path()."/images/competition/".$competiton->image))
-//                {
-//                    ini_set('max_execution_time', 0);
-//                    $zip->add(public_path()."/images/competition/".$competiton->image);
-//
-//                }
-//            }
-//
-//        }
-//
-//        $zip->close();
+
+
 
         return view('admin.competition.competition_all')
                             ->with('competiton_category',$competiton_category->id)

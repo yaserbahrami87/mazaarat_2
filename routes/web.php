@@ -171,6 +171,7 @@ Route::prefix('english')->group(function ()
 
 });
 
+Route::post('/gallery/increment-view', [App\Http\Controllers\GalleryController::class, 'incrementView'])->name('gallery.incrementView');
 
 Route::get('/{language}/home','SiteController@setLanguage');
 //{

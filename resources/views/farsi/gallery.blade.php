@@ -116,7 +116,7 @@
             @foreach($galleries as $pic)
 
                 <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a href="/images/gallery/{{$pic->image}}" class="fancybox" rel="ligthbox" title="{{$pic->fname_fa.' '.$pic->lname_fa}}">
+                    <a href="/images/gallery/{{$pic->image}}" class="fancybox view" rel="ligthbox" title="{{$pic->fname_fa.' '.$pic->lname_fa}}" data-gallery-id="{{$pic->id}}"  >
                         <img  src="/images/gallery/thumbnail_{{$pic->image}}" class="zoom img-fluid "  alt="">
                     </a>
                     <a href="https://api.whatsapp.com/send?text={{ urlencode(asset('/images/gallery/'.$pic->image)) }}" target="_blank">
@@ -131,6 +131,9 @@
                     <a href="https://twitter.com/intent/tweet?url={{ urlencode(asset('/images/gallery/'.$pic->image)) }}&text=این+متن+اشتراک‌گذاری" target="_blank">
                         <i class="bi bi-twitter-x"></i>
                     </a>
+                    <span class="text-light ">
+                        <i class="bi bi-eye mr-2"></i>{{$pic->view}}
+                    </span>
 
 
 
@@ -210,8 +213,6 @@
         });
     </script>
 
-
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -229,6 +230,42 @@
             });
         });
 
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.view').on('click', function(e) {
+                // جلوگیری از باز شدن فوری لایت باکس
+                //e.preventDefault();
+
+
+                // گرفتن ID گالری از URL تصویر (فرض می‌کنیم نام فایل تصویر شامل ID است)
+                // یا می‌توانید یک data-attribute به تگ a اضافه کنید
+                var galleryId = $(this).data('gallery-id');
+
+                // ارسال درخواست Ajax
+                $.ajax({
+                    url: '{{ route("gallery.incrementView") }}',
+                    type: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        gallery_id: galleryId
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            console.log('View count updated:', response.views);
+                        }
+                    }
+                    // complete: function() {
+                    //     // بعد از اتمام Ajax، لایت باکس را باز کنید
+                    //     $.fancybox.open({
+                    //         src: imageUrl,
+                    //         type: 'image'
+                    //     });
+                    // }
+                });
+            });
+        });
     </script>
 
 @endsection

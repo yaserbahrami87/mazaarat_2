@@ -47,7 +47,6 @@ class GalleryController extends Controller
      */
     public function show(festival $festival,Request $request)
     {
-
         $galleries=gallery::where('festival_id','=',$festival->id)
                             ->paginate(12);
 
@@ -99,4 +98,19 @@ class GalleryController extends Controller
     {
         //
     }
+
+    public function incrementView(Request $request)
+    {
+        $galleryId = $request->input('gallery_id');
+
+        $gallery = gallery::find($galleryId);
+
+        if ($gallery) {
+            $gallery->increment('view');
+            return response()->json(['success' => true, 'views' => $gallery->view]);
+        }
+
+        return response()->json(['success' => false]);
+    }
+
 }

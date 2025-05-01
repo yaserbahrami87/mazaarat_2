@@ -1,13 +1,34 @@
 @extends('admin.master.index')
 
+@section('headerScript')
+
+    <link rel="stylesheet" href="/plugins/Persian_Jalali_Calendar_DataPicker/dist/kamadatepicker.min.css" />
+@endsection
+
+
 @section('content')
     <div class="col-12 card " >
-        {{--
+
         <div class="card-header">
             عکسهای فرستاده شده
-            <a href="/admin/competiton/{{$festival->festival_en}}/{{$competiton_category}}/download">دانلود همه عکسها</a>
+            <form method="GET" action="{{ url()->current() }}" class="row g-3">
+                <div class="col-md-4">
+                    <label for="start_date" class="form-label">از تاریخ</label>
+                    <input type="text" class="form-control" id="start_date" name="start_date"
+                           value="{{ request('start_date') }}" autocomplete="off">
+                </div>
+                <div class="col-md-4">
+                    <label for="end_date" class="form-label">تا تاریخ</label>
+                    <input type="text" class="form-control" id="end_date" name="end_date"
+                           value="{{ request('end_date') }}" autocomplete="off">
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary">فیلتر</button>
+                    <a href="{{ url()->current() }}" class="btn btn-outline-secondary mr-2">حذف فیلتر</a>
+                </div>
+            </form>
         </div>
-        --}}
+
         <div class="card-body">
             <div class="row">
                 @foreach($competitions as $competition)
@@ -36,9 +57,19 @@
                     </div>
                 @endforeach
                 <div class="col-12">
-                    {{$competitions->links()}}
+                    {{ $competitions->appends(request()->query())->links() }}
                 </div>
             </div>
         </div>
     </div>
+@endsection
+
+@section('footerScript')
+    <script src="/plugins/Persian_Jalali_Calendar_DataPicker/src/kamadatepicker.js"></script>
+    <script>
+        $(document).ready(function() {
+            kamaDatepicker('start_date');
+            kamaDatepicker('end_date');
+        });
+    </script>
 @endsection
